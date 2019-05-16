@@ -1,7 +1,85 @@
+
 * {
-font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-body {
+.body {
     font-size: 14px;
+}
+
+.inner {
+    margin: 0 auto;
+    width: 70em;
+}
+
+.feature {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin-bottom: 6em;
+}
+
+.feature:last-child {
+    margin-bottom: 2em;
+}
+
+.feature.left {
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.feature.right {
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.feature .image {
+    width: 48%;
+}
+
+.feature .image img {
+    max-width: 100%;
+}
+
+.feature .content {
+    padding: 2em 3em 0.1em 3em;
+    width: 52%;
+}
+
+
+/* Banner */
+
+#banner {
+    padding: 11em 0 9em 0;
+    background-color: #1E2832;
+    color: rgba(255, 255, 255, 0.75);
+    background-attachment: fixed;
+    background-image: url("../resources/images/about-us/overlay.png"), url("../resources/images/about-us/banner.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+#banner h2 {
+    font-size: 2.5em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+#banner p {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 1.75em;
+    text-transform: uppercase;
 }
