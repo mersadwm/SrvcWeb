@@ -1,0 +1,17 @@
+.form-cell-form-element{
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    top: 140px;
+    box-align: center;
+    left: 50%;
+}
+.as-tabnav-tablist {
+    flex-flow: row;
+    margin: 100px;
+    column-gap: 20px;
+}
+.as-l-container-mobileoverflow-content{
+display: flex;
+flex-flow: column;
+}
