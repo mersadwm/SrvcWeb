@@ -1,17 +1,65 @@
-.form-cell-form-element{
+.form-cell-form-element {
     display: flex;
     flex-flow: row;
     position: absolute;
     top: 140px;
     box-align: center;
-    left: 50%;
+    margin-left: 70%;
+    margin-top: 0%;
 }
+
 .as-tabnav-tablist {
     flex-flow: row;
-    margin: 100px;
+    margin: 20px;
     column-gap: 20px;
+    display: flex;
 }
-.as-l-container-mobileoverflow-content{
-display: flex;
-flex-flow: column;
+
+.as-l-container-mobileoverflow-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.as-tabnav-tablist .as-tabnav-tablist-item {
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.as-search-results-value {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.dl-trigger {
+    bottom: hide;
+}
+
+.input-group {
+    display: flex;
+}
+
+.as-search-wrapper {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.dl-menu {
+    list-style-type: none;
+}
+
+.dl-submenu {
+    list-style-type: none;
+}
+
+.as-search-tabnav {
+    display: flex;
+    text-align: center;
+}
+
+.input-group {
+    display: none;
+}
+
+.navbar-brand {
+    margin-left: 0%;
 }
