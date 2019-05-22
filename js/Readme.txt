@@ -1,0 +1,1 @@
+store your js files here like : index.js, aboutus.js

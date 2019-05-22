@@ -251,4 +251,10 @@ a:hover {
         margin-left: 20px;
         margin-top: 10px;
     }
+    .dl-menu {
+        list-style-type: none;
+    }
+    .dl-submenu {
+        list-style-type: none;
+    }
 }
