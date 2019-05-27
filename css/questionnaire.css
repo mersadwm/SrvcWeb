@@ -1,4 +1,52 @@
-img {
+.usersExplanationsInput {
+    overflow: auto;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+    min-height: 150px;
+}
+
+.slide {
+    width: 90%;
+    margin: 5%;
+    border-style: groove;
+    border-block-color: #000000;
+}
+
+.questionContainer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.answerContainer {
+    width: 60%;
+    min-height: 30px;
+    margin: 0% 20% 0% 20%;
+    background-color: aliceblue;
+}
+
+.visualAnswerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.visualAnswer {
+    position: relative;
     margin: 10px;
+}
+
+.imageCaption {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.answerImg {
     width: 100px;
+    height: 100px;
+}
+
+.moreInfoContainer {
+    margin: 4% 0% 0% 3%;
 }

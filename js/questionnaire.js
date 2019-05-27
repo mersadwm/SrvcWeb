@@ -1,42 +1,41 @@
+var currentSlide = "thisPagesUniqueKey"
 
 
-$('.btn').click(function () {
+
+var qFunc = function () {
 
     $('.text').text('loading . . .');
 
     $.ajax({
         type: "GET",
-        data: {
-            q: "puppy",
-            restrict_sr: "true"
-        },
-        url: "http://www.reddit.com/r/aww/search.json",
+        url: "../questions.json",
+        dataType: 'json',
         success: function (response) {
             $('.text').html('');
-            var children = response.data.children;
-            for (var i = 0; i < children.length; i++) {
-                if (children[i].data.thumbnail !== "self" && children[i].data.thumbnail !== "default") {
-                    $('.text').append(children[i].data.title + '<br>' + '<img src="' + children[i].data.thumbnail + '" />' + '<br>');
+            var slides = response.slides;
+            for (var i = 0; i < slides.length; i++) {
+                if (slides[i].key == currentSlide) {
+                    $('.text').append('<div class="questionContainer"> <h2>' + slides[i].question + '</h2></div>');
+                    if (slides[i].isAnswerVisualized) {
+                        var answershtml = '<div class="answerContainer visualAnswerContainer">';
+                        var answers = slides[i].visualAnswers;
+                        for (var j = 0; j < answers.length; j++) {
+                            answershtml += '<div class="visualAnswer"><img class="answerImg" src="' + answers[j].imageUrl + '" /><div class="imageCaption" <h7>' + answers[j].imageCaption + '</h7> </div></div>';
+                        }
+                        $('.text').append(answershtml + '</div>');
+                    } else {
+                        var answers = slides[i].verbalAnswers;
+                        for (var j = 0; j < answers.length; j++) {
+                            $('.text').append('<div class="answerContainer"><h6>' + answers[j].text + '</h6></div>');
+                        }
+                    }
+                    $('.text').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
+                        '</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">');
                 }
             }
-
         },
     });
 
-});
+}
 
-
-// $('.btn').click(function() {
-  
-//     $('.text').text('loading . . .');
-    
-//     $.ajax({
-//       type:"GET",
-//       url:"https://api.meetup.com/2/cities",
-//       success: function(data) {
-//         $('.text').text(JSON.stringify(data));
-//       },
-//       dataType: 'jsonp',
-//     });
-    
-//   });
+qFunc();

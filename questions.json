@@ -1,41 +1,84 @@
 {
     "slides": [{
             "parentKey": "root",
-            "key": "keyForThisSlide",
+            "key": "thisPagesUniqueKey",
             "question": "this is a question?",
-            "isAnswerVisualized": false,
+            "isAnswerVisualized": true,
             "moreInfo": "There is more information about the question here",
             "verbalAnswers": [{
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "text": "An answer for a question"
                 },
                 {
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "text": "An answer for a question"
                 },
                 {
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "text": "An answer for a question"
                 },
                 {
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "text": "An answer for a question"
                 }
             ],
             "visualAnswers": [{
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
+                    "imageUrl": "https://via.placeholder.com/100x100",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                },
+                {
+                    "nextSlidekey": "nextSlidesKey",
+                    "imageUrl": "https://via.placeholder.com/100x100",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                },
+                {
+                    "nextSlidekey": "nextSlidesKey",
+                    "imageUrl": "https://via.placeholder.com/100x100",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                }
+            ]
+        },
+        {
+            "parentKey": "root",
+            "key": "thisPagesUniqueKey2",
+            "question": "this is a question?",
+            "isAnswerVisualized": false,
+            "moreInfo": "There is more information about the question here",
+            "verbalAnswers": [{
+                    "nextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "nextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "nextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "nextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                }
+            ],
+            "visualAnswers": [{
+                    "nextSlidekey": "nextSlidesKey",
                     "imageUrl": "",
                     "imageCaption": "a caption text",
                     "imageDescription": "a description for this pic"
                 },
                 {
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "imageUrl": "",
                     "imageCaption": "a caption text",
                     "imageDescription": "a description for this pic"
                 },
                 {
-                    "NextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "nextSlidesKey",
                     "imageUrl": "",
                     "imageCaption": "a caption text",
                     "imageDescription": "a description for this pic"
