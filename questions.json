@@ -1,0 +1,52 @@
+{
+    "slides": [{
+            "parentKey": "root",
+            "key": "keyForThisSlide",
+            "question": "this is a question?",
+            "isAnswerVisualized": false,
+            "moreInfo": "There is more information about the question here",
+            "verbalAnswers": [{
+                    "NextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "NextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "NextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                },
+                {
+                    "NextSlidekey": "nextSlidesKey",
+                    "text": "An answer for a question"
+                }
+            ],
+            "visualAnswers": [{
+                    "NextSlidekey": "nextSlidesKey",
+                    "imageUrl": "",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                },
+                {
+                    "NextSlidekey": "nextSlidesKey",
+                    "imageUrl": "",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                },
+                {
+                    "NextSlidekey": "nextSlidesKey",
+                    "imageUrl": "",
+                    "imageCaption": "a caption text",
+                    "imageDescription": "a description for this pic"
+                }
+            ]
+        }
+
+
+
+
+
+
+    ]
+}
