@@ -5,12 +5,13 @@ var parentSlide = "root"
 var qFunc = function () {
 
     $('.text').text('loading . . .');
-
+    nextSlideTransitionAnim();
     $.ajax({
         type: "GET",
         url: "../questions.json",
         dataType: 'json',
         success: function (response) {
+
             $('.text').html();
             $('.text').text('');
             if (parentSlide != "root" && parentSlide != "") {
@@ -38,7 +39,7 @@ var qFunc = function () {
                     } else {
                         var answers = slides[i].verbalAnswers;
                         for (var j = 0; j < answers.length; j++) {
-                            $('.text').append('<div class="answerContainer"><h6>' + answers[j].text + '</h6></div>');
+                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\')"><h6>' + answers[j].text + '</h6></div>');
                         }
                     }
                     $('.text').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
@@ -63,6 +64,12 @@ var onPrevBtnClick = function () {
     qFunc();
 }
 
+var nextSlideTransitionAnim = function () {
+    $('.text').fadeTo(100, 0.0, "linear", function () {
+        // Animation complete.
+        $('.text').fadeTo(1000, 1.0, "linear");
+    });
 
+}
 
 qFunc();
