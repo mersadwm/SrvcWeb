@@ -1,9 +1,6 @@
-* {
-font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
+#footerContainer {
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    background-color: #212529;
+    background-color: hsl(210, 11%, 15%);
     color: white;
 }

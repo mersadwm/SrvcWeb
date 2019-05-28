@@ -13,7 +13,7 @@ var resultCollection = []
 
 var qFunc = async function () {
 
-    $('.text').text('loading . . .');
+    $('.questionnaireContainer').text('loading . . .');
     nextSlideTransitionAnim();
     await $.ajax({
         type: "GET",
@@ -22,10 +22,10 @@ var qFunc = async function () {
         data: {},
         success: function (response) {
 
-            $('.text').html();
-            $('.text').text('');
+            $('.questionnaireContainer').html();
+            $('.questionnaireContainer').text('');
             if (parentSlide != "root" && parentSlide != "") {
-                $('.text').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
+                $('.questionnaireContainer').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
             }
             var slides = response.slides;
             for (var i = 0; i < slides.length; i++) {
@@ -33,10 +33,10 @@ var qFunc = async function () {
                     if (parentSlide == "") {
                         parentSlide = slides[i].parentKey;
                         if (parentSlide != "root") {
-                            $('.text').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
+                            $('.questionnaireContainer').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
                         }
                     }
-                    $('.text').append('<div class="questionContainer"> <h2>' + slides[i].question + '</h2></div>');
+                    $('.questionnaireContainer').append('<div class="questionContainer"> <h2>' + slides[i].question + '</h2></div>');
                     if (slides[i].isAnswerVisualized) {
                         var answershtml = '<div class="answerContainer visualAnswerContainer">';
                         var answers = slides[i].visualAnswers;
@@ -46,15 +46,15 @@ var qFunc = async function () {
                                 answers[j].imageCaption + '</h7> </div>' +
                                 '<span class="tooltiptext">' + answers[j].imageDescription + '</span> </div>';
                         }
-                        $('.text').append(answershtml + '</div>');
+                        $('.questionnaireContainer').append(answershtml + '</div>');
                     } else {
                         var answers = slides[i].verbalAnswers;
                         for (var j = 0; j < answers.length; j++) {
-                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].text +
+                            $('.questionnaireContainer').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].text +
                                 '\')"> <div class="verbalAnswer"> <h4>' + answers[j].text + '</h4></div></div>');
                         }
                     }
-                    $('.text').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
+                    $('.questionnaireContainer').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
                         '</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">');
                     resultCollection.push(new SlideResult(slides[i].question, "", ""))
                 }
@@ -81,9 +81,9 @@ var onPrevBtnClick = function () {
 }
 
 var nextSlideTransitionAnim = function () {
-    $('.text').fadeTo(100, 0.0, "linear", function () {
+    $('.questionnaireContainer').fadeTo(100, 0.0, "linear", function () {
         // Animation complete.
-        $('.text').fadeTo(1000, 1.0, "linear");
+        $('.questionnaireContainer').fadeTo(1000, 1.0, "linear");
     });
 
 }
