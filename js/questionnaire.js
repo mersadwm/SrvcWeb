@@ -1,6 +1,15 @@
 var currentSlide = "thisPagesUniqueKey"
 var parentSlide = "root"
 
+class SlideResult {
+    constructor(question, answer, extraDetail) {
+        this.question = question;
+        this.answer = answer;
+        this.extraDetail = extraDetail;
+    }
+}
+
+var resultCollection = []
 
 var qFunc = function () {
 
@@ -32,19 +41,21 @@ var qFunc = function () {
                         var answers = slides[i].visualAnswers;
                         for (var j = 0; j < answers.length; j++) {
                             answershtml += '<div class="visualAnswer"><img class="answerImg" src="' + answers[j].imageUrl +
-                                '"onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\')" /><div class="imageCaption" <h7>' + answers[j].imageCaption + '</h7> </div>' +
+                                '"onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].imageCaption + '   \' )" /><div class="imageCaption" <h7>' +
+                                answers[j].imageCaption + '</h7> </div>' +
                                 '<span class="tooltiptext">' + answers[j].imageDescription + '</span> </div>';
                         }
                         $('.text').append(answershtml + '</div>');
                     } else {
                         var answers = slides[i].verbalAnswers;
                         for (var j = 0; j < answers.length; j++) {
-                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\')"> <div class="verbalAnswer"> <h4>' + answers[j].text + '</h4></div></div>');
+                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].text +
+                                '\')"> <div class="verbalAnswer"> <h4>' + answers[j].text + '</h4></div></div>');
                         }
                     }
                     $('.text').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
                         '</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">');
-
+                    resultCollection.push(new SlideResult(slides[i].question, "", ""))
                 }
             }
         },
@@ -52,15 +63,19 @@ var qFunc = function () {
 
 }
 
-var onAnswerClick = function (nxtSlideKey) {
+var onAnswerClick = function (nxtSlideKey, chosenAnswer) {
     parentSlide = currentSlide;
     currentSlide = nxtSlideKey;
+    resultCollection[resultCollection.length - 1].answer = chosenAnswer;
+    resultCollection[resultCollection.length - 1].extraDetail = $('.usersExplanationsInput').val();
+    printQuestionnaireResult();
     qFunc();
 }
 
 var onPrevBtnClick = function () {
     currentSlide = parentSlide;
     parentSlide = "";
+    resultCollection.pop();
     qFunc();
 }
 
@@ -71,5 +86,14 @@ var nextSlideTransitionAnim = function () {
     });
 
 }
+
+var printQuestionnaireResult = function(){
+    for (result in resultCollection){
+        console.log(result.question + '\n' +
+        result.answer + '\n' +
+        result.extraDetail + resultCollection.length + '\n\n\n');
+    }
+}
+
 
 qFunc();
