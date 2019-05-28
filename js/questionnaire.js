@@ -39,7 +39,7 @@ var qFunc = function () {
                     } else {
                         var answers = slides[i].verbalAnswers;
                         for (var j = 0; j < answers.length; j++) {
-                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\')"><h6>' + answers[j].text + '</h6></div>');
+                            $('.text').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\')"> <div class="verbalAnswer"> <h4>' + answers[j].text + '</h4></div></div>');
                         }
                     }
                     $('.text').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
