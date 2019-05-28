@@ -8,8 +8,8 @@ var qFunc = function () {
 
     $.ajax({
         type: "GET",
-        url: "../resources/data/questions.json",
-        dataType: 'json',
+        url: "../questions.json",
+        dataType:'json',
         success: function (response) {
             $('.text').html('');
             var slides = response.slides;
@@ -22,7 +22,7 @@ var qFunc = function () {
                         for (var j = 0; j < answers.length; j++) {
                             answershtml += '<div class="visualAnswer"><img class="answerImg" src="' + answers[j].imageUrl 
                             + '" /><div class="imageCaption" <h7>' + answers[j].imageCaption + '</h7> </div>' 
-                            + '<span class="tooltiptext">' + answers[j].imageDescription +'</span>' + '</div>' ;
+                            + '<span class="tooltiptext">' + answers[j].imageDescription +'</span> </div>' ;
                         }
                         $('.text').append(answershtml + '</div>');
                     } else {

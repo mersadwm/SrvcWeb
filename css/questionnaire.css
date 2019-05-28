@@ -64,10 +64,15 @@
     top: 100%;
     left: 50%;
     margin-left: -75px;
+
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .visualAnswer:hover .tooltiptext {
     visibility: visible;
+    opacity: 1;
+
 }
 
 .moreInfoContainer {
