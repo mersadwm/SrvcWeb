@@ -1,8 +1,9 @@
 .usersExplanationsInput {
     overflow: auto;
     width: 90%;
-    margin: 2% 5% 2% 5%;
+    margin: 1% 5% 1% 5%;
     min-height: 150px;
+    padding: 10px;
 }
 
 .slide {
@@ -21,7 +22,11 @@
     width: 60%;
     min-height: 30px;
     margin: 0% 20% 0% 20%;
-    background-color: aliceblue;
+    padding: 0 0 0 10px;
+    background-color: rgba(240, 240, 240, 0.315);
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-bottom: 1px dotted black;
+
 }
 
 /* Picture based answer mode */
@@ -37,6 +42,22 @@
     display: inline-block;
     border-bottom: 1px dotted black;
     margin: 10px;
+}
+
+.answerImg:hover {
+    transform: scale(1.1);
+}
+
+.verbalAnswer:hover {
+    background-color: lightgray;
+    scale: 102%;
+    transition: all 0.5s ease-out;
+}
+
+.verbalAnswer{
+    width: 95%;
+    height: 100%;
+    padding-left: 2.5%;
 }
 
 .imageCaption {
@@ -80,6 +101,7 @@
 
 .moreInfoContainer {
     margin: 4% 0% 0% 3%;
+    color: gray;
 }
 
 /* Back button  */
@@ -87,7 +109,7 @@ a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-    margin: 5px 0 0 5px;
+    margin: 5px 0 5px 5px;
 }
 
 a:hover {
@@ -103,4 +125,3 @@ a:hover {
 .round {
     border-radius: 50%;
 }
-
