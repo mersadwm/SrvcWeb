@@ -11,14 +11,15 @@ class SlideResult {
 
 var resultCollection = []
 
-var qFunc = function () {
+var qFunc = async function () {
 
     $('.text').text('loading . . .');
     nextSlideTransitionAnim();
-    $.ajax({
+    await $.ajax({
         type: "GET",
         url: "../questions.json",
         dataType: 'json',
+        data: {},
         success: function (response) {
 
             $('.text').html();
@@ -68,7 +69,7 @@ var onAnswerClick = function (nxtSlideKey, chosenAnswer) {
     currentSlide = nxtSlideKey;
     resultCollection[resultCollection.length - 1].answer = chosenAnswer;
     resultCollection[resultCollection.length - 1].extraDetail = $('.usersExplanationsInput').val();
-    printQuestionnaireResult();
+    // printQuestionnaireResult();
     qFunc();
 }
 
@@ -87,11 +88,11 @@ var nextSlideTransitionAnim = function () {
 
 }
 
-var printQuestionnaireResult = function(){
-    for (result in resultCollection){
-        console.log(result.question + '\n' +
-        result.answer + '\n' +
-        result.extraDetail + resultCollection.length + '\n\n\n');
+var printQuestionnaireResult = function () {
+    for (var i = 0; i < resultCollection.length; i++) {
+        console.log(resultCollection[i].question + '\n' +
+            resultCollection[i].answer + '\n' +
+            resultCollection[i].extraDetail + '\nLength: ' + resultCollection.length + '\n\n\n');
     }
 }
 
