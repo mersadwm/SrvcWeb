@@ -23,7 +23,7 @@
                 }
             ],
             "visualAnswers": [{
-                    "nextSlidekey": "nextSlidesKey",
+                    "nextSlidekey": "thisPagesUniqueKey2",
                     "imageUrl": "https://via.placeholder.com/100x100",
                     "imageCaption": "a caption text",
                     "imageDescription": "a description for this pic"
