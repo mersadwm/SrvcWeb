@@ -33,7 +33,7 @@ var qFunc = async function () {
                     if (parentSlide == "") {
                         parentSlide = slides[i].parentKey;
                         if (parentSlide != "root") {
-                            $('.questionnaireContainer').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
+                            $('.questionnaireContainer').append('<a class="previous round btnHighlight" onclick="onPrevBtnClick()">&#8249;</a>');
                         }
                     }
                     $('.questionnaireContainer').append('<div class="questionContainer unselectable"> <h2>' + slides[i].question + '</h2></div>');

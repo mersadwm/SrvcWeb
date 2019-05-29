@@ -112,14 +112,14 @@
 }
 
 /* Back button  */
-a {
+btnHighlight {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
     margin: 5px 0 5px 5px;
 }
 
-a:hover {
+btnHighlight:hover {
     background-color: #ddd;
     color: black;
 }
