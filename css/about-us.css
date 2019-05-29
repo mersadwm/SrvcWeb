@@ -1,18 +1,7 @@
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-.body {
-    font-size: 14px;
-}
-
 .inner {
     margin: 0 auto;
-    width: 70em;
+    width: 90%;
 }
 
 .feature {
@@ -24,7 +13,7 @@
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
-    margin-bottom: 6em;
+    margin-top: 3%;
 }
 
 .feature:last-child {
@@ -46,7 +35,7 @@
 }
 
 .feature .image {
-    width: 48%;
+    width: 40%;
 }
 
 .feature .image img {

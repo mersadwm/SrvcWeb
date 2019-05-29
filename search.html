@@ -15,125 +15,63 @@
     <link rel="stylesheet" href="css/header_Sidebar.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/footer.css">
+
+    <script>
+        (function() {
+            var id = 'e3e8838b-dea2-4515-b37c-673476f52cbd-ws';
+            var ci_search = document.createElement('script');
+            ci_search.type = 'text/javascript';
+            ci_search.async = true;
+            ci_search.src = 'https://cse.expertrec.com/api/js/ci_common.js?id=' + id;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ci_search, s);
+        })();
+    </script>
+
 </head>
 
 <body>
     <!-- Header -->
     <div id="header_SliderContainer"></div>
+
     <!-- Page contents -->
     <div id="main">
         <div id="headerContainer"></div>
         <!-- End header -->
 
-        <div class="search-headline">
+        <!--<div class="search-headline">
             <div class="search-head">
                 <input class="search-input" type="text" placeholder="">
                 <input type="submit" value="Search" />
             </div>
+            -->
+
+        <ci-search></ci-search>
 
 
-            <div>
-                <nav class="search-tabnav">
-                    <ul class="search-tabnav-tablist" role="tablist">
-                        <li class="search-tabnav-tablist-item" role="presentation">Service </li>
-                        <li class="search-tabnav-tablist-item" role="presentation"> Service Provider </li>
-                        <li class="search-tabnav-tablist-item" role="presentation"> Support </li>
-                    </ul>
-                </nav>
-            </div>
-            <hr>
+        <div>
+            <nav class="search-tabnav">
+                <ul class="search-tabnav-tablist" role="tablist">
+                    <li class="search-tabnav-tablist-item" role="presentation">Service </li>
+                    <li class="search-tabnav-tablist-item" role="presentation"> Service Provider </li>
+                    <li class="search-tabnav-tablist-item" role="presentation"> Support </li>
+                </ul>
+            </nav>
         </div>
+        <hr>
+    </div>
 
-        <div class="search-results">
-            <div class="as-search-results-count as-search-noresult-data">
-                <h1 class="as-search-results-value">
-                    <span class="a11y"></span>0 results found
-                </h1>
-            </div>
+    <div class="search-results">
+        <div class="as-search-results-count as-search-noresult-data">
+            <h1 class="as-search-results-value">
+                <span class="a11y"></span>0 results found
+            </h1>
         </div>
+    </div>
 
-        <div id="placeholdersearch">
-        </div>
+    <div id="placeholdersearch">
 
-
-        <!-- start of freefind search box html -->
-        <!--
-        <table cellpadding=0 cellspacing=0 border=0>
-            <tr>
-                <td style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
-                    <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-                        <input type="hidden" name="si" value="17893112">
-                        <input type="hidden" name="pid" value="r">
-                        <input type="hidden" name="n" value="0">
-                        <input type="hidden" name="_charset_" value="">
-                        <input type="hidden" name="bcd" value="&#247;">
-                        <input type="text" name="query" size="15">
-                        <input type="submit" value="search">
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
-                    <a style="text-decoration:none; color:gray;" href="https://www.extrhands4.me" rel="nofollow">search engine</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow"> by
-            <span style="color: #606060;">freefind</span></a>
-                </td>
-
-            </tr>
-        </table> 
-        
-        <!-- end of freefind search box html -->
-        __>
-        <script>
-            (function() {
-                var cx = '000918350672795101152:so9bk9p7oiq';
-                var gcse = document.createElement('script');
-                gcse.type = 'text/javascript';
-                gcse.async = true;
-                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(gcse, s);
-            })();
-        </script>
-        <gcse:search></gcse:search>
-
-        <!-- Top Search -->
-        <div class="container">
-
-            <!-- Atribute Navigation -->
-
-            <div class="navbar-brand">
-                <div id="dl-menu" class="dl-menuwrapper">
-
-                    <ul class="dl-menu">
-                        <li>
-                            <a href="#">Topic</a>
-                            <ul class="dl-submenu">
-
-                                <li>
-                                    <a href="#">1....</a>
-                                    <ul class="dl-submenu">
-                                        <li><a href="#">1...</a></li>
-                                        <li><a href="#">2...</a></li>
-                                        <li><a href="#">3...</a></li>
-
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">2....</a>
-                                    <ul class="dl-submenu">
-                                        <li><a href="#">1...</a></li>
-                                        <li><a href="#">2....</a></li>
-                                        <li><a href="#">3...</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /dl-menuwrapper -->
-            </div>
-            <!-- Header Navigation -->
+    </div>
 
 
 
@@ -142,17 +80,14 @@
 
 
 
-        </div>
+    <!-- Navbar end -->
+    </header>
+    <!-- Header end -->
+    <!-- End page contents -->
 
 
-        <!-- Navbar end -->
-        </header>
-        <!-- Header end -->
-        <!-- End page contents -->
-
-
-        <!-- Footer -->
-        <div id="footerContainer"></div>
+    <!-- Footer -->
+    <div id="footerContainer"></div>
     </div>
     <!-- End footer -->
 
