@@ -1,9 +1,9 @@
-* {
+/* * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
-}
+} */
 
 body {
     font-size: 14px;
@@ -12,5 +12,5 @@ body {
 .mainPagePic{
     height: 500px;
     width: 90%;
-    margin: 0 5% 0 5%;
+    margin: 5% 5% 0 5%;
 }
