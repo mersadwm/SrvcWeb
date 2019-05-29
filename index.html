@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/header_Sidebar.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/questionnaire.css">
   <link rel="stylesheet" href="css/footer.css">
 
 
@@ -30,7 +31,9 @@
     <img class="mainPagePic" alt="main photo" src="https://via.placeholder.com/1000x400?text=main photo">
 
 
-    <div id="questionnaireContainer"></div>
+    <div class="slide">
+        <div class="questionnaireContainer"></div>
+      </div>
 
     <!-- End page contents -->
 
@@ -53,13 +56,14 @@
   <script src="js/header_Sidebar.js"></script>
   <script src="js/index.js"></script>
   <script src="js/footer.js"></script>
+  <script src="js/questionnaire.js"></script>
+
 
   <script>
     $(document).ready(async function () {
       $('#headerContainer').load("header.html");
       $('#header_SliderContainer').load("header_Slider.html");
       $('#footerContainer').load("footer.html");
-      $('#questionnaireContainer').load("questionnaire.html");
     });
   </script>
 

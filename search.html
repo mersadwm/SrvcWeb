@@ -9,98 +9,103 @@
     <title>Construction - Free HTML Bootstrap Template</title>
 
 
-
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header_Sidebar.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
     <!-- Header -->
-    <!--<div id="headerDiv"><object type="text/html" data="header.html" style="overflow:auto; width: 100%; height: 320px;"></object></div>
-    -->
-    <div class="search-headline">
-        <div class="search-head">
-            <input class="search-input" type="text" placeholder="">
-            <input type="submit" value="Search" />
-        </div>
+    <div id="header_SliderContainer"></div>
+    <!-- Page contents -->
+    <div id="main">
+        <div id="headerContainer"></div>
+        <!-- End header -->
 
-
-        <div>
-            <nav class="search-tabnav">
-                <ul class="search-tabnav-tablist" role="tablist">
-                    <li class="search-tabnav-tablist-item" role="presentation">Service </li>
-                    <li class="search-tabnav-tablist-item" role="presentation"> Service Provider </li>
-                    <li class="search-tabnav-tablist-item" role="presentation"> Support </li>
-                </ul>
-            </nav>
-        </div>
-        <hr>
-    </div>
-
-    <div class="search-results">
-        <div class="as-search-results-count as-search-noresult-data">
-            <h1 class="as-search-results-value">
-                <span class="a11y"></span>0 results found
-            </h1>
-        </div>
-    </div>
-
-    <div id="placeholdersearch">
-    </div>
-
-    <script>
-        (function() {
-            var cx = '000918350672795101152:so9bk9p7oiq';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-    </script>
-    <gcse:search></gcse:search>
-
-    <!-- Top Search -->
-    <div class="container">
-
-        <!-- Atribute Navigation -->
-
-        <div class="navbar-brand">
-            <div id="dl-menu" class="dl-menuwrapper">
-
-                <ul class="dl-menu">
-                    <li>
-                        <a href="#">Topic</a>
-                        <ul class="dl-submenu">
-
-                            <li>
-                                <a href="#">1....</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#">1...</a></li>
-                                    <li><a href="#">2...</a></li>
-                                    <li><a href="#">3...</a></li>
-
-
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">2....</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#">1...</a></li>
-                                    <li><a href="#">2....</a></li>
-                                    <li><a href="#">3...</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+        <div class="search-headline">
+            <div class="search-head">
+                <input class="search-input" type="text" placeholder="">
+                <input type="submit" value="Search" />
             </div>
-            <!-- /dl-menuwrapper -->
+
+
+            <div>
+                <nav class="search-tabnav">
+                    <ul class="search-tabnav-tablist" role="tablist">
+                        <li class="search-tabnav-tablist-item" role="presentation">Service </li>
+                        <li class="search-tabnav-tablist-item" role="presentation"> Service Provider </li>
+                        <li class="search-tabnav-tablist-item" role="presentation"> Support </li>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
         </div>
-        <!-- Header Navigation -->
+
+        <div class="search-results">
+            <div class="as-search-results-count as-search-noresult-data">
+                <h1 class="as-search-results-value">
+                    <span class="a11y"></span>0 results found
+                </h1>
+            </div>
+        </div>
+
+        <div id="placeholdersearch">
+        </div>
+
+        <script>
+            (function () {
+                var cx = '000918350672795101152:so9bk9p7oiq';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <gcse:search></gcse:search>
+
+        <!-- Top Search -->
+        <div class="container">
+
+            <!-- Atribute Navigation -->
+
+            <div class="navbar-brand">
+                <div id="dl-menu" class="dl-menuwrapper">
+
+                    <ul class="dl-menu">
+                        <li>
+                            <a href="#">Topic</a>
+                            <ul class="dl-submenu">
+
+                                <li>
+                                    <a href="#">1....</a>
+                                    <ul class="dl-submenu">
+                                        <li><a href="#">1...</a></li>
+                                        <li><a href="#">2...</a></li>
+                                        <li><a href="#">3...</a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2....</a>
+                                    <ul class="dl-submenu">
+                                        <li><a href="#">1...</a></li>
+                                        <li><a href="#">2....</a></li>
+                                        <li><a href="#">3...</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /dl-menuwrapper -->
+            </div>
+            <!-- Header Navigation -->
 
 
 
@@ -109,46 +114,39 @@
 
 
 
+        </div>
+
+
+        <!-- Navbar end -->
+        </header>
+        <!-- Header end -->
+        <!-- End page contents -->
+
+
+        <!-- Footer -->
+        <div id="footerContainer"></div>
     </div>
+    <!-- End footer -->
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/header.js"></script>
+    <script src="js/header_Sidebar.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/footer.js"></script>
 
-    <!-- Navbar end -->
-    </header>
-    <!-- Header end -->
-
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.12.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Bootsnav js -->
-    <script src="js/bootsnav.js"></script>
-
-    <!-- JS Implementing Plugins -->
-    <script src="js/isotope.js"></script>
-    <script src="js/isotope-active.js"></script>
-    <script src="js/jquery.fancybox.js?v=2.1.5"></script>
-
-    <script src="js/jquery.scrollUp.min.js"></script>
-
-    <script src="js/main.js"></script>
-
-    <script src="js/jquery.dlmenu.js"></script>
     <script>
-        $(function() {
-            $('#dl-menu').dlmenu();
+        $(document).ready(async function () {
+            $('#headerContainer').load("header.html");
+            $('#header_SliderContainer').load("header_Slider.html");
+            $('#footerContainer').load("footer.html");
         });
     </script>
-
-    <!-- Footer -->
-    <div id="footerDiv"><object type="text/html" data="footer.html" style="overflow:auto; width: 100%; height: 370px"></object></div>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
 </body>
