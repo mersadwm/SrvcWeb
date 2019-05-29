@@ -18,11 +18,15 @@
     padding-top: 20px;
 }
 
-.unselectable{
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none; /* Standard syntax */
+.unselectable {
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
 }
 
 .answerContainer {
@@ -61,7 +65,7 @@
     transition: all 0.5s ease-out;
 }
 
-.verbalAnswer{
+.verbalAnswer {
     width: 95%;
     height: 100%;
     padding-left: 2.5%;
@@ -112,14 +116,14 @@
 }
 
 /* Back button  */
-btnHighlight {
+.btnHighlight {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
     margin: 5px 0 5px 5px;
 }
 
-btnHighlight:hover {
+.btnHighlight:hover {
     background-color: #ddd;
     color: black;
 }
