@@ -15,14 +15,13 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <div id="headerDiv"><object type="text/html" data="header.html"
-      style="overflow:auto; width: 100%; height: 320px;"></object></div>
+
+  <div id="headerContainer"></div>
 
   <img class="mainPagePic" alt="main photo" src="https://via.placeholder.com/1000x400?text=main photo">
 
-  <div id="questionnairevDiv"><object type="text/html" data="questionnaire.html"
-      style="overflow:auto; width: 100%; height: 830px;"></object></div>
+
+  <div id="questionnaireContainer"></div>
 
 
   <!-- Footer -->
@@ -38,18 +37,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
   <script src="js/index.js"></script>
-  <script>$(document).ready(function () {$('#footerContainer').load("footer.html"); });</script>
-  
-=======
   <script>
-    $(document).ready(function () {
-      $('#footerContainer').load("footer.html");
+    $(document).ready(async function () {
       $('#headerContainer').load("header.html");
+      $('#footerContainer').load("footer.html");
       $('#questionnaireContainer').load("questionnaire.html");
     });
   </script>
 
->>>>>>> 24286aa02fda808a9346034a91709bfb240428a2
 </body>
 
 </html>

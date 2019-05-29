@@ -36,25 +36,25 @@ var qFunc = async function () {
                             $('.questionnaireContainer').append('<a class="previous round" onclick="onPrevBtnClick()">&#8249;</a>');
                         }
                     }
-                    $('.questionnaireContainer').append('<div class="questionContainer"> <h2>' + slides[i].question + '</h2></div>');
+                    $('.questionnaireContainer').append('<div class="questionContainer unselectable"> <h2>' + slides[i].question + '</h2></div>');
                     if (slides[i].isAnswerVisualized) {
                         var answershtml = '<div class="answerContainer visualAnswerContainer">';
                         var answers = slides[i].visualAnswers;
                         for (var j = 0; j < answers.length; j++) {
                             answershtml += '<div class="visualAnswer"><img class="answerImg" src="' + answers[j].imageUrl +
-                                '"onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].imageCaption + '   \' )" /><div class="imageCaption" <h7>' +
+                                '"onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].imageCaption + '   \' )" /><div class="imageCaption unselectable" <h7>' +
                                 answers[j].imageCaption + '</h7> </div>' +
-                                '<span class="tooltiptext">' + answers[j].imageDescription + '</span> </div>';
+                                '<span class="tooltiptext unselectable">' + answers[j].imageDescription + '</span> </div>';
                         }
                         $('.questionnaireContainer').append(answershtml + '</div>');
                     } else {
                         var answers = slides[i].verbalAnswers;
                         for (var j = 0; j < answers.length; j++) {
                             $('.questionnaireContainer').append('<div class="answerContainer" onclick="onAnswerClick(\'' + answers[j].nextSlidekey + '\', \' ' + answers[j].text +
-                                '\')"> <div class="verbalAnswer"> <h4>' + answers[j].text + '</h4></div></div>');
+                                '\')"> <div class="verbalAnswer"> <h4 class="unselectable">' + answers[j].text + '</h4></div></div>');
                         }
                     }
-                    $('.questionnaireContainer').append('<div class="moreInfoContainer"><h4>' + slides[i].moreInfo +
+                    $('.questionnaireContainer').append('<div class="moreInfoContainer unselectable"><h4>' + slides[i].moreInfo +
                         '</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">');
                     resultCollection.push(new SlideResult(slides[i].question, "", ""))
                 }
@@ -81,10 +81,12 @@ var onPrevBtnClick = function () {
 }
 
 var nextSlideTransitionAnim = function () {
-    $('.questionnaireContainer').fadeTo(100, 0.0, "linear", function () {
-        // Animation complete.
-        $('.questionnaireContainer').fadeTo(1000, 1.0, "linear");
-    });
+    try {
+        $('.questionnaireContainer').fadeTo(100, 0.0, "linear", function () {
+            // Animation complete.
+            $('.questionnaireContainer').fadeTo(1000, 1.0, "linear");
+        });
+    } catch (err) {}
 
 }
 
