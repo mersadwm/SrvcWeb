@@ -14,7 +14,7 @@ var resultCollection = []
 var qFunc = async function () {
 
     $('.questionnaireContainer').text('loading . . .');
-    nextSlideTransitionAnim();
+    // nextSlideTransitionAnim();
     await $.ajax({
         type: "GET",
         url: "../questions.json",
