@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     width: auto;
+    border-radius: .25rem !important;
 }
 
 .er-dummy-search-box #er_search_input_dummy important {
@@ -12,7 +13,7 @@
     font-weight: 300;
     color: #333;
     border: 1px solid #ced4da !important;
-    border-radius: 0px;
+    border-radius: .25rem !important;
     width: auto;
 }
 
