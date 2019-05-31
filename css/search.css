@@ -4,14 +4,14 @@
     width: auto;
 }
 
-.er-dummy-search-box #er_search_input_dummy {
+.er-dummy-search-box #er_search_input_dummy important {
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    outline: #efefef;
+    outline: #efefef !important;
     font-size: 13px;
     font-weight: 300;
     color: #333;
-    border: 1px solid #ced4da;
+    border: 1px solid #ced4da !important;
     border-radius: 0px;
     width: auto;
 }
@@ -19,7 +19,7 @@
 .er-dummy-search-box #er_search_button_dummy {
     font-size: 16px;
     color: white;
-    background: transparent;
+    background: transparent !important;
     border: none;
     border-radius: .25rem;
     padding: .375rem .75rem;
@@ -32,7 +32,7 @@
 .er-dummy-search-box .er_voice_search_dummy {
     font-size: 16px;
     color: white;
-    background: none;
+    background: transparent !important;
     padding-left: 7px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
@@ -43,10 +43,10 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #495057 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
 }
