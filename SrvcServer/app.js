@@ -1,17 +1,30 @@
-const debug = require('debug');
+const debug = require('debug')('app');
 const express = require('express');
 const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const sql = require('mssql');
 
 const routes = require('./routes/index');
 const users = require('./routes/users');
 const help = require('./routes/help');
+const services = require('./routes/services');
 
 
 const app = express();
+
+const sqlConfig = {
+  user: 'mersad',
+  password: '5xqpV&Vde9!W',
+  server: 'srvc.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
+  database: 'services',
+
+  options: {
+      encrypt: true // Use this if you're on Windows Azure
+  }
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +44,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/help', help);
+app.use('/services', services);
 
+sql.connect(sqlConfig).catch(err => debug(err));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

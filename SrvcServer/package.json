@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "set DEBUG=app & nodemon app.js",
+    "start": "set DEBUG=app:* & nodemon app.js",
     "lint": "eslint app.js",
     "lintinit": "eslint --init",
     "lintfix": "eslint app.js --fix"
@@ -19,6 +19,7 @@
     "ejs": "^2.6.1",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
+    "mssql": "^5.1.0",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
