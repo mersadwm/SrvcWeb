@@ -11,10 +11,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/header_Sidebar.css">
-    <link rel="stylesheet" href="css/faq.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/header_Sidebar.css">
+    <link rel="stylesheet" href="stylesheets/faq.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
 
 </head>
 
@@ -621,9 +621,9 @@
 
     <script>
         $(document).ready(async function () {
-            $('#headerContainer').load("header.html");
-            $('#header_SliderContainer').load("header_Slider.html");
-            $('#footerContainer').load("footer.html");
+            $('#headerContainer').load("/subviews/header.html");
+            $('#header_SliderContainer').load("/subviews/header_Slider.html");
+            $('#footerContainer').load("/subviews/footer.html");
         });
     </script>
 
