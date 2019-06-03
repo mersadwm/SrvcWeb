@@ -17,7 +17,7 @@
     width: auto;
 }
 
-.er-dummy-search-box #er_search_button_dummy {
+.er-dummy-search-box {
     font-size: 16px !important;
     color: white !important;
     background: transparent !important;
@@ -38,20 +38,24 @@
     padding: .375rem .75rem;
     display: block;
     width: auto !important;
-    height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: white !important;
-    /* background-color: transparent !important; */
     background-clip: padding-box !important;
     border: none !important;
     border-radius: .25rem !important;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
 }
 
-.#er_search_button_dummy {
-    height: 30px !important;
-    padding: 0% !important;
+#er_search_button_dummy {
+    height: inherit !important;
+    width: auto !important;
+    padding: .375rem .75rem !important;
+    padding-left: 7px !important;
+    margin: 0px !important;
+    align-items: center !important;
+    background: transparent !important;
+    padding-top: 0px !important;
 }
