@@ -1,4 +1,1 @@
-SrvcServer/node_modules/
-.vs/
-SrvcServer/obj/
-SrvcServer/bin/
+node_modules/
