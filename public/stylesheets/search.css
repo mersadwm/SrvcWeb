@@ -18,16 +18,16 @@
 }
 
 .er-dummy-search-box #er_search_button_dummy {
-    font-size: 16px;
-    color: white;
+    font-size: 16px !important;
+    color: white !important;
     background: transparent !important;
-    border: none;
-    border-radius: .25rem;
+    border: none !important;
+    border-radius: .25rem !important;
     padding: .375rem .75rem;
-    width: auto;
+    width: auto !important;
     height: calc(1.5em + .75rem + 2px);
-    margin: 0px;
-    background-clip: padding-box;
+    margin: 0px !important;
+    background-clip: padding-box !important;
 }
 
 .er-dummy-search-box .er_voice_search_dummy {
@@ -49,4 +49,9 @@
     border: none !important;
     border-radius: .25rem !important;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+.#er_search_button_dummy {
+    height: 30px !important;
+    padding: 0% !important;
 }
