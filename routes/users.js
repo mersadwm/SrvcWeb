@@ -10,9 +10,18 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/editProfile', (req, res) => {
-  res.render('editProfile');
-});
+router.route('/editProfile')
+  .all((req, res, next) => {
+    if (req.user) {
+      debug(req.user);
+      next();
+    } else {
+      res.redirect('/users/signin');
+    }
+  })
+  .get((req, res) => {
+    res.render('editProfile');
+  });
 
 router.route('/signUp').post((req, res) => {
   // debug(req.body);
@@ -25,7 +34,7 @@ router.route('/signUp').post((req, res) => {
   }());
 
   req.login(req.body, () => {
-    res.redirect('/users/signin');
+    res.redirect('/users/editProfile');
   });
   // res.json(req.body);
 });
@@ -39,6 +48,13 @@ router.route('/signin')
     failureRedirect: '/users/signin',
   }));
 router.route('/profile')
+  .all((req, res, next) => {
+    if (req.user) {
+      next();
+    } else {
+      res.redirect('/users/signin');
+    }
+  })
   .get((req, res) => {
     res.json(req.user);
   });
@@ -50,7 +66,8 @@ router.get('/google', passport.authenticate('google', {
 
 router.get('/logout', (req, res) => {
   // hande with passport
-  res.send('logout');
+  req.logout(req.body);
+  res.redirect('/users/signin');
 });
 
 module.exports = router;
