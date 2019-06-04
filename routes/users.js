@@ -43,4 +43,14 @@ router.route('/profile')
     res.json(req.user);
   });
 
+  //auth with google
+router.get('/google',passport.authenticate('google',{
+  scope:['profile']
+}));
+
+router.get('/logout',(req,res)=>{
+  //hande with passport
+  res.send('logout')
+});
+
 module.exports = router;

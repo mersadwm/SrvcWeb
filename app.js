@@ -14,8 +14,7 @@ const routes = require('./routes/index');
 const users = require('./routes/users');
 const help = require('./routes/help');
 const services = require('./routes/services');
-const googleLogin = require('./routes/oauth');
-const ouathStrategy = require('./config/strategies/ouath.strategy');
+
 const app = express();
 
 const sqlConfig = {
@@ -51,7 +50,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/help', help);
 app.use('/services', services);
-app.use('/auth',googleLogin);
+
 
 sql.connect(sqlConfig).catch(err => debug(err));
 
