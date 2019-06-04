@@ -15,19 +15,19 @@ router.get('/editProfile', (req, res) => {
 });
 
 router.route('/signUp').post((req, res) => {
-  debug(req.body);
+  // debug(req.body);
   // create user
   const { username, password, email } = req.body;
   (async function addUser() {
     const request = new sql.Request();
     const result = await request.query(`INSERT INTO users (user_name, pass, email) VALUES ('${username}', '${password}', '${email}')`);
-    debug(result);
+    // debug(result);
   }());
 
   req.login(req.body, () => {
-    res.redirect('/users/profile');
+    res.redirect('/users/signin');
   });
-  res.json(req.body);
+  // res.json(req.body);
 });
 
 router.route('/signin')

@@ -1,7 +1,7 @@
 const passport = require('passport');
 const { Strategy } = require('passport-local');
 const sql = require('mssql');
-const debug = require('debug')('app:local.strategy');
+// const debug = require('debug')('app:local.strategy');
 
 module.exports = function localStrategy() {
   passport.use(new Strategy({
@@ -15,7 +15,7 @@ module.exports = function localStrategy() {
 
       if (recordset.length > 0) {
         const user = recordset[0];
-        debug(user);
+        // debug(user);
         if (user.pass === password) {
         // debug('matchted');
           done(null, user);
