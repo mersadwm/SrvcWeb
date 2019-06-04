@@ -5,13 +5,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Login & Signup</title>
-  <meta name="description" content="login and signup page">
+  <title>Singin</title>
+  <meta name="description" content="signin page">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/stylesheets/header.css">
   <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
   <link rel="stylesheet" href="/stylesheets/login.css">
   <link rel="stylesheet" href="/stylesheets/footer.css">
@@ -30,7 +29,7 @@
     <div class="login-wrap">
       <div class="login-html">
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up" disabled><label for="tab-2" class="tab">Sign Up</label>
         <div class="login-form">
           <div class="sign-in-htm">
             <form name="signInForm" action="/users/signin" method="post">
@@ -61,33 +60,6 @@
             </div>
             <form>
           </div>
-          <div class="sign-up-htm">
-            <%# <form name="signInForm" action="/users/signip" method="post"> %>
-            <div class="group">
-              <label for="user" class="label">Username</label>
-              <input id="user" name="username" type="text" class="input">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id="pass" name="password" type="password" class="input" data-type="password">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Repeat Password</label>
-              <input id="pass" name="passwordR" type="password" class="input" data-type="password">
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Email Address</label>
-              <input id="pass" name="email" type="text" class="input">
-            </div>
-            <div class="group">
-              <input type="submit" class="button" value="Sign Up">
-            </div>
-            <div class="hr"></div>
-            <div class="foot-lnk">
-              <label for="tab-1">Already Member?</a>
-            </div>
-            <%# </form> %>
-          </div>
         </div>
       </div>
     </div>
@@ -110,10 +82,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <script src="/javascripts/header.js"></script>
   <script src="/javascripts/header_Sidebar.js"></script>
-  <script src="/javascripts/login.js"></script>
-  <script src="/javascripts/footer.js"></script>
 
   <script>
     $(document).ready(async function () {

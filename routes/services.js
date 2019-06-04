@@ -8,9 +8,7 @@ const debug = require('debug')('app:services');
 router.get('/', (req, res) => {
   (async function query() {
     const request = new sql.Request();
-    const nn = 'a';
-    const result = await request.query(`select * from users where user_name='${nn}'`);
-    // const result = await request.query('select * from services');
+    const result = await request.query('select * from services');
     // const result = await request.input('id', sql.Int, 1).query('select * from services where id=@id');
     debug(result);
     res.send(result.recordset);

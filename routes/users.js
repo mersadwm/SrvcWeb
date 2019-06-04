@@ -6,8 +6,8 @@ const passport = require('passport');
 const router = express.Router();
 
 /* GET users pages. */
-router.get('/login', (req, res) => {
-  res.render('login');
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 router.get('/editProfile', (req, res) => {
@@ -20,7 +20,7 @@ router.route('/signUp').post((req, res) => {
   const { username, password, email } = req.body;
   (async function addUser() {
     const request = new sql.Request();
-    const result = await request.query(`INSERT INTO users (user_name, password, email) VALUES ('${username}', '${password}', '${email}')`);
+    const result = await request.query(`INSERT INTO users (user_name, pass, email) VALUES ('${username}', '${password}', '${email}')`);
     debug(result);
   }());
 
@@ -35,8 +35,8 @@ router.route('/signin')
     res.render('signin');
   })
   .post(passport.authenticate('local', {
-    successRedirect: '/editProfile',
-    failureRedirect: '/failed',
+    successRedirect: '/users/editProfile',
+    failureRedirect: '/users/signin',
   }));
 router.route('/profile')
   .get((req, res) => {
