@@ -32,13 +32,11 @@ router.route('/signUp').post((req, res) => {
 
 router.route('/signin')
   .get((req, res) => {
-    res.render('login', {
-      name: 'User',
-    });
+    res.render('signin');
   })
   .post(passport.authenticate('local', {
     successRedirect: '/editProfile',
-    failureRedirect: '/',
+    failureRedirect: '/failed',
   }));
 router.route('/profile')
   .get((req, res) => {
