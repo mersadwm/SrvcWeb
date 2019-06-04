@@ -1,6 +1,6 @@
 const passport = require('passport');
 require('./strategies/local.strategy.js')();
-const ouathStrategy = require('./strategies/ouath.strategy');
+const oauthStrategy = require('./strategies/oauth.strategy');
 
 module.exports = function passportConfig(app) {
   app.use(passport.initialize());
