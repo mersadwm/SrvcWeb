@@ -1,24 +1,19 @@
 const express = require('express');
-const debug = require('debug')('app:users');
 const sql = require('mssql');
 const passport = require('passport');
 
 const router = express.Router();
 
+const usersController = require('../controllers/usersController');
+
+const { routeProtection } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
 router.route('/editProfile')
-  .all((req, res, next) => {
-    if (req.user) {
-      debug(req.user);
-      next();
-    } else {
-      res.redirect('/users/signin');
-    }
-  })
+  .all(routeProtection)
   .get((req, res) => {
     res.render('editProfile');
   });
@@ -48,13 +43,7 @@ router.route('/signin')
     failureRedirect: '/users/signin',
   }));
 router.route('/profile')
-  .all((req, res, next) => {
-    if (req.user) {
-      next();
-    } else {
-      res.redirect('/users/signin');
-    }
-  })
+  .all(routeProtection)
   .get((req, res) => {
     res.json(req.user);
   });
