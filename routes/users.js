@@ -6,8 +6,8 @@ const passport = require('passport');
 const router = express.Router();
 
 /* GET users pages. */
-router.get('/login', (req, res) => {
-  res.render('login');
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 router.get('/editProfile', (req, res) => {
@@ -15,30 +15,28 @@ router.get('/editProfile', (req, res) => {
 });
 
 router.route('/signUp').post((req, res) => {
-  debug(req.body);
+  // debug(req.body);
   // create user
   const { username, password, email } = req.body;
   (async function addUser() {
     const request = new sql.Request();
-    const result = await request.query(`INSERT INTO users (user_name, password, email) VALUES ('${username}', '${password}', '${email}')`);
-    debug(result);
+    const result = await request.query(`INSERT INTO users (user_name, pass, email) VALUES ('${username}', '${password}', '${email}')`);
+    // debug(result);
   }());
 
   req.login(req.body, () => {
-    res.redirect('/users/profile');
+    res.redirect('/users/signin');
   });
-  res.json(req.body);
+  // res.json(req.body);
 });
 
 router.route('/signin')
   .get((req, res) => {
-    res.render('login', {
-      name: 'User',
-    });
+    res.render('signin');
   })
   .post(passport.authenticate('local', {
-    successRedirect: '/editProfile',
-    failureRedirect: '/',
+    successRedirect: '/users/editProfile',
+    failureRedirect: '/users/signin',
   }));
 router.route('/profile')
   .get((req, res) => {

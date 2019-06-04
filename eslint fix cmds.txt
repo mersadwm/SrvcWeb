@@ -1,0 +1,10 @@
+node_modules\.bin\eslint routes\users.js --fix
+node_modules\.bin\eslint routes\services.js --fix
+node_modules\.bin\eslint routes\help.js --fix
+node_modules\.bin\eslint routes\index.js --fix
+node_modules\.bin\eslint config\passport.js --fix
+node_modules\.bin\eslint config\strategies\local.strategy.js --fix
+node_modules\.bin\eslint public\javascripts\search.js --fix
+node_modules\.bin\eslint public\javascripts\questionnaire.js --fix
+node_modules\.bin\eslint public\javascripts\header_Sidebar.js --fix
+
