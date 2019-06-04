@@ -10,7 +10,7 @@ module.exports = function localStrategy() {
   }, (username, password, done) => {
     (async function query() {
       const request = new sql.Request();
-      const user = await request.input('id', sql.Int, username).query('select * from services where id=@id');
+      const user = await request.input('username', sql.VarChar, username).query('select * from services where username=@username');
       debug(user);
 
       if (user.password === password) {
