@@ -9,4 +9,5 @@ node_modules\.bin\eslint public\javascripts\search.js --fix
 node_modules\.bin\eslint public\javascripts\questionnaire.js --fix
 node_modules\.bin\eslint public\javascripts\header_Sidebar.js --fix
 node_modules\.bin\eslint controllers\usersController.js --fix
+node_modules\.bin\eslint public\javascripts\pass_Validation.js --fix
 

@@ -1,13 +1,14 @@
-let password = document.getElementById('pass'),
- confirm_password = document.getElementById('pass_rep');
+/* eslint-disable camelcase */
+const password = document.getElementById('pass');
+const confirm_Password = document.getElementById('pass_rep');
 
 function validatePassword() {
-  if (password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
+  if (password.value !== confirm_Password.value) {
+    confirm_Password.setCustomValidity("Passwords Don't Match");
   } else {
-    confirm_password.setCustomValidity('');
+    confirm_Password.setCustomValidity('');
   }
 }
 
 password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+confirm_Password.onkeyup = validatePassword;
