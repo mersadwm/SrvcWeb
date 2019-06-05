@@ -15,7 +15,7 @@ passport.use(
     debug(profile);
     const { id } = profile;
     debug(profile);
-    addGUser(id, 'google', `${id}somthing`);
+    addGUser(id, 'google', `${id}somthing`, done);
 
     // pasport callback function
 

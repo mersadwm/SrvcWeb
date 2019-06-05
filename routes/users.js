@@ -43,7 +43,7 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.send('you reached');
+  res.render('editProfile');
 
   // debug(result);
 });
