@@ -12,6 +12,17 @@ function usersController() {
     }
   }
 
+  function routeProtectionAdmin(req, res, next) {
+    if (req.user) {
+      if (req.user.adminRights) {
+      // debug(req.user);
+        next();
+      }
+    } else {
+      res.redirect('/users/signin');
+    }
+  }
+
   function addUser(req, res, username, password, email) {
     const request = new sql.Request();
     // debug(`username : ${username} ### pass : ${password} ###  email : ${email}`);
@@ -43,7 +54,8 @@ function usersController() {
       if (!err) {
         // debug(result);
         if (result.output.responseMessage === 'User successfully logged in') {
-          done(null, { username });
+          const adminRights = true;
+          done(null, { username, adminRights });
         } else {
           done(null, false);
         }
@@ -57,6 +69,7 @@ function usersController() {
     routeProtection,
     addUser,
     loginUser,
+    routeProtectionAdmin,
   };
 }
 
