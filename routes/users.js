@@ -1,5 +1,5 @@
 const express = require('express');
-const debug = require('debug')('app:users');
+// const debug = require('debug')('app:users');
 const sql = require('mssql');
 const passport = require('passport');
 
@@ -47,6 +47,12 @@ router.route('/profile')
 router.get('/google', passport.authenticate('google', {
   scope: ['profile'],
 }));
+
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+  res.send('you reached');
+
+  // debug(result);
+});
 
 router.get('/logout', (req, res) => {
   // hande with passport
