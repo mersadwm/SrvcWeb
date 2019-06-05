@@ -1,7 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
 const sql = require('mssql');
-const debug = require('debug')('app:users');
+const debug = require('debug')('app:oauth');
 
 
 passport.use(
