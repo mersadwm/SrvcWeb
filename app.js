@@ -15,7 +15,6 @@ const users = require('./routes/users');
 const help = require('./routes/help');
 const services = require('./routes/services');
 
-
 const app = express();
 
 const sqlConfig = {
@@ -51,6 +50,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/help', help);
 app.use('/services', services);
+
 
 sql.connect(sqlConfig).catch(err => debug(err));
 
