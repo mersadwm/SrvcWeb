@@ -70,5 +70,52 @@
     color: #fff;
     font-size: 1.5em;
     margin-bottom: 1.75em;
-    text-transform: uppercase;
+    text-transform:none;
+}
+
+#one h2 {
+    color: #ff4411;
+    font-size: 48px;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 10px; 
+   }
+
+#one p {
+    font-family: 'Inder', sans-serif;
+    line-height: 28px;
+    margin-bottom: 15px;
+    color: #666; 
+    text-align: center;
+   }
+
+
+#two h2 {
+    color: #ff4411;
+    font-size: 48px;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 10px;
+    }
+
+
+#two p {
+    font-family: 'Inder', sans-serif;
+    line-height: 28px;
+    margin-bottom: 15px;
+    color: #666;
+    text-align: center;
+    }
+
+#three h2 {
+    color: #ff4411;
+    font-size: 48px;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 10px;
+     }
+
+#three p {
+    font-family: 'Inder', sans-serif;
+    line-height: 28px;
+    margin-bottom: 15px;
+    color: #666;
+    text-align: center;
 }
