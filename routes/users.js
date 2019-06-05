@@ -1,18 +1,26 @@
 const express = require('express');
+<<<<<<< HEAD
 // const debug = require('debug')('app:users');
+=======
+>>>>>>> acd3c44ada4731d1b8bbd7757780ecf630961e66
 const sql = require('mssql');
 const passport = require('passport');
 
 const router = express.Router();
 
+const usersController = require('../controllers/usersController');
+
+const { routeProtection } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/editProfile', (req, res) => {
-  res.render('editProfile');
-});
+router.route('/editProfile')
+  .all(routeProtection)
+  .get((req, res) => {
+    res.render('editProfile');
+  });
 
 router.route('/signUp').post((req, res) => {
   // debug(req.body);
@@ -25,7 +33,7 @@ router.route('/signUp').post((req, res) => {
   }());
 
   req.login(req.body, () => {
-    res.redirect('/users/signin');
+    res.redirect('/users/editProfile');
   });
   // res.json(req.body);
 });
@@ -39,6 +47,7 @@ router.route('/signin')
     failureRedirect: '/users/signin',
   }));
 router.route('/profile')
+  .all(routeProtection)
   .get((req, res) => {
     res.json(req.user);
   });
@@ -56,7 +65,8 @@ router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
 
 router.get('/logout', (req, res) => {
   // hande with passport
-  res.send('logout');
+  req.logout(req.body);
+  res.redirect('/users/signin');
 });
 
 module.exports = router;
