@@ -1,11 +1,7 @@
 const express = require('express');
-<<<<<<< HEAD
-// const debug = require('debug')('app:users');
-=======
->>>>>>> acd3c44ada4731d1b8bbd7757780ecf630961e66
 const sql = require('mssql');
 const passport = require('passport');
-
+// const debug = require('debug')('app:users');
 const router = express.Router();
 
 const usersController = require('../controllers/usersController');
