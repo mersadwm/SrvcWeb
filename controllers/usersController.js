@@ -1,4 +1,4 @@
-// const debug = require('debug')('app:usersController');
+const debug = require('debug')('app:usersController');
 const sql = require('mssql');
 
 
@@ -46,16 +46,6 @@ function usersController() {
   }
 
 
-  function addGUser(username, password, email) {
-    const request = new sql.Request();
-    // debug(`username : ${username} ### pass : ${password} ###  email : ${email}`);
-    request.input('pLogin', sql.NVarChar, username);
-    request.input('pPassword', sql.NVarChar, password);
-    request.input('pEmail', sql.NVarChar, email);
-    request.output('responseMessage', sql.NVarChar);
-    request.execute('uspAddUser');
-  }
-
   function loginUser(username, password, done) {
     const request = new sql.Request();
     request.input('pLoginName', sql.NVarChar, username);
@@ -72,6 +62,22 @@ function usersController() {
         }
       } else {
         done(err, false);
+      }
+    });
+  }
+
+  function addGUser(username, password, email, done) {
+    const request = new sql.Request();
+    // debug(`username : ${username} ### pass : ${password} ###  email : ${email}`);
+    request.input('pLogin', sql.NVarChar, username);
+    request.input('pPassword', sql.NVarChar, password);
+    request.input('pEmail', sql.NVarChar, email);
+    request.output('responseMessage', sql.NVarChar);
+    request.execute('uspAddUser', (err, result) => {
+      // debug(err);
+      // debug(result);
+      if (result.returnValue !== 0) {
+        loginUser(username, password, done);
       }
     });
   }
