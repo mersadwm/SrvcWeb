@@ -4,3 +4,14 @@
     background-color: hsl(210, 11%, 15%);
     color: white;
 }
+
+.fab fa-linkedin-in {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.contact {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
