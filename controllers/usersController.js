@@ -45,6 +45,17 @@ function usersController() {
     });
   }
 
+
+  function addGUser(username, password, email) {
+    const request = new sql.Request();
+    // debug(`username : ${username} ### pass : ${password} ###  email : ${email}`);
+    request.input('pLogin', sql.NVarChar, username);
+    request.input('pPassword', sql.NVarChar, password);
+    request.input('pEmail', sql.NVarChar, email);
+    request.output('responseMessage', sql.NVarChar);
+    request.execute('uspAddUser');
+  }
+
   function loginUser(username, password, done) {
     const request = new sql.Request();
     request.input('pLoginName', sql.NVarChar, username);
@@ -70,6 +81,7 @@ function usersController() {
     addUser,
     loginUser,
     routeProtectionAdmin,
+    addGUser,
   };
 }
 

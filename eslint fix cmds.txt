@@ -8,4 +8,5 @@ node_modules\.bin\eslint config\strategies\oauth.strategy.js --fix
 node_modules\.bin\eslint public\javascripts\search.js --fix
 node_modules\.bin\eslint public\javascripts\questionnaire.js --fix
 node_modules\.bin\eslint public\javascripts\header_Sidebar.js --fix
+node_modules\.bin\eslint controllers\usersController.js --fix
 

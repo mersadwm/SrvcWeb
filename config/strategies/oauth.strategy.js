@@ -1,8 +1,9 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-const sql = require('mssql');
 const debug = require('debug')('app:oauth');
+const usersController = require('../../controllers/usersController');
 
+const { addGUser } = usersController();
 
 passport.use(
   new GoogleStrategy({
@@ -11,15 +12,14 @@ passport.use(
     clientSecret: 'UsfdAK9yDy9RroyMcP2YGVQZ',
     // options for google strategy
   }, (accessToken, refreshToken, profile, done) => {
-    (async function addUser() {
-      // pasport callback function
-      const {
-        displayName, givenName, familyName, id,
-      } = profile;
-      debug(profile);
-      debug('profile from the route');
-      const request = new sql.Request();
-      const result = await request.query(`INSERT INTO users (login_name, user_id) VALUES ('${displayName}', '${id}')`);
-    }());
+    debug(profile);
+    const { id } = profile;
+    debug(profile);
+    addGUser(id, 'google', `${id}somthing`);
+
+    // pasport callback function
+
+
+    debug('profile from the route');
   }),
 );
