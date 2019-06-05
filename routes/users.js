@@ -1,12 +1,11 @@
 const express = require('express');
-const sql = require('mssql');
 const passport = require('passport');
 // const debug = require('debug')('app:users');
 const router = express.Router();
 
 const usersController = require('../controllers/usersController');
 
-const { routeProtection } = usersController();
+const { routeProtection, addUser } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup');
@@ -19,19 +18,9 @@ router.route('/editProfile')
   });
 
 router.route('/signUp').post((req, res) => {
-  // debug(req.body);
   // create user
   const { username, password, email } = req.body;
-  (async function addUser() {
-    const request = new sql.Request();
-    const result = await request.query(`INSERT INTO users (user_name, pass, email) VALUES ('${username}', '${password}', '${email}')`);
-    // debug(result);
-  }());
-
-  req.login(req.body, () => {
-    res.redirect('/users/editProfile');
-  });
-  // res.json(req.body);
+  addUser(req, res, username, password, email);
 });
 
 router.route('/signin')

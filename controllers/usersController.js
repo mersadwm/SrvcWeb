@@ -1,4 +1,5 @@
 const debug = require('debug')('app:users');
+const sql = require('mssql');
 
 
 function usersController() {
@@ -11,9 +12,32 @@ function usersController() {
     }
   }
 
+  function addUser(req, res, username, password, email) {
+    const request = new sql.Request();
+    debug(`username : ${username} ### pass : ${password} ###  email : ${email}`);
+    request.input('pLogin', sql.NVarChar, username);
+    request.input('pPassword', sql.NVarChar, password);
+    request.input('pEmail', sql.NVarChar, email);
+    request.output('responseMessage', sql.NVarChar);
+    request.execute('uspAddUser', (err, result) => {
+      if (!err) {
+        if (result.output.responseMessage === 'Success') {
+          req.login(req.body, () => {
+            res.redirect('/users/editProfile');
+          });
+        } else {
+          res.send(result.output.responseMessage);
+        }
+      } else {
+        res.send(err);
+      }
+    });
+  }
+
 
   return {
     routeProtection,
+    addUser,
   };
 }
 
