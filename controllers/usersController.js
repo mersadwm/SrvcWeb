@@ -14,7 +14,7 @@ function usersController() {
 
   function routeProtectionAdmin(req, res, next) {
     if (req.user) {
-      if (req.user.adminRights) {
+      if (req.user.admin_rights) {
         // debug(req.user);
         next();
       }
