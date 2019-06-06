@@ -11,7 +11,7 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
-  res.render('addquestion');
+  res.render('/questionnairView/addquestion');
 });
 
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
