@@ -15,19 +15,19 @@ router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
 });
 
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
-  res.render('addvisualanswer');
+  res.render('questionnaireView/addvisualanswer');
 });
 
 router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
-  res.render('addverbalanswer');
+  res.render('questionnaireView/addverbalanswer');
 });
 
 router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
-  res.render('updateQuestion');
+  res.render('questionnaireView/updateQuestion');
 });
 
 router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
-  res.render('updateverbalanswer');
+  res.render('questionnaireView/updateverbalanswer');
 });
 
 module.exports = router;
