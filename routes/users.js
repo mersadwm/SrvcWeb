@@ -1,11 +1,11 @@
 const express = require('express');
 const passport = require('passport');
-// const debug = require('debug')('app:users');
+const debug = require('debug')('app:users');
 const router = express.Router();
 
 const usersController = require('../controllers/usersController');
 
-const { routeProtection, addUser } = usersController();
+const { routeProtection, addUser, loginUser } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup');
@@ -17,10 +17,19 @@ router.route('/editProfile')
     res.render('editProfile');
   });
 
-router.route('/signUp').post((req, res) => {
+router.route('/signUp').post(async (req, res) => {
   // create user
   const { username, password, email } = req.body;
-  addUser(req, res, username, password, email);
+  addUser(username, password, email);
+  const login = await loginUser(username, password);
+  debug(login);
+  if (login.output.responseMessage === 'User successfully logged in') {
+    debug('success');
+    
+  } else {
+    debug('failed');
+    await done(null, false);
+  }
 });
 
 router.route('/signin')
