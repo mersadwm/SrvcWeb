@@ -1,4 +1,4 @@
-const debug = require('debug')('app:usersController');
+// const debug = require('debug')('app:usersController');
 const sql = require('mssql');
 
 
@@ -50,12 +50,23 @@ function usersController() {
     request.execute('uspAddUser');
   }
 
+  async function updateUserInfo(username, password, firstName, lastName, profilePic) {
+    const login = await loginUser(username, password);
+    // debug(login);
+    if (login.output.responseMessage === 'User successfully logged in') {
+      // debug('success');
+      const request = new sql.Request();
+      request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', PROFILE_PIC_URL = '${profilePic}' where LOGIN_NAME = '${username}'`);
+    }
+  }
+
   return {
     routeProtection,
     addUser,
     loginUser,
     routeProtectionAdmin,
     getUserInfo,
+    updateUserInfo,
   };
 }
 

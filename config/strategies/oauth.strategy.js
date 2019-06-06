@@ -1,9 +1,9 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-const debug = require('debug')('app:oauth');
+// const debug = require('debug')('app:oauth');
 const usersController = require('../../controllers/usersController');
 
-const { addUser, loginUser } = usersController();
+const { addUser, loginUser, updateUserInfo } = usersController();
 
 passport.use(
   new GoogleStrategy({
@@ -12,26 +12,26 @@ passport.use(
     clientSecret: 'UsfdAK9yDy9RroyMcP2YGVQZ',
     // options for google strategy
   }, async (accessToken, refreshToken, profile, done) => {
-    debug(profile);
-    const { id } = profile;
+    // debug(profile);
+    const { id, name, photos } = profile;
     const username = id;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
     const email = `${id}google.com`;
-    debug(profile);
     addUser(username, pass, email);
+    updateUserInfo(username, pass, name.givenName, name.familyName, photos[0].value);
     const login = await loginUser(username, pass);
-    debug(login);
+    // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
-      debug('success');
+      // debug('success');
       done(null, true);
     } else {
-      debug('failed');
+      // debug('failed');
       done(null, true);
     }
 
     // pasport callback function
 
 
-    debug('profile from the route');
+    // debug('profile from the route');
   }),
 );

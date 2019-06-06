@@ -23,13 +23,7 @@ router.route('/signUp').post(async (req, res) => {
   addUser(username, password, email);
   const login = await loginUser(username, password);
   debug(login);
-  if (login.output.responseMessage === 'User successfully logged in') {
-    debug('success');
-    
-  } else {
-    debug('failed');
-    await done(null, false);
-  }
+  res.redirect('/users/signin');
 });
 
 router.route('/signin')
@@ -52,7 +46,7 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.render('editProfile');
+  res.redirect('/users/editProfile');
 
   // debug(result);
 });
