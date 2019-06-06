@@ -45,6 +45,26 @@ function usersController() {
     });
   }
 
+  function getUserInfo(username, password) {
+    const request = new sql.Request();
+    request.input('pLogin', sql.NVarChar, username);
+    request.input('pPassword', sql.NVarChar, password);
+    // request.output('responseMessage', sql.NVarChar);
+    request.execute('uspUserInfo', (err, result) => {
+      debug(err);
+      debug(result);
+      const {
+        // eslint-disable-next-line camelcase
+        first_name, last_name, email, admin_rights, profile_pic_url,
+      } = result;
+      const userInfo = {
+        username, first_name, last_name, email, admin_rights, profile_pic_url,
+      };
+      debug('userInfo');
+      debug(userInfo);
+    });
+  }
+
 
   function loginUser(username, password, done) {
     const request = new sql.Request();
@@ -55,7 +75,9 @@ function usersController() {
       if (!err) {
         // debug(result);
         if (result.output.responseMessage === 'User successfully logged in') {
+          // ONLY FOR TEST PORPUSE : Should be edited
           const adminRights = true;
+          getUserInfo(username, password);
           done(null, { username, adminRights });
         } else {
           done(null, false);
@@ -88,6 +110,7 @@ function usersController() {
     loginUser,
     routeProtectionAdmin,
     addGUser,
+    getUserInfo,
   };
 }
 
