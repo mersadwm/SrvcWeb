@@ -11,11 +11,15 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
-  res.render('addQuestion');
+  res.render('addquestion');
 });
 
-router.route('/addA').all(routeProtectionAdmin).get((req, res) => {
-  res.render('addAnswer');
+router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
+  res.render('addvisualanswer');
+});
+
+router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
+  res.render('addverbalanswer');
 });
 
 router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
@@ -23,7 +27,7 @@ router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
 });
 
 router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
-  res.render('updateAnswer');
+  res.render('updateverbalanswer');
 });
 
 module.exports = router;

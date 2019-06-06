@@ -219,7 +219,6 @@ a {
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
 	padding: 0;
-	vertical-align: middle;
 	
 	&:focus,
 	&:hover {
@@ -252,9 +251,6 @@ a {
 	font-weight: bold;
 	font-family: 'Roboto',arial,sans-serif;
   }
-  
-  
- 
   
   button ~ button {
 	margin-left: 20px;
