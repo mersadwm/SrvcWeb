@@ -3,7 +3,9 @@ const GoogleStrategy = require('passport-google-oauth20');
 // const debug = require('debug')('app:oauth');
 const usersController = require('../../controllers/usersController');
 
-const { addUser, loginUser, updateUserInfo } = usersController();
+const {
+  addUser, loginUser, updateUserInfo, getUserInfo,
+} = usersController();
 
 passport.use(
   new GoogleStrategy({
@@ -23,10 +25,11 @@ passport.use(
     // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
       // debug('success');
-      done(null, true);
+      const { recordset } = await getUserInfo(username, pass);
+      done(null, recordset[0]);
     } else {
       // debug('failed');
-      done(null, true);
+      done(null, false);
     }
 
     // pasport callback function

@@ -14,7 +14,7 @@ router.get('/signup', (req, res) => {
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('editProfile');
+    res.render('editProfile', req.user);
   });
 
 router.route('/signUp').post(async (req, res) => {
