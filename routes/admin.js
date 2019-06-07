@@ -12,7 +12,12 @@ router.route('/').get((req, res) => {
 
 router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addquestion');
-});
+})
+  .post((req, res) => {
+    const {
+      questionkey, parentkey, question, isvisualized, moreinfo,
+    } = req.body;
+  });
 
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addvisualanswer');
