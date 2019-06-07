@@ -1,15 +1,23 @@
 const express = require('express');
 
 const router = express.Router();
-const sql = require('mssql');
 const debug = require('debug')('app:services');
+const servicesController = require('../controllers/servicesController');
+
+const { getService, getAllServices } = servicesController;
 
 /* GET users pages. */
+router.get('/:id', (req, res) => {
+  (async function query() {
+    const result = await getService(req.param.id);
+    debug(result);
+    res.send(result.recordset);
+  }());
+});
+
 router.get('/', (req, res) => {
   (async function query() {
-    const request = new sql.Request();
-    const result = await request.query('select * from services');
-    // const result = await request.input('id', sql.Int, 1).query('select * from services where id=@id');
+    const result = await getAllServices();
     debug(result);
     res.send(result.recordset);
   }());

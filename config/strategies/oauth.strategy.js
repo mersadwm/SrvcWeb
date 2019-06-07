@@ -1,8 +1,11 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-const sql = require('mssql');
-const debug = require('debug')('app:oauth');
+// const debug = require('debug')('app:oauth');
+const usersController = require('../../controllers/usersController');
 
+const {
+  addUser, loginUser, updateUserInfo, getUserInfo,
+} = usersController();
 
 passport.use(
   new GoogleStrategy({
@@ -10,16 +13,28 @@ passport.use(
     clientID: '279862265685-c7qqd59k6j493vvbve3jkc7qbp9puujn.apps.googleusercontent.com',
     clientSecret: 'UsfdAK9yDy9RroyMcP2YGVQZ',
     // options for google strategy
-  }, (accessToken, refreshToken, profile, done) => {
-    (async function addUser() {
-      // pasport callback function
-      const {
-        displayName, givenName, familyName, id,
-      } = profile;
-      debug(profile);
-      debug('profile from the route');
-      const request = new sql.Request();
-      const result = await request.query(`INSERT INTO users (login_name, user_id) VALUES ('${displayName}', '${id}')`);
-    }());
+  }, async (accessToken, refreshToken, profile, done) => {
+    // debug(profile);
+    const { id, name, photos } = profile;
+    const username = id;
+    const pass = `sdw90sdkf${id}7iuzjh3f`;
+    const email = `${id}google.com`;
+    addUser(username, pass, email);
+    updateUserInfo(username, pass, name.givenName, name.familyName, photos[0].value);
+    const login = await loginUser(username, pass);
+    // debug(login);
+    if (login.output.responseMessage === 'User successfully logged in') {
+      // debug('success');
+      const { recordset } = await getUserInfo(username, pass);
+      done(null, recordset[0]);
+    } else {
+      // debug('failed');
+      done(null, false);
+    }
+
+    // pasport callback function
+
+
+    // debug('profile from the route');
   }),
 );

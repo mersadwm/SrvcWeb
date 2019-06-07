@@ -1,11 +1,11 @@
 const express = require('express');
 const passport = require('passport');
-// const debug = require('debug')('app:users');
+const debug = require('debug')('app:users');
 const router = express.Router();
 
 const usersController = require('../controllers/usersController');
 
-const { routeProtection, addUser } = usersController();
+const { routeProtection, addUser, loginUser } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup');
@@ -14,13 +14,16 @@ router.get('/signup', (req, res) => {
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('editProfile');
+    res.render('editProfile', req.user);
   });
 
-router.route('/signUp').post((req, res) => {
+router.route('/signUp').post(async (req, res) => {
   // create user
   const { username, password, email } = req.body;
-  addUser(req, res, username, password, email);
+  addUser(username, password, email);
+  const login = await loginUser(username, password);
+  debug(login);
+  res.redirect('/users/signin');
 });
 
 router.route('/signin')
@@ -43,7 +46,7 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.send('you reached');
+  res.redirect('/users/editProfile');
 
   // debug(result);
 });
