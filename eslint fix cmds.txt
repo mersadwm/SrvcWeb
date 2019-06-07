@@ -1,4 +1,6 @@
+node_modules\.bin\eslint routes\admin.js --fix
 node_modules\.bin\eslint routes\users.js --fix
+node_modules\.bin\eslint app.js --fix
 node_modules\.bin\eslint routes\services.js --fix
 node_modules\.bin\eslint routes\help.js --fix
 node_modules\.bin\eslint routes\index.js --fix
@@ -8,8 +10,8 @@ node_modules\.bin\eslint config\strategies\oauth.strategy.js --fix
 node_modules\.bin\eslint public\javascripts\search.js --fix
 node_modules\.bin\eslint public\javascripts\questionnaire.js --fix
 node_modules\.bin\eslint public\javascripts\header_Sidebar.js --fix
+node_modules\.bin\eslint public\javascripts\pass_Validation.js --fix
 node_modules\.bin\eslint controllers\usersController.js --fix
 node_modules\.bin\eslint controllers\questionnaireController.js --fix
 node_modules\.bin\eslint controllers\servicesController.js --fix
-node_modules\.bin\eslint public\javascripts\pass_Validation.js --fix
-node_modules\.bin\eslint routes\admin.js --fix
+

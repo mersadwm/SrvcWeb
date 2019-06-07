@@ -63,31 +63,24 @@ app.use((req, res, next) => {
   next(err);
 });
 
+
 // error handlers
 
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use((err, req, res) => {
+  app.use((err, req, res, next) => {
     res.status(err.status || 500);
-    res.send('error 500');
+    res.send(err.message);
   });
 }
 
 // production error handler
 // no stacktraces leaked to user
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  res.send('404 page not found');
+  res.send(err.message);
 });
-
-
-// app.get('/', (req, res) => {
-//   // res.send('Hello world');
-//   res.render('index', {
-//     title: ['a', 'b']
-//   });
-// });
 
 
 app.set('port', process.env.PORT || 3000);
