@@ -22,8 +22,8 @@ passport.use(
     // debug(value);
     const username = id;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
-    addUser(username, pass, value);
-    updateUserInfo(username, pass, value, name.givenName, name.familyName, photos[0].value);
+    await addUser(username, pass, value);
+    await updateUserInfo(username, pass, value, name.givenName, name.familyName, photos[0].value);
     const login = await loginUser(username, pass);
     // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
