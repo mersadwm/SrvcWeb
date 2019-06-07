@@ -10,8 +10,8 @@ const {
 passport.use(
   new GoogleStrategy({
     callbackURL: '/users/google/redirect',
-    clientID: '279862265685-c7qqd59k6j493vvbve3jkc7qbp9puujn.apps.googleusercontent.com',
-    clientSecret: 'UsfdAK9yDy9RroyMcP2YGVQZ',
+    clientID: '279862265685-lmj5j8rto2ss84enlic472f7egjnu94i.apps.googleusercontent.com',
+    clientSecret: 'cE_tKiQ4wMkFgzTozO_hPJRr',
     // options for google strategy
   }, async (accessToken, refreshToken, profile, done) => {
     // debug(profile);

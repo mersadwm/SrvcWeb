@@ -2,8 +2,31 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     background-color: hsl(210, 11%, 15%);
+    color: orange;
+}
+#footerContainer p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
     color: white;
 }
+
+#footerContainer p small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#footerContainer li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: hsl(210, 11%, 15%);
+    color: white;
+}
+
+#footerContainer a {
+    color: white;
+}
+
 
 .fab fa-linkedin-in {
     background-color: transparent;
