@@ -21,10 +21,13 @@
           Links
         </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/users/signup">signup</a>
+                <% if (!logged) {%>
                     <a class="dropdown-item" href="/users/signin">singin</a>
+                    <a class="dropdown-item" href="/users/signup">signup</a>
+                    <% } else {%>
                     <a class="dropdown-item" href="/users/logout">logout</a>
                     <a class="dropdown-item" href="/users/editProfile">edit profile</a>
+                    <% } %>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/help/faq">FAQs</a>
                     <a class="dropdown-item" href="/help/aboutUs">about us</a>

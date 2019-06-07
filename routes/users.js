@@ -8,13 +8,13 @@ const usersController = require('../controllers/usersController');
 const { routeProtection, addUser, loginUser } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
-  res.render('signup');
+  res.render('signup', { logged: req.isAuthenticated() });
 });
 
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('editProfile', req.user);
+    res.render('editProfile', { user: req.user, logged: req.isAuthenticated() });
   });
 
 router.route('/signUp').post(async (req, res) => {
@@ -28,7 +28,7 @@ router.route('/signUp').post(async (req, res) => {
 
 router.route('/signin')
   .get((req, res) => {
-    res.render('signin');
+    res.render('signin', { logged: req.isAuthenticated() });
   })
   .post(passport.authenticate('local', {
     successRedirect: '/users/editProfile',
