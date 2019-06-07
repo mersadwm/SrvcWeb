@@ -13,13 +13,13 @@ passport.use(
     clientID: '279862265685-c7qqd59k6j493vvbve3jkc7qbp9puujn.apps.googleusercontent.com',
     clientSecret: 'UsfdAK9yDy9RroyMcP2YGVQZ',
     // options for google strategy
-  }, async (accessToken, refreshToken, profile, done) => {
+  }, async (accessToken, refreshToken, profile, email, done) => {
     // debug(profile);
     const { id, name, photos } = profile;
+    const { userEmail } = email;
     const username = id;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
-    const email = `${id}google.com`;
-    addUser(username, pass, email);
+    addUser(username, pass, userEmail);
     updateUserInfo(username, pass, name.givenName, name.familyName, photos[0].value);
     const login = await loginUser(username, pass);
     // debug(login);
