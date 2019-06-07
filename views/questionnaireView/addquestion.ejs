@@ -1,28 +1,25 @@
 <form name="addquestion" action="/admin/addQ" method="post">
   <div>
     <label for="user" class="label">Question Key</label>
-    <input id="questiinKey" name="Question Key" type="text">
+    <input id="questiinKey" name="questionKey" type="text">
   </div>
   <div>
     <label for="Parent Key" class="label">Parent Key</label>
-    <input id="ParentKey" name="Parent Key" type="text">
+    <input id="ParentKey" name="parentKey" type="text">
   </div>
   <div>
     <label for="Question" class="label">Question</label>
-    <input id="question" name="Question" type="text">
+    <input id="question" name="question" type="text">
 
   </div>
-  <input id="isVisual" type="checkbox" class="check" checked>
+  <input id="isVisual" name= "isVisualized" type="checkbox" class="check" checked>
   <label for="IsVisualized"><span class="icon"></span> Is Visualized</label>
   </div>
   <div>
     <label for="More info" class="label">More info</label>
-    <input id="moreinfo" name="more info" type="text">
+    <input id="moreinfo" name="moreInfo" type="text">
   </div>
-  <a href="/admin/addQ">
-     <button type="button">
-
-    <span> submit </span>
-    </button>
-  </a>
+  <div>
+  <input type="submit" class="button" value="submit">
+  </div>
   <form>
