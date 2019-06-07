@@ -1,4 +1,5 @@
 const express = require('express');
+const debug = require('debug')('app:usersController');
 
 const router = express.Router();
 
@@ -8,13 +9,15 @@ const questionnaireController = require('../controllers/questionnaireController'
 
 const { routeProtectionAdmin } = usersController();
 
-const { addQuestion, updateQuestion } = questionnaireController();
+const {
+  addQuestion, updateQuestion, addVisualAnswer, addVerbalAnswer,
+} = questionnaireController();
 
 router.route('/').get((req, res) => {
   res.send('not found');
 });
 
-router.route('/addQ').get((req, res) => {
+router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addquestion');
 })
   .post((req, res) => {
@@ -32,14 +35,30 @@ router.route('/addQ').get((req, res) => {
   });
 
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/addvisualanswer');
-});
+  res.render('questionnaireView/addvisualanswers');
+})
+  .post((req, res) => {
+    const {
+      questionKey, imageDescription, id, nextSlideKey, imageCaption, imageUrl,
+    } = req.body;
+    debug(questionKey, imageDescription, id, nextSlideKey, imageCaption, imageUrl);
+    addVisualAnswer(questionKey, imageDescription, id, nextSlideKey, imageCaption, imageUrl);
+    res.redirect('/admin/addVis');
+  });
 
 router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addverbalanswer');
-});
+})
+  .post((req, res) => {
+    const {
+      questionKey, text, id, nextSlideKey,
+    } = req.body;
 
-router.route('/updateQ').get((req, res) => {
+    addVerbalAnswer(questionKey, text, id, nextSlideKey);
+    res.redirect('/admin/addVerb');
+  });
+
+router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/updateQuestion');
 })
   .post((req, res) => {

@@ -9,16 +9,39 @@
 </head>
 
 <body>
-    <form action="">
-        <input class="question-type" type="text">
-        <input class="image-description" type="text">
-        <input class="next-slide-key" type="text">
-        <input class="image-caption" type="text">
-        <input class="image-url" type="text">
-        <input class="questiontype" type="text">
-        <a href="/admin/addVis">
-        <button class="AVA-btn type=" submit >Submit</button>
-        </a>
+    <form name="addVisualAnswer" action="/admin/addVis" method="POST" >
+        <div>
+           <label>question key</label>
+           <input name="questionKey" type="text">
+        </div>
+        <div>
+                <label>image description</label>
+                <input name="imageDescription" type="text">
+
+        </div>
+        <div>
+                <label>id</label>
+                <input name="id" type="number">
+
+        </div>
+        <div>
+                <label>next slide key</label>
+                <input name="nextSlideKey" type="text">
+
+        </div>
+        <div>
+                <label>image caption</label>
+                <input name="imageCaption" type="text">
+
+        </div>
+        <div>
+                <label>image url</label>
+                <input name="imageUrl" type="text">
+        </div>
+        <div>
+                <input type="submit" class="button" value="submit">
+
+        </div>
     </form>
 
 
