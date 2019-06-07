@@ -50,13 +50,13 @@ function usersController() {
     request.execute('uspAddUser');
   }
 
-  async function updateUserInfo(username, password, firstName, lastName, profilePic) {
+  async function updateUserInfo(username, password, email, firstName, lastName, profilePic) {
     const login = await loginUser(username, password);
     // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
       // debug('success');
       const request = new sql.Request();
-      request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', PROFILE_PIC_URL = '${profilePic}' where LOGIN_NAME = '${username}'`);
+      request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', PROFILE_PIC_URL = '${profilePic}', email = '${email}' where LOGIN_NAME = '${username}'`);
     }
   }
 
