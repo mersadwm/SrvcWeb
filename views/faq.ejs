@@ -21,10 +21,10 @@
 <body>
 
     <!-- Header -->
-    <div id="header_SliderContainer"></div>
+    <%- include partials/header_Slider %>
     <!-- Page contents -->
     <div id="main">
-        <div id="headerContainer"></div>
+        <%- include partials/header %>
         <!-- End header -->
 
         <!-- Preloader -->
@@ -641,7 +641,7 @@
 
 
         <!-- Footer -->
-        <div id="footerContainer"></div>
+    <%- include partials/footer %>
     </div>
     <!-- End footer -->
 
@@ -655,14 +655,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="/javascripts/header_Sidebar.js"></script>
-
-    <script>
-        $(document).ready(async function () {
-            $('#headerContainer').load("/subviews/header.html");
-            $('#header_SliderContainer').load("/subviews/header_Slider.html");
-            $('#footerContainer').load("/subviews/footer.html");
-        });
-    </script>
 
 </body>
 
