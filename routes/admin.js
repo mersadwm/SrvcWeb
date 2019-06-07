@@ -22,6 +22,7 @@ router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
 })
   .post((req, res) => {
     let {
+      // eslint-disable-next-line prefer-const
       questionKey, parentKey, question, isVisualized, moreInfo,
     } = req.body;
     if (isVisualized === 'on') {
@@ -63,13 +64,10 @@ router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
 })
   .post((req, res) => {
     let {
+      // eslint-disable-next-line prefer-const
       questionKey, parentKey, question, isVisualized, moreInfo,
     } = req.body;
-    if (isVisualized === 'on') {
-      isVisualized = 1;
-    } else {
-      isVisualized = 0;
-    }
+    isVisualized = isVisualized === 'on' ? 1 : 0;
     updateQuestion(question, parentKey, moreInfo, questionKey, isVisualized);
 
     res.redirect('/admin/updateQ');
