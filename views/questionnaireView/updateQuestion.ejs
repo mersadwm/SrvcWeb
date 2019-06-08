@@ -1,12 +1,38 @@
-<form name="update question">
-  <div>
-    <label for="questionkey" class="label">Question Key</label>
-    <input id="questiinKey" name="Question Key" type="text">
-  </div>
-  <a href="/admin/updateQ">
-  <button type="button">
+<!DOCTYPE html>
+<html lang="en">
 
-    <span> submit </span>
-  </button>
-  </a>
-  <form>
+<head>
+  <meta charset="UTF-8">
+  <title>Update Quetion</title>
+</head>
+
+<body>
+
+  <form name="addquestion" action="/admin/updateQ" method="post">
+    <div>
+      <label for="questionkey" class="label">Enter key of the question you want to edit</label>
+      <input id="questiinKey" name="questionKey" type="text">
+    </div>
+    <div>
+      <label for="Parent Key" class="label">Parent Key</label>
+      <input id="ParentKey" name="parentKey" type="text">
+    </div>
+    <div>
+      <label for="Question" class="label">Question</label>
+      <input id="question" name="question" type="text">
+
+    </div>
+    <input id="isVisual" name="isVisualized" type="checkbox" class="check" checked>
+    <label for="IsVisualized"><span class="icon"></span> Is Visualized</label>
+    </div>
+    <div>
+      <label for="More info" class="label">More info</label>
+      <input id="moreinfo" name="moreInfo" type="text">
+    </div>
+    <div>
+      <input type="submit" class="button" value="submit">
+    </div>
+    <form>
+</body>
+
+</html>

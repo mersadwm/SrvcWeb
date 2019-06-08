@@ -19,10 +19,10 @@
 
 <body>
   <!-- Header -->
-  <div id="header_SliderContainer"></div>
+    <%- include partials/header_Slider %>
   <!-- Page contents -->
   <div id="main">
-    <div id="headerContainer"></div>
+        <%- include partials/header %>
     <!-- End header -->
 
     <div class="container">
@@ -32,7 +32,7 @@
         <!-- left column -->
         <div class="col-md-3">
           <div class="text-center">
-            <img src="<%if(profile_pic_url){%><%=profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
+            <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
             <h6>Upload a different photo...</h6>
 
             <input type="file" class="form-control">
@@ -41,11 +41,11 @@
 
         <!-- edit form column -->
         <div class="col-md-9 personal-info">
-        <%if(!first_name || !last_name || !address_1){ %>
+        <%if(!user.first_name || !user.last_name || !user.address_1){ %>
           <div class="alert alert-info alert-dismissable">
             <a class="panel-close close" data-dismiss="alert">×</a>
             <i class="fa fa-coffee"></i>
-            Please enter your <%if(!first_name){%><strong>first name</strong> and <%}%> <%if(!last_name){%><strong>last name</strong> and <%}%> <%if(!address_1){%><strong>adress</strong><%}%>
+            Please enter your <%if(!user.first_name){%><strong>first name</strong> and <%}%> <%if(!user.last_name){%><strong>last name</strong> and <%}%> <%if(!user.address_1){%><strong>adress</strong><%}%>
           </div>
           <% }%>
           <h3>Personal info</h3>
@@ -54,13 +54,13 @@
             <div class="form-group">
               <label class="col-lg-3 control-label">First name:</label>
               <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=first_name%>">
+                <input class="form-control" type="text" value="<%=user.first_name%>">
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Last name:</label>
               <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=last_name%>">
+                <input class="form-control" type="text" value="<%=user.last_name%>">
               </div>
             </div>
             <div class="form-group">
@@ -72,7 +72,7 @@
             <div class="form-group">
               <label class="col-lg-3 control-label">Email:</label>
               <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=email%>">
+                <input class="form-control" type="text" value="<%=user.email%>">
               </div>
             </div>
             <div class="form-group">
@@ -111,7 +111,7 @@
 
 
     <!-- Footer -->
-    <div id="footerContainer"></div>
+    <%- include partials/footer %>
   </div>
   <!-- End footer -->
 
@@ -126,11 +126,4 @@
   </script>
   <script src="/javascripts/header_Sidebar.js"></script>
 
-  <script>
-    $(document).ready(async function () {
-            $('#headerContainer').load("/subviews/header.html");
-            $('#header_SliderContainer').load("/subviews/header_Slider.html");
-            $('#footerContainer').load("/subviews/footer.html");
-    });
-  </script>
 </body>

@@ -1,7 +1,8 @@
 const passport = require('passport');
 const { Strategy } = require('passport-local');
+// const debug = require('debug')('app:localStrategy');
+
 const usersController = require('../../controllers/usersController');
-const debug = require('debug')('app:localStrategy');
 
 
 const { loginUser, getUserInfo } = usersController();

@@ -20,17 +20,17 @@
 
 <body>
   <!-- Header -->
-  <div id="header_SliderContainer"></div>
+    <%- include partials/header_Slider %>
   <!-- Page contents -->
   <div id="main">
-    <div id="headerContainer"></div>
+        <%- include partials/header %>
     <!-- End header -->
 
     <div class="login-wrap">
       <div class="login-html">
         <input id="tab-1"  action="/users/signup.ejs" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
         
-        <input id="tab-2"type="radio" name="tab" class="sign-up" disabled><label for="tab-2" class="tab">Sign Up</label>
+        <input id="tab-2"type="radio" name="tab" class="sign-up" disabled><label for="tab-2" class="tab" onClick="window.location.href='/users/signup'" >Sign Up</label>
         
 
         <div class="login-form">
@@ -76,7 +76,7 @@
 
 
     <!-- Footer -->
-    <div id="footerContainer"></div>
+    <%- include partials/footer %>
   </div>
   <!-- End footer -->
 
@@ -91,13 +91,6 @@
   </script>
   <script src="/javascripts/header_Sidebar.js"></script>
 
-  <script>
-    $(document).ready(async function () {
-            $('#headerContainer').load("/subviews/header.html");
-            $('#header_SliderContainer').load("/subviews/header_Slider.html");
-            $('#footerContainer').load("/subviews/footer.html");
-    });
-  </script>
 </body>
 
 </html>

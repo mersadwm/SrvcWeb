@@ -19,10 +19,10 @@
 
 <body>
     <!-- Header -->
-    <div id="header_SliderContainer"></div>
+    <%- include partials/header_Slider %>
     <!-- Page contents -->
     <div id="main">
-        <div id="headerContainer"></div>
+        <%- include partials/header %>
         <!-- End header -->
 
 
@@ -79,7 +79,7 @@
 
 
         <!-- Footer -->
-        <div id="footerContainer"></div>
+      <%- include partials/footer %>
     </div>
     <!-- End footer -->
 
@@ -94,13 +94,6 @@
     </script>
     <script src="/javascripts/header_Sidebar.js"></script>
 
-    <script>
-        $(document).ready(async function () {
-            $('#headerContainer').load("/subviews/header.html");
-            $('#header_SliderContainer').load("/subviews/header_Slider.html");
-            $('#footerContainer').load("/subviews/footer.html");
-        });
-    </script>
 </body>
 
 </html>

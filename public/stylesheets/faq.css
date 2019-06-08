@@ -1,13 +1,15 @@
 .c05{
     position: relative;
-    margin-left: 30%;
+    margin-left: 15%;
+    margin-right: 10%;
     box-align: left;
 }
 
 
 .c05-faq-container__title{
     position: relative;
-    margin-left: 30%;
+    margin-left: 14%;
+    margin-right: 10%;
     box-align: left;
     color: red;
 }

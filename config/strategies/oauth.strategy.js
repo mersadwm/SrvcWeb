@@ -15,12 +15,15 @@ passport.use(
     // options for google strategy
   }, async (accessToken, refreshToken, profile, done) => {
     // debug(profile);
-    const { id, name, photos } = profile;
+    const {
+      id, name, photos, emails,
+    } = await profile;
+    const { value } = await emails[0];
+    // debug(value);
     const username = id;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
-    const email = `${id}google.com`;
-    addUser(username, pass, email);
-    updateUserInfo(username, pass, name.givenName, name.familyName, photos[0].value);
+    await addUser(username, pass, value);
+    await updateUserInfo(username, pass, value, name.givenName, name.familyName, photos[0].value);
     const login = await loginUser(username, pass);
     // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
