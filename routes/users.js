@@ -24,7 +24,7 @@ const user = {
   PLZ: '',
 };
 
-const { routeProtection, addUser, loginUser } = usersController();
+const { routeProtection, addUser, loginUser, updateUserInfo } = usersController();
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
@@ -34,6 +34,14 @@ router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
     res.render('editProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+  })
+  .post((req, res) => {
+    const {
+      userName, password, email, firstName, lastName,
+    } = req.body;
+
+    updateUserInfo(userName, password, email, firstName, lastName, null);
+    res.redirect('/users/profile');
   });
 
 router.route('/signUp').post(async (req, res) => {
