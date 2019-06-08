@@ -9,12 +9,27 @@
 </head>
 
 <body>
-    <form action="">
-        <input class="question-type" type="text">
-        <input class="next-slide-key" type="text">
-        <a href="/admin/updateA">
-            <button type="submit">Submit</button>
-        </a>
+    <form name="verbalQuestion" action="/admin/updateA" method="POST">
+        <div>
+            <label>Enter question key for the related question you want to edit</label>
+            <input name="questionKey" type="text">
+        </div>
+        <div>
+            <label>text </label>
+            <input name="text" type="text">
+        </div>
+        <div>
+            <label>id </label>
+            <input name="id" type="number">
+        </div>
+        <div>
+            <label>next slide key </label>
+            <input name="nextSlideKey" type="text">
+        </div>
+        <div>
+            <input type="submit" class="button" value="submit">
+        </div>
+
     </form>
 
 

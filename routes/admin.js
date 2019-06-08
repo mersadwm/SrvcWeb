@@ -10,7 +10,7 @@ const questionnaireController = require('../controllers/questionnaireController'
 const { routeProtectionAdmin } = usersController();
 
 const {
-  addQuestion, updateQuestion, addVisualAnswer, addVerbalAnswer,
+  addQuestion, updateQuestion, addVisualAnswer, addVerbalAnswer, updateVerbalAnswer,
 } = questionnaireController();
 
 router.route('/').get((req, res) => {
@@ -25,11 +25,7 @@ router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
       // eslint-disable-next-line prefer-const
       questionKey, parentKey, question, isVisualized, moreInfo,
     } = req.body;
-    if (isVisualized === 'on') {
-      isVisualized = 1;
-    } else {
-      isVisualized = 0;
-    }
+    isVisualized = isVisualized === 'on' ? 1 : 0;
     addQuestion(question, parentKey, moreInfo, questionKey, isVisualized);
 
     res.redirect('/admin/addQ');
@@ -75,6 +71,14 @@ router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
 
 router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/updateverbalanswer');
-});
+})
+  .post((req, res) => {
+    const {
+      questionKey, text, id, nextSlideKey,
+    } = req.body;
+
+    updateVerbalAnswer(questionKey, text, id, nextSlideKey);
+    res.redirect('/admin/updateA');
+  });
 
 module.exports = router;

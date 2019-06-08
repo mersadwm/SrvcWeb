@@ -43,11 +43,21 @@ function questionnaireController() {
     request.query('insert into visual_answer values(@question_key, @image_description, @id, @next_slide_key, @image_caption, @image_url)');
   }
 
+  function updateVerbalAnswer(questionKey, text, id, nextSlideKey) {
+    const request = new sql.Request();
+    request.input('question_key', questionKey);
+    request.input('txt', text);
+    request.input('id', sql.Int, id);
+    request.input('next_slide_key', nextSlideKey);
+    request.query(`update verbal_answer set txt = '${text}', id = '${id}', next_slide_key = '${nextSlideKey}' where question_key = '${questionKey}' `);
+  }
+
   return {
     addQuestion,
     updateQuestion,
     addVerbalAnswer,
     addVisualAnswer,
+    updateVerbalAnswer,
   };
 }
 module.exports = questionnaireController;
