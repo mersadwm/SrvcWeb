@@ -1,5 +1,5 @@
 const sql = require('mssql');
-
+const debug = require('debug')('app:usersController');
 
 function questionnaireController() {
   function addQuestion(question, parentKey, moreInfo, questionKey, isVisualized) {
@@ -51,6 +51,20 @@ function questionnaireController() {
     request.input('next_slide_key', nextSlideKey);
     request.query(`update verbal_answer set txt = '${text}', id = '${id}', next_slide_key = '${nextSlideKey}' where question_key = '${questionKey}' `);
   }
+  function getQuestion(id) {
+    const request = new sql.Request();
+    const result = request.input('title', sql.NVarChar, id).query('select * from question where title=@title');
+    debug(result);
+    return (result);
+  }
+
+  function getAllQuestions() {
+    const request = new sql.Request();
+    const result = request.query('select * from question');
+    debug(result);
+    return (result);
+  }
+
 
   return {
     addQuestion,
@@ -58,6 +72,8 @@ function questionnaireController() {
     addVerbalAnswer,
     addVisualAnswer,
     updateVerbalAnswer,
+    getAllQuestions,
+    getQuestion,
   };
 }
-module.exports = questionnaireController;
+module.exports = questionnaireController();

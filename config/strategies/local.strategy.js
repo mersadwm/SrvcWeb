@@ -5,7 +5,7 @@ const { Strategy } = require('passport-local');
 const usersController = require('../../controllers/usersController');
 
 
-const { loginUser, getUserInfo } = usersController();
+const { loginUser, getUserInfo } = usersController;
 
 
 module.exports = function localStrategy() {

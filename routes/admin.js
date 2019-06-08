@@ -7,11 +7,11 @@ const usersController = require('../controllers/usersController');
 
 const questionnaireController = require('../controllers/questionnaireController');
 
-const { routeProtectionAdmin } = usersController();
+const { routeProtectionAdmin } = usersController;
 
 const {
   addQuestion, updateQuestion, addVisualAnswer, addVerbalAnswer, updateVerbalAnswer,
-} = questionnaireController();
+} = questionnaireController;
 
 
 router.route('/').get((req, res) => {

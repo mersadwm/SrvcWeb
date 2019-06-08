@@ -5,7 +5,7 @@ const usersController = require('../../controllers/usersController');
 
 const {
   addUser, loginUser, updateUserInfo, getUserInfo,
-} = usersController();
+} = usersController;
 
 passport.use(
   new GoogleStrategy({

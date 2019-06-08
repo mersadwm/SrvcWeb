@@ -71,4 +71,4 @@ function usersController() {
 }
 
 
-module.exports = usersController;
+module.exports = usersController();
