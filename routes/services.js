@@ -2,11 +2,31 @@ const express = require('express');
 
 const router = express.Router();
 const debug = require('debug')('app:services');
+const defined = require('defined');
 const servicesController = require('../controllers/servicesController');
 const questionController = require('../controllers/questionnaireController');
 
 const { getService, getAllServices } = servicesController;
 const { getQuestion, getAllQuestions } = questionController;
+
+
+const user = {
+  first_name: '',
+  last_name: '',
+  login_name: '',
+  email: '',
+  admin_rights: false,
+  profile_pic_url: '/images/profilePic/default_w.png',
+  address_1: '',
+  address_2: '',
+  address_3: '',
+  city_name: '',
+  state_name: '',
+  Country: '',
+  PLZ: '',
+};
+
+
 /* GET users pages. */
 router.get('/id:id', (req, res) => {
   (async function query() {
@@ -36,7 +56,7 @@ router.get('/questionnaire/', (req, res) => {
   (async function query() {
     const result = await getAllQuestions();
     debug(result);
-    res.send(result.recordset);
+    res.render('questionnaireView/allQuestions', { user: defined(req.user, user), logged: req.isAuthenticated(), data: result.recordset });
   }());
 });
 

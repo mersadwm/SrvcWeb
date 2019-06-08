@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update Quetion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
+
+    <link rel="stylesheet" href="/stylesheets/adminForms.css">
+
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include ../partials/header_Slider %>
+
+    <!-- Page contents -->
+    <div id="main">
+        <%- include ../partials/header %>
+        <!-- End header -->
+
+
+        <table class="table" style="margin: 5% 0 5% 0;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question key</th>
+                    <th scope="col">Parent Key</th>
+                    <th scope="col">Quetion Text</th>
+                    <th scope="col">More info</th>
+                    <th scope="col">is a visualized?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < data.length; i++) { %>
+                 <tr>
+                    <th scope="row">i</th>
+                    <td><%=data[i].question_key%></td>
+                    <td><%=data[i].parent_key%></td>
+                    <td><%=data[i].questions%></td>
+                    <td><%=data[i].moreinfo%></td>
+                    <td><%=data[i].isvisualized%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!-- End page contents -->
+
+
+        <!-- Footer -->
+        <%- include ../partials/footer %>
+    </div>
+    <!-- End footer -->
+
+    <!-- Scripts -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+    </script>
+    <script src="/javascripts/header_Sidebar.js"></script>
+
+
+</body>
+
+</html>
