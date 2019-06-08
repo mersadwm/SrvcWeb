@@ -26,42 +26,37 @@
         <div id="main">
                 <%- include ../partials/header %>
                 <!-- End header -->
-
-                <form name="addVisualAnswer" action="/admin/addVis" method="POST">
-                        <div>
-                                <label>question key</label>
-                                <input name="questionKey" type="text">
-                        </div>
-                        <div>
-                                <label>image description</label>
-                                <input name="imageDescription" type="text">
-
-                        </div>
-                        <div>
-                                <label>id</label>
-                                <input name="id" type="number">
-
-                        </div>
-                        <div>
-                                <label>next slide key</label>
-                                <input name="nextSlideKey" type="text">
-
-                        </div>
-                        <div>
-                                <label>image caption</label>
-                                <input name="imageCaption" type="text">
-
-                        </div>
-                        <div>
-                                <label>image url</label>
-                                <input name="imageUrl" type="text">
-                        </div>
-                        <div>
-                                <input type="submit" class="button" value="submit">
-
-                        </div>
-                </form>
-
+                <div class="form-container">
+                        <form name="addVisualAnswer" action="/admin/addVis" method="POST">
+                                <div class="form-group">
+                                        <label>question key</label>
+                                        <input class="form-control" name="questionKey" type="text">
+                                </div>
+                                <div class="form-group">
+                                        <label>image description</label>
+                                        <input class="form-control" name="imageDescription" type="text">
+                                </div>
+                                <div class="form-group">
+                                        <label>id</label>
+                                        <input class="form-control" name="id" type="number">
+                                </div>
+                                <div class="form-group">
+                                        <label>next slide key</label>
+                                        <input class="form-control" name="nextSlideKey" type="text">
+                                </div>
+                                <div class="form-group">
+                                        <label>image caption</label>
+                                        <input class="form-control" name="imageCaption" type="text">
+                                </div>
+                                <div class="form-group">
+                                        <label>image url</label>
+                                        <input class="form-control" name="imageUrl" type="text">
+                                </div>
+                                <div>
+                                        <input type="submit" class="button btn btn-primary" value="submit">
+                                </div>
+                        </form>
+                </div>
 
                 <!-- End page contents -->
 
@@ -83,7 +78,7 @@
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
         </script>
-        <script src="javascripts/header_Sidebar.js"></script>
+        <script src="/javascripts/header_Sidebar.js"></script>
 
 
 </body>

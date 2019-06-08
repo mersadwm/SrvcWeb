@@ -27,30 +27,30 @@
     <%- include ../partials/header %>
     <!-- End header -->
 
+    <div class="form-container">
+      <form name="verbalQuestion" action="/admin/updateA" method="POST">
+        <div class="form-group">
+          <label>Enter question key for the related question you want to edit</label>
+          <input class="form-control" name="questionKey" type="text">
+        </div>
+        <div class="form-group">
+          <label>text </label>
+          <input class="form-control" name="text" type="text">
+        </div>
+        <div class="form-group">
+          <label>id </label>
+          <input class="form-control" name="id" type="number">
+        </div>
+        <div class="form-group">
+          <label>next slide key </label>
+          <input class="form-control" name="nextSlideKey" type="text">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="button btn btn-primary" value="submit">
+        </div>
 
-    <form name="verbalQuestion" action="/admin/updateA" method="POST">
-      <div>
-        <label>Enter question key for the related question you want to edit</label>
-        <input name="questionKey" type="text">
-      </div>
-      <div>
-        <label>text </label>
-        <input name="text" type="text">
-      </div>
-      <div>
-        <label>id </label>
-        <input name="id" type="number">
-      </div>
-      <div>
-        <label>next slide key </label>
-        <input name="nextSlideKey" type="text">
-      </div>
-      <div>
-        <input type="submit" class="button" value="submit">
-      </div>
-
-    </form>
-
+      </form>
+    </div>
 
     <!-- End page contents -->
 
@@ -72,7 +72,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
   </script>
-  <script src="javascripts/header_Sidebar.js"></script>
+  <script src="/javascripts/header_Sidebar.js"></script>
 
 
 </body>
