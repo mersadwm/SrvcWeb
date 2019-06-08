@@ -14,7 +14,7 @@ const user = {
   login_name: '',
   email: '',
   admin_rights: false,
-  profile_pic_url: '',
+  profile_pic_url: '/images/profilePic/default_w.png',
   address_1: '',
   address_2: '',
   address_3: '',

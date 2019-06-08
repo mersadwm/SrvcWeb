@@ -1,6 +1,7 @@
 const passport = require('passport');
 require('./strategies/local.strategy.js')();
-// const oauthStrategy = require('./strategies/oauth.strategy');
+// eslint-disable-next-line no-unused-vars
+const oauthStrategy = require('./strategies/oauth.strategy');
 
 module.exports = function passportConfig(app) {
   app.use(passport.initialize());

@@ -1,5 +1,5 @@
 <div id="headerContainer">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <span class="navbar-brand " style="cursor:pointer" onclick="openNav()">&#9776;</span>
         <a class="navbar-brand" href="https://extrahands4.me">
             <img src="/images/logo_transparent.png" width="30" height="30" alt="">
@@ -23,16 +23,9 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <% if (!logged) {%>
-                        <a class="dropdown-item" href="/users/signin">Login</a>
-                        <a class="dropdown-item" href="/users/signup">Register</a>
-                        <% } else {%>
-                        <a class="dropdown-item" href="/users/logout">Logout</a>
-                        <a class="dropdown-item" href="/users/editProfile">Edit Profile</a>
-                        <% } %>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/help/faq">FAQs</a>
                         <a class="dropdown-item" href="/help/aboutUs">About Us</a>
+                        <!-- <div class="dropdown-divider"></div> -->
                     </div>
                 </li>
                 <% if (user.admin_rights) {%>
@@ -56,14 +49,35 @@
             </li>
             -->
             </ul>
-            <form class="form-inline">
-                <link rel="stylesheet" href="/stylesheets/search.css">
-                <script src="/javascripts/search.js"></script>
-                <ci-search></ci-search>
-                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      -->
-            </form>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <link rel="stylesheet" href="/stylesheets/search.css">
+                        <script src="/javascripts/search.js"></script>
+                        <ci-search></ci-search>
+                        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        -->
+                </li>
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default_w.png<%}%>"
+                            class="rounded-circle z-depth-0" alt="avatar image" width="25px" height="25px">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                        aria-labelledby="navbarDropdownMenuLink-55">
+                        <% if (!logged) {%>
+                        <a class=" dropdown-item" href="/users/signin">Login</a>
+                        <a class="dropdown-item" href="/users/signup">Register</a>
+                        <% } else {%>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                        <a class="dropdown-item" href="/users/editProfile">Edit Profile</a>
+                        <% } %>
         </div>
-    </nav>
+        </li>
+        </ul>
+        </form>
+</div>
+</nav>
 </div>
