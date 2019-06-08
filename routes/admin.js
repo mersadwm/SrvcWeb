@@ -1,5 +1,6 @@
 const express = require('express');
 const debug = require('debug')('app:usersController');
+const defined = require('defined');
 
 const router = express.Router();
 
@@ -13,12 +14,29 @@ const {
   addQuestion, updateQuestion, addVisualAnswer, addVerbalAnswer, updateVerbalAnswer,
 } = questionnaireController();
 
+
+const user = {
+  first_name: '',
+  last_name: '',
+  login_name: '',
+  email: '',
+  admin_rights: false,
+  profile_pic_url: '',
+  address_1: '',
+  address_2: '',
+  address_3: '',
+  city_name: '',
+  state_name: '',
+  Country: '',
+  PLZ: '',
+};
+
 router.route('/').get((req, res) => {
   res.send('not found');
 });
 
 router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/addquestion');
+  res.render('questionnaireView/addquestion', { user: defined(req.user, user), logged: req.isAuthenticated() });
 })
   .post((req, res) => {
     let {
@@ -32,7 +50,7 @@ router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
   });
 
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/addvisualanswers');
+  res.render('questionnaireView/addvisualanswers', { user: defined(req.user, user), logged: req.isAuthenticated() });
 })
   .post((req, res) => {
     const {
@@ -44,7 +62,7 @@ router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
   });
 
 router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/addverbalanswer');
+  res.render('questionnaireView/addverbalanswer', { user: defined(req.user, user), logged: req.isAuthenticated() });
 })
   .post((req, res) => {
     const {
@@ -56,7 +74,7 @@ router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
   });
 
 router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/updateQuestion');
+  res.render('questionnaireView/updateQuestion', { user: defined(req.user, user), logged: req.isAuthenticated() });
 })
   .post((req, res) => {
     let {
@@ -70,7 +88,7 @@ router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
   });
 
 router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
-  res.render('questionnaireView/updateverbalanswer');
+  res.render('questionnaireView/updateverbalanswer', { user: defined(req.user, user), logged: req.isAuthenticated() });
 })
   .post((req, res) => {
     const {

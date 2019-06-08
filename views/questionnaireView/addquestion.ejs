@@ -4,34 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <title>Update Quetion</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/adminForms.css">
+
+
+
 </head>
 
 <body>
-  <form name="addquestion" action="/admin/addQ" method="post">
-    <div>
-      <label for="user" class="label">Question Key</label>
-      <input id="questiinKey" name="questionKey" type="text">
-    </div>
-    <div>
-      <label for="Parent Key" class="label">Parent Key</label>
-      <input id="ParentKey" name="parentKey" type="text">
-    </div>
-    <div>
-      <label for="Question" class="label">Question</label>
-      <input id="question" name="question" type="text">
+  <!-- Header -->
+  <%- include ../partials/header_Slider %>
 
+  <!-- Page contents -->
+  <div id="main">
+    <%- include ../partials/header %>
+    <!-- End header -->
+
+    <form name="addquestion" action="/admin/addQ" method="post">
+      <div>
+        <label for="user" class="label">Question Key</label>
+        <input id="questiinKey" name="questionKey" type="text">
+      </div>
+      <div>
+        <label for="Parent Key" class="label">Parent Key</label>
+        <input id="ParentKey" name="parentKey" type="text">
+      </div>
+      <div>
+        <label for="Question" class="label">Question</label>
+        <input id="question" name="question" type="text">
+
+      </div>
+      <input id="isVisual" name="isVisualized" type="checkbox" class="check" checked>
+      <label for="IsVisualized"><span class="icon"></span> Is Visualized</label>
+  </div>
+  <div>
+    <label for="More info" class="label">More info</label>
+    <input id="moreinfo" name="moreInfo" type="text">
+  </div>
+  <div>
+    <input type="submit" class="button" value="submit">
+  </div>
+  <form>
+
+
+    <!-- End page contents -->
+
+
+    <!-- Footer -->
+    <%- include ../partials/footer %>
     </div>
-    <input id="isVisual" name="isVisualized" type="checkbox" class="check" checked>
-    <label for="IsVisualized"><span class="icon"></span> Is Visualized</label>
-    </div>
-    <div>
-      <label for="More info" class="label">More info</label>
-      <input id="moreinfo" name="moreInfo" type="text">
-    </div>
-    <div>
-      <input type="submit" class="button" value="submit">
-    </div>
-    <form>
+    <!-- End footer -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="javascripts/header_Sidebar.js"></script>
+
+
 </body>
 
 </html>
