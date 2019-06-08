@@ -24,15 +24,15 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <% if (!logged) {%>
-                        <a class="dropdown-item" href="/users/signin">singin</a>
-                        <a class="dropdown-item" href="/users/signup">signup</a>
+                        <a class="dropdown-item" href="/users/signin">Login</a>
+                        <a class="dropdown-item" href="/users/signup">Register</a>
                         <% } else {%>
-                        <a class="dropdown-item" href="/users/logout">logout</a>
-                        <a class="dropdown-item" href="/users/editProfile">edit profile</a>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                        <a class="dropdown-item" href="/users/editProfile">Edit Profile</a>
                         <% } %>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/help/faq">FAQs</a>
-                        <a class="dropdown-item" href="/help/aboutUs">about us</a>
+                        <a class="dropdown-item" href="/help/aboutUs">About Us</a>
                     </div>
                 </li>
                 <% if (user.admin_rights) {%>
