@@ -15,7 +15,7 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
-  
+
 
 </head>
 
@@ -53,83 +53,82 @@
             <%}%> <%if(!user.address_1){%><strong>adress</strong><%}%>
           </div>
           <% }%>
-          <h3>Personal info</h3>
+            <h3>Personal info</h3>
 
-          <form class="form-horizontal" name="form" action="/users/editProfile" method="post">
-            <div class="form-group">
-              <label class="col-lg-3 control-label">First name:</label>
-              <div class="col-lg-8">
-                <input class="form-control" name= 'firstName' type="text" value="<%=user.first_name%>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Last name:</label>
-              <div class="col-lg-8">
-                <input class="form-control" name= 'lastName' type="text" value="<%=user.last_name%>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Company:</label>
-              <div class="col-lg-8">
-                <input class="form-control" name= 'compony' type="text" value="">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Email:</label>
-              <div class="col-lg-8">
-                <input class="form-control" name= 'email' type="text" value="<%=user.email%>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Username:</label>
-              <div class="col-md-8">
-                <input class="form-control" name= 'userName' type="text">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Password:</label>
-              <div class="col-md-8">
-                <input class="form-control" name= 'password' type="password">
-              </div>
+            <form class="form-horizontal" name="form" action="/users/editProfile" method="post">
               <div class="form-group">
-                <label class="col-md-3 control-label">Confirm password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="password">
+                <label class="col-lg-3 control-label">First name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='firstName' type="text" value="<%=user.first_name%>">
                 </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label"></label>
-              <div class="col-md-8">
-                <input type="submit" class="btn btn-primary" value="Save Changes">
-                <input type="reset" class="btn btn-default" value="Cancel">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Last name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='lastName' type="text" value="<%=user.last_name%>">
+                </div>
               </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Company:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='compony' type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Email:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='email' type="text" value="<%=user.email%>">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Username:</label>
+                <div class="col-md-8">
+                  <input class="form-control" name='userName' type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Password:</label>
+                <div class="col-md-8">
+                  <input class="form-control" name='password' type="password">
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Confirm password:</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="password">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                  <input type="submit" class="btn btn-primary" value="Save Changes">
+                  <input type="reset" class="btn btn-default" value="Cancel">
+                </div>
             </form>
           </div>
         </div>
       </div>
-      <hr>
-
-      <!-- End page contents -->
-
-
-      <!-- Footer -->
-      <%- include partials/footer %>
     </div>
-    <!-- End footer -->
+    <!-- End page contents -->
 
-    <!-- Scripts -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-    </script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
-    </script>
-    <script src="/javascripts/header_Sidebar.js"></script>
+
+    <!-- Footer -->
+    <%- include partials/footer %>
+  </div>
+  <!-- End footer -->
+
+  <!-- Scripts -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+  </script>
+  <script src="/javascripts/header_Sidebar.js"></script>
 
 </body>
