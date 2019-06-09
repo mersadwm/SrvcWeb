@@ -27,6 +27,27 @@ const user = {
   PLZ: '',
 };
 
+const verbalAnswer = {
+  nextSlidekey: '',
+  text: '',
+};
+
+const visualAnswer = {
+  nextSlidekey: '',
+  imageUrl: '',
+  imageCaption: '',
+  imageDescription: '',
+};
+
+const question = {
+  parentKey: '',
+  key: '',
+  question: '',
+  isAnswerVisualized: null,
+  moreInfo: '',
+  verbalAnswers: [],
+  visualAnswers: [],
+};
 
 /* GET users pages. */
 router.get('/id:id', (req, res) => {
@@ -60,7 +81,35 @@ router.get('/questionnaire/', (req, res) => {
     const request = new sql.Request();
     const verbalAnswers = await request.query('select * from verbal_answer');
     const visualAnswers = await request.query('select * from visual_answer');
-    res.render('questionnaireView/allQuestions', { user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset });
+
+    const finalJson = [];
+    // TEST Field
+    for (let i = 0; i < questions.recordset.lenght; i++) {
+      let tempQ = question;
+      tempQ.parentKey = questions.recordset[i].parent_key;
+      // add the rest
+      if (questions.recordset[i].isAnswerVisualized) {
+        for (let j = 0; j < visualAnswers.recordset.length; j++) {
+          if (visualAnswers.recordset[j].question_key === tempQ.key) {
+            let tempA = visualAnswer;
+            tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
+            // add the rest
+            tempQ.visualAnswers.push(tempA);
+          }
+        }
+      } else {
+        for (let j = 0; j < verbalAnswers.recordset.length; j++) {
+          // like visual answer
+        }
+      }
+      finalJson.push(tempQ);
+    }
+
+    // End Test
+
+    res.render('questionnaireView/allQuestions', {
+      user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset 
+    });
   }());
 });
 
