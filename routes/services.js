@@ -81,35 +81,48 @@ router.get('/questionnaire/', (req, res) => {
     const request = new sql.Request();
     const verbalAnswers = await request.query('select * from verbal_answer');
     const visualAnswers = await request.query('select * from visual_answer');
+    let tempQ = question;
+    let tempA = visualAnswer;
+    let tempB = verbalAnswer;
 
-    const finalJson = [];
+    let finalJson = [];
     // TEST Field
     for (let i = 0; i < questions.recordset.lenght; i++) {
-      let tempQ = question;
       tempQ.parentKey = questions.recordset[i].parent_key;
+      tempQ.key = questions.recordset[i].question_key;
+      tempQ.question = questions.recordset[i].questions;
+      tempQ.isAnswerVisualized = questions.recordset[i].isvisualized;
+      tempQ.moreInfo = questions.recordset[i].moreinfo;
       // add the rest
-      if (questions.recordset[i].isAnswerVisualized) {
+      if (questions.recordset[i].isvisualized) {
         for (let j = 0; j < visualAnswers.recordset.length; j++) {
           if (visualAnswers.recordset[j].question_key === tempQ.key) {
-            let tempA = visualAnswer;
             tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
+            tempA.imageUrl = visualAnswers.recordset[j].image_url;
+            tempA.imageCaption = visualAnswers.recordset[j].image_caption;
+            tempA.imageDescription = visualAnswers.recordset[j].image_description;
             // add the rest
             tempQ.visualAnswers.push(tempA);
           }
         }
       } else {
         for (let j = 0; j < verbalAnswers.recordset.length; j++) {
+          if (verbalAnswer.recordset[j].question_key === tempQ.key) {
+            tempB.nextSlidekey = verbalAnswer.recordset[j].next_slide_key;
+            tempB.text = verbalAnswer.recordset[j].txt;
+            tempQ.verbalAnswers.push(tempB);
+          }
           // like visual answer
         }
       }
       finalJson.push(tempQ);
     }
-
+    tempQ.isAnswerVisualized = questions.recordset[4].isvisualized;
+    debug(tempQ);
     // End Test
-
-    res.render('questionnaireView/allQuestions', {
-      user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset 
-    });
+    res.send(finalJson);
+    // res.render('questionnaireView/allQuestions', {
+    // user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset
   }());
 });
 
