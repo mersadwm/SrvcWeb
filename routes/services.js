@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const debug = require('debug')('app:services');
 const defined = require('defined');
+const sql = require('mssql');
 const servicesController = require('../controllers/servicesController');
 const questionController = require('../controllers/questionnaireController');
 
@@ -54,9 +55,12 @@ router.get('/questionnaire/:id', (req, res) => {
 
 router.get('/questionnaire/', (req, res) => {
   (async function query() {
-    const result = await getAllQuestions();
-    debug(result);
-    res.render('questionnaireView/allQuestions', { user: defined(req.user, user), logged: req.isAuthenticated(), data: result.recordset });
+    const questions = await getAllQuestions();
+    // debug(questions);
+    const request = new sql.Request();
+    const verbalAnswers = await request.query('select * from verbal_answer');
+    const visualAnswers = await request.query('select * from visual_answer');
+    res.render('questionnaireView/allQuestions', { user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset });
   }());
 });
 

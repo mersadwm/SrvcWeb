@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Update Quetion</title>
+    <title>View all</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -26,8 +26,11 @@
     <div id="main">
         <%- include ../partials/header %>
         <!-- End header -->
+        <br>
+        <br>
 
-
+        <!-- Question table -->
+        <h2 class="text-center">Questions</h2>
         <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
             <thead>
                 <tr>
@@ -40,14 +43,64 @@
                 </tr>
             </thead>
             <tbody>
-                <% for(var i=0; i < data.length; i++) { %>
+                <% for(var i=0; i < questions.length; i++) { %>
                  <tr>
                     <th scope="row"><%=i%></th>
-                    <td><%=data[i].question_key%></td>
-                    <td><%=data[i].parent_key%></td>
-                    <td><%=data[i].questions%></td>
-                    <td><%=data[i].moreinfo%></td>
-                    <td><%=data[i].isvisualized%></td>
+                    <td><%=questions[i].question_key%></td>
+                    <td><%=questions[i].parent_key%></td>
+                    <td><%=questions[i].questions%></td>
+                    <td><%=questions[i].moreinfo%></td>
+                    <td><%=questions[i].isvisualized%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!-- Verbal Answer table -->
+        <h2 class="text-center">Verbal Answers</h2>
+        <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+            <thead>
+                <tr>
+                    <th scope="col"><strong>#</strong></th>
+                    <th scope="col"><strong>Question key</strong></th>
+                    <th scope="col"><strong>Text</strong></th>
+                    <th scope="col"><strong><strong>Next question key</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < verbalAnswers.length; i++) { %>
+                 <tr>
+                    <th scope="row"><%=i%></th>
+                    <td><%=verbalAnswers[i].question_key%></td>
+                    <td><%=verbalAnswers[i].txt%></td>
+                    <td><%=verbalAnswers[i].next_slide_key%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!--- Visual Answers table -->
+        <h2 class="text-center">Visual Answer</h2>
+        <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+            <thead>
+                <tr>
+                    <th scope="col"><strong>#</strong></th>
+                    <th scope="col"><strong>Question key</strong></th>
+                    <th scope="col"><strong>Image caption</strong></th>
+                    <th scope="col"><strong>Image Description</strong></th>
+                    <th scope="col"><strong>Image URL</strong></th>
+                    <th scope="col"><strong><strong>Next question key</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < visualAnswers.length; i++) { %>
+                 <tr>
+                    <th scope="row"><%=i%></th>
+                    <td><%=visualAnswers[i].question_key%></td>
+                    <td><%=visualAnswers[i].IMAGE_CAPTION%></td>
+                    <td><%=visualAnswers[i].IMAGE_DESCRIPTION%></td>
+                    <td><%=visualAnswers[i].IMAGE_URL%></td>
+                    <td><%=visualAnswers[i].NEXT_SLIDE_KEY%></td>
                 </tr>
                 <% } %>
             </tbody>
