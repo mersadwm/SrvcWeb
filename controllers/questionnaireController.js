@@ -1,6 +1,35 @@
 const sql = require('mssql');
 const debug = require('debug')('app:usersController');
 
+class VerbalAnswer {
+  constructor() {
+    this.nextSlidekey = '';
+    this.text = '';
+  }
+}
+
+class VisualAnswer {
+  constructor() {
+    this.nextSlidekey = '';
+    this.imageUrl = '';
+    this.imageCaption = '';
+    this.imageDescription = '';
+  }
+}
+
+
+class Question {
+  constructor() {
+    this.parentKey = '';
+    this.key = '';
+    this.question = '';
+    this.isAnswerVisualized = null;
+    this.moreInfo = '';
+    this.verbalAnswers = [];
+    this.visualAnswers = [];
+  }
+}
+
 function questionnaireController() {
   function addQuestion(question, parentKey, moreInfo, questionKey, isVisualized) {
     const request = new sql.Request();
@@ -65,6 +94,52 @@ function questionnaireController() {
     return (result);
   }
 
+  async function getAllQuestionsRaw() {
+    const { recordset } = await getAllQuestions();
+    const questions = recordset;
+    // debug(questions);
+    const request = new sql.Request();
+    const verbalAnswers = await request.query('select * from verbal_answer');
+    // debug(verbalAnswers);
+    const visualAnswers = await request.query('select * from visual_answer');
+    // debug(visualAnswers);
+    const finalJson = [];
+    // TEST Field
+    for (let i = 0; i < questions.length; i++) {
+      const tempQ = new Question();
+      debug('##################');
+      debug(questions[i]);
+      tempQ.parentKey = questions[i].parent_key;
+      tempQ.key = questions[i].question_key;
+      tempQ.question = questions[i].questions;
+      tempQ.isAnswerVisualized = questions[i].isvisualized;
+      tempQ.moreInfo = questions[i].moreinfo;
+      if (questions[i].isvisualized ) {
+        for (let j = 0; j < visualAnswers.recordset.length; j++) {
+          if (visualAnswers.recordset[j].question_key === tempQ.key) {
+            const tempA = new VisualAnswer();
+            tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
+            tempA.imageUrl = visualAnswers.recordset[j].image_url;
+            tempA.imageCaption = visualAnswers.recordset[j].image_caption;
+            tempA.imageDescription = visualAnswers.recordset[j].image_description;
+            tempQ.visualAnswers.push(tempA);
+          }
+        }
+      } else {
+        for (let p = 0; p < verbalAnswers.recordset.length; p++) {
+          if (verbalAnswers.recordset[p].question_key === tempQ.key) {
+            const tempB = new VerbalAnswer();
+            tempB.nextSlidekey = verbalAnswers.recordset[p].next_slide_key;
+            tempB.text = verbalAnswers.recordset[p].txt;
+            tempQ.verbalAnswers.push(tempB);
+          }
+        }
+      }
+      finalJson.push(tempQ);
+    }
+    return finalJson;
+  }
+
 
   return {
     addQuestion,
@@ -74,6 +149,7 @@ function questionnaireController() {
     updateVerbalAnswer,
     getAllQuestions,
     getQuestion,
+    getAllQuestionsRaw,
   };
 }
 module.exports = questionnaireController();
