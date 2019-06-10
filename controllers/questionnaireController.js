@@ -1,5 +1,5 @@
 const sql = require('mssql');
-const debug = require('debug')('app:usersController');
+const debug = require('debug')('app:QuestionnaireController');
 
 class VerbalAnswer {
   constructor() {
@@ -105,17 +105,17 @@ function questionnaireController() {
     // debug(visualAnswers);
     const finalJson = [];
     // TEST Field
-    for (let i = 0; i < questions.length; i++) {
+    for (let i = 0; i < questions.length; i += 1) {
       const tempQ = new Question();
-      debug('##################');
-      debug(questions[i]);
+      // debug('##################');
+      // debug(questions[i]);
       tempQ.parentKey = questions[i].parent_key;
       tempQ.key = questions[i].question_key;
       tempQ.question = questions[i].questions;
       tempQ.isAnswerVisualized = questions[i].isvisualized;
       tempQ.moreInfo = questions[i].moreinfo;
-      if (questions[i].isvisualized ) {
-        for (let j = 0; j < visualAnswers.recordset.length; j++) {
+      if (questions[i].isvisualized) {
+        for (let j = 0; j < visualAnswers.recordset.length; j += 1) {
           if (visualAnswers.recordset[j].question_key === tempQ.key) {
             const tempA = new VisualAnswer();
             tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
@@ -126,7 +126,7 @@ function questionnaireController() {
           }
         }
       } else {
-        for (let p = 0; p < verbalAnswers.recordset.length; p++) {
+        for (let p = 0; p < verbalAnswers.recordset.length; p += 1) {
           if (verbalAnswers.recordset[p].question_key === tempQ.key) {
             const tempB = new VerbalAnswer();
             tempB.nextSlidekey = verbalAnswers.recordset[p].next_slide_key;

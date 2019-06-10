@@ -24,7 +24,9 @@ const user = {
   PLZ: '',
 };
 
-const { routeProtection, addUser, loginUser, updateUserInfo } = usersController;
+const {
+  routeProtection, addUser, loginUser, updateUserInfo,
+} = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
