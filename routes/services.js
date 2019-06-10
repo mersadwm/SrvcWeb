@@ -45,8 +45,8 @@ const question = {
   question: '',
   isAnswerVisualized: null,
   moreInfo: '',
-  verbalAnswers: [],
-  visualAnswers: [],
+  verbalAnswers: [verbalAnswer],
+  visualAnswers: [visualAnswer],
 };
 
 /* GET users pages. */
@@ -86,10 +86,9 @@ router.get('/questionnaire/raw', (req, res) => {
     const tempQ = question;
     const tempA = visualAnswer;
     const tempB = verbalAnswer;
-
     const finalJson = [];
     // TEST Field
-    for (let i = 0; i < questions.recordset.lenght; i++) {
+    for (var i = 0; i < questions.recordset.length; i++) {
       tempQ.parentKey = questions.recordset[i].parent_key;
       tempQ.key = questions.recordset[i].question_key;
       tempQ.question = questions.recordset[i].questions;
@@ -97,7 +96,7 @@ router.get('/questionnaire/raw', (req, res) => {
       tempQ.moreInfo = questions.recordset[i].moreinfo;
       // add the rest
       if (questions.recordset[i].isvisualized) {
-        for (let j = 0; j < visualAnswers.recordset.length; j++) {
+        for (var j = 0; j < visualAnswers.recordset.length; j++) {
           if (visualAnswers.recordset[j].question_key === tempQ.key) {
             tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
             tempA.imageUrl = visualAnswers.recordset[j].image_url;
@@ -110,10 +109,10 @@ router.get('/questionnaire/raw', (req, res) => {
           }
         }
       } else {
-        for (let j = 0; j < verbalAnswers.recordset.length; j++) {
-          if (verbalAnswer.recordset[j].question_key === tempQ.key) {
-            tempB.nextSlidekey = verbalAnswer.recordset[j].next_slide_key;
-            tempB.text = verbalAnswer.recordset[j].txt;
+        for (var p = 0; p < verbalAnswers.recordset.length; p++) {
+          if (verbalAnswers.recordset[p].question_key === tempQ.key) {
+            tempB.nextSlidekey = verbalAnswers.recordset[p].next_slide_key;
+            tempB.text = verbalAnswers.recordset[p].txt;
             tempQ.verbalAnswers.push(tempB);
           }
           // like visual answer
@@ -121,10 +120,9 @@ router.get('/questionnaire/raw', (req, res) => {
       }
       finalJson.push(tempQ);
     }
-    tempQ.isAnswerVisualized = questions.recordset[4].isvisualized;
-    debug(tempQ);
+    debug(finalJson);
     // End Test
-    res.send(finalJson);
+    res.send(JSON.stringify(finalJson));
   }());
 });
 
