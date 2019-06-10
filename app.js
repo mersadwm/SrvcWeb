@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(session({
-  secret: 'srvc'
+  secret: 'esxdrcfvgbe6ede5e46br6rzbdbd346djjz3wlps35jjuofd34'
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 require('./config/passport.js')(app);

@@ -66,26 +66,28 @@ router.get('/', (req, res) => {
   }());
 });
 
-router.get('/questionnaire/:id', (req, res) => {
-  (async function query() {
-    const result = await getQuestion(req.param.id);
-    debug(result);
-    res.send(result.recordset);
-  }());
-});
+// router.get('/questionnaire/:id', (req, res) => {
+//   (async function query() {
+//     const result = await getQuestion(req.param.id);
+//     debug(result);
+//     res.send(result.recordset);
+//   }());
+// });
 
-router.get('/questionnaire/', (req, res) => {
+router.get('/questionnaire/raw', (req, res) => {
   (async function query() {
     const questions = await getAllQuestions();
     // debug(questions);
     const request = new sql.Request();
     const verbalAnswers = await request.query('select * from verbal_answer');
+    // debug(verbalAnswers);
     const visualAnswers = await request.query('select * from visual_answer');
-    let tempQ = question;
-    let tempA = visualAnswer;
-    let tempB = verbalAnswer;
+    // debug(visualAnswers);
+    const tempQ = question;
+    const tempA = visualAnswer;
+    const tempB = verbalAnswer;
 
-    let finalJson = [];
+    const finalJson = [];
     // TEST Field
     for (let i = 0; i < questions.recordset.lenght; i++) {
       tempQ.parentKey = questions.recordset[i].parent_key;
@@ -102,7 +104,9 @@ router.get('/questionnaire/', (req, res) => {
             tempA.imageCaption = visualAnswers.recordset[j].image_caption;
             tempA.imageDescription = visualAnswers.recordset[j].image_description;
             // add the rest
+            debug(tempA);
             tempQ.visualAnswers.push(tempA);
+            debug(tempQ);
           }
         }
       } else {
@@ -121,9 +125,22 @@ router.get('/questionnaire/', (req, res) => {
     debug(tempQ);
     // End Test
     res.send(finalJson);
-    // res.render('questionnaireView/allQuestions', {
-    // user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset
   }());
 });
+
+
+router.get('/questionnaire/', (req, res) => {
+  (async function query() {
+    const questions = await getAllQuestions();
+    // debug(questions);
+    const request = new sql.Request();
+    const verbalAnswers = await request.query('select * from verbal_answer');
+    const visualAnswers = await request.query('select * from visual_answer');
+    res.render('questionnaireView/allQuestions', {
+      user: defined(req.user, user), logged: req.isAuthenticated(), questions: questions.recordset, verbalAnswers: verbalAnswers.recordset, visualAnswers: visualAnswers.recordset,
+    });
+  }());
+});
+
 
 module.exports = router;
