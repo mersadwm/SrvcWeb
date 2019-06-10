@@ -76,7 +76,8 @@ router.get('/', (req, res) => {
 
 router.get('/questionnaire/raw', (req, res) => {
   (async function query() {
-    const questions = await getAllQuestions();
+    const { recordset } = await getAllQuestions();
+    const questions = recordset;
     // debug(questions);
     const request = new sql.Request();
     const verbalAnswers = await request.query('select * from verbal_answer');
@@ -88,14 +89,16 @@ router.get('/questionnaire/raw', (req, res) => {
     const tempB = verbalAnswer;
     const finalJson = [];
     // TEST Field
-    for (var i = 0; i < questions.recordset.length; i++) {
-      tempQ.parentKey = questions.recordset[i].parent_key;
-      tempQ.key = questions.recordset[i].question_key;
-      tempQ.question = questions.recordset[i].questions;
-      tempQ.isAnswerVisualized = questions.recordset[i].isvisualized;
-      tempQ.moreInfo = questions.recordset[i].moreinfo;
+    for (var i = 0; i < questions.length; i++) {
+      debug('##################');
+      debug(questions[i]);
+      tempQ.parentKey = questions[i].parent_key;
+      tempQ.key = questions[i].question_key;
+      tempQ.question = questions[i].questions;
+      tempQ.isAnswerVisualized = questions[i].isvisualized;
+      tempQ.moreInfo = questions[i].moreinfo;
       // add the rest
-      if (questions.recordset[i].isvisualized) {
+      if (questions[i].isvisualized === 1) {
         for (var j = 0; j < visualAnswers.recordset.length; j++) {
           if (visualAnswers.recordset[j].question_key === tempQ.key) {
             tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
@@ -103,9 +106,9 @@ router.get('/questionnaire/raw', (req, res) => {
             tempA.imageCaption = visualAnswers.recordset[j].image_caption;
             tempA.imageDescription = visualAnswers.recordset[j].image_description;
             // add the rest
-            debug(tempA);
+            // debug(tempA);
             tempQ.visualAnswers.push(tempA);
-            debug(tempQ);
+            // debug(tempQ);
           }
         }
       } else {
@@ -120,7 +123,7 @@ router.get('/questionnaire/raw', (req, res) => {
       }
       finalJson.push(tempQ);
     }
-    debug(finalJson);
+    // debug(finalJson);
     // End Test
     res.send(JSON.stringify(finalJson));
   }());
