@@ -5,24 +5,27 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Profile Edit</title>
+  <title>Edit Profile</title>
   <meta name="description" content="Edit Profile">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
-  <link rel="stylesheet" href="/stylesheets/footer.css">
+
 
 </head>
 
 
 <body>
   <!-- Header -->
-    <%- include partials/header_Slider %>
+  <%- include partials/header_Slider %>
   <!-- Page contents -->
   <div id="main">
-        <%- include partials/header %>
+    <%- include partials/header %>
     <!-- End header -->
 
     <div class="container">
@@ -32,81 +35,80 @@
         <!-- left column -->
         <div class="col-md-3">
           <div class="text-center">
-            <img src="<%if(profile_pic_url){%><%=profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
+            <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
             <h6>Upload a different photo...</h6>
 
-            <input type="file" class="form-control">
+            <input type="file" name='file' class="form-control">
           </div>
         </div>
 
         <!-- edit form column -->
         <div class="col-md-9 personal-info">
-        <%if(!first_name || !last_name || !address_1){ %>
-          <div class="alert alert-info alert-dismissable">
+        <%if(!user.first_name || !user.last_name || !user.address_1){ %>
+          <div class=" alert alert-info alert-dismissable">
             <a class="panel-close close" data-dismiss="alert">×</a>
             <i class="fa fa-coffee"></i>
-            Please enter your <%if(!first_name){%><strong>first name</strong> and <%}%> <%if(!last_name){%><strong>last name</strong> and <%}%> <%if(!address_1){%><strong>adress</strong><%}%>
+            Please enter your <%if(!user.first_name){%><strong>first name</strong> and
+            <%}%> <%if(!user.last_name){%><strong>last name</strong> and
+            <%}%> <%if(!user.address_1){%><strong>adress</strong><%}%>
           </div>
           <% }%>
-          <h3>Personal info</h3>
+            <h3>Personal info</h3>
 
-          <form class="form-horizontal" role="form">
-            <div class="form-group">
-              <label class="col-lg-3 control-label">First name:</label>
-              <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=first_name%>">
+            <form class="form-horizontal" name="form" action="/users/editProfile" method="post">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">First name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='firstName' type="text" value="<%=user.first_name%>">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Last name:</label>
-              <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=last_name%>">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Last name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='lastName' type="text" value="<%=user.last_name%>">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Company:</label>
-              <div class="col-lg-8">
-                <input class="form-control" type="text" value="">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Company:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='compony' type="text" value="">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Email:</label>
-              <div class="col-lg-8">
-                <input class="form-control" type="text" value="<%=email%>">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Email:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='email' type="text" value="<%=user.email%>">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Username:</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text">
+              <div class="form-group">
+                <label class="col-md-3 control-label">Username:</label>
+                <div class="col-md-8">
+                  <input class="form-control" name='userName' type="text">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Password:</label>
-              <div class="col-md-8">
-                <input class="form-control" type="password">
+              <div class="form-group">
+                <label class="col-md-3 control-label">Password:</label>
+                <div class="col-md-8">
+                  <input class="form-control" name='password' type="password">
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Confirm password:</label>
+                  <div class="col-md-8">
+                    <input class="form-control" type="password">
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Confirm password:</label>
-              <div class="col-md-8">
-                <input class="form-control" type="password">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label"></label>
-              <div class="col-md-8">
-                <input type="button" class="btn btn-primary" value="Save Changes">
-                <span></span>
-                <input type="reset" class="btn btn-default" value="Cancel">
-              </div>
-            </div>
-          </form>
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                  <input type="submit" class="btn btn-primary" value="Save Changes">
+                  <input type="reset" class="btn btn-default" value="Cancel">
+                </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <hr>
-
     <!-- End page contents -->
 
 
@@ -116,13 +118,16 @@
   <!-- End footer -->
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
   </script>
   <script src="/javascripts/header_Sidebar.js"></script>
 

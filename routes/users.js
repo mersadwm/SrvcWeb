@@ -1,20 +1,49 @@
 const express = require('express');
 const passport = require('passport');
 const debug = require('debug')('app:users');
+
 const router = express.Router();
+const defined = require('defined');
+
 
 const usersController = require('../controllers/usersController');
 
-const { routeProtection, addUser, loginUser } = usersController();
+const user = {
+  first_name: '',
+  last_name: '',
+  login_name: '',
+  email: '',
+  admin_rights: false,
+  profile_pic_url: '/images/profilePic/default_w.png',
+  address_1: '',
+  address_2: '',
+  address_3: '',
+  city_name: '',
+  state_name: '',
+  Country: '',
+  PLZ: '',
+};
+
+const {
+  routeProtection, addUser, loginUser, updateUserInfo,
+} = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
-  res.render('signup');
+  res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
 });
 
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('editProfile', req.user);
+    res.render('editProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+  })
+  .post((req, res) => {
+    const {
+      userName, password, email, firstName, lastName,
+    } = req.body;
+
+    updateUserInfo(userName, password, email, firstName, lastName, null);
+    res.redirect('/users/profile');
   });
 
 router.route('/signUp').post(async (req, res) => {
@@ -28,7 +57,7 @@ router.route('/signUp').post(async (req, res) => {
 
 router.route('/signin')
   .get((req, res) => {
-    res.render('signin');
+    res.render('signin', { user: defined(req.user, user), logged: req.isAuthenticated() });
   })
   .post(passport.authenticate('local', {
     successRedirect: '/users/editProfile',

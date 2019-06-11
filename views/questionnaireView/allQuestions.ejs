@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View all</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
+
+    <link rel="stylesheet" href="/stylesheets/adminForms.css">
+
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include ../partials/header_Slider %>
+
+    <!-- Page contents -->
+    <div id="main">
+        <%- include ../partials/header %>
+        <!-- End header -->
+        <br>
+        <br>
+
+        <!-- Question table -->
+        <h2 class="text-center">Questions</h2>
+        <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+            <thead>
+                <tr>
+                    <th scope="col"><strong>#</strong></th>
+                    <th scope="col"><strong>Question key</strong></th>
+                    <th scope="col"><strong>Parent Key</strong></th>
+                    <th scope="col"><strong><strong>Quetion Text</strong></th>
+                    <th scope="col"><strong>More info</strong></th>
+                    <th scope="col"><strong>is a visualized?</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < questions.length; i++) { %>
+                 <tr>
+                    <th scope="row"><%=i%></th>
+                    <td><%=questions[i].question_key%></td>
+                    <td><%=questions[i].parent_key%></td>
+                    <td><%=questions[i].questions%></td>
+                    <td><%=questions[i].moreinfo%></td>
+                    <td><%=questions[i].isvisualized%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!-- Verbal Answer table -->
+        <h2 class="text-center">Verbal Answers</h2>
+        <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+            <thead>
+                <tr>
+                    <th scope="col"><strong>#</strong></th>
+                    <th scope="col"><strong>Question key</strong></th>
+                    <th scope="col"><strong>Text</strong></th>
+                    <th scope="col"><strong><strong>Next question key</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < verbalAnswers.length; i++) { %>
+                 <tr>
+                    <th scope="row"><%=i%></th>
+                    <td><%=verbalAnswers[i].question_key%></td>
+                    <td><%=verbalAnswers[i].txt%></td>
+                    <td><%=verbalAnswers[i].next_slide_key%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!--- Visual Answers table -->
+        <h2 class="text-center">Visual Answer</h2>
+        <table class="table" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+            <thead>
+                <tr>
+                    <th scope="col"><strong>#</strong></th>
+                    <th scope="col"><strong>Question key</strong></th>
+                    <th scope="col"><strong>Image caption</strong></th>
+                    <th scope="col"><strong>Image Description</strong></th>
+                    <th scope="col"><strong>Image URL</strong></th>
+                    <th scope="col"><strong><strong>Next question key</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < visualAnswers.length; i++) { %>
+                 <tr>
+                    <th scope="row"><%=i%></th>
+                    <td><%=visualAnswers[i].question_key%></td>
+                    <td><%=visualAnswers[i].image_caption%></td>
+                    <td><%=visualAnswers[i].image_description%></td>
+                    <td><%=visualAnswers[i].image_url%></td>
+                    <td><%=visualAnswers[i].next_slide_key%></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!-- End page contents -->
+
+
+        <!-- Footer -->
+        <%- include ../partials/footer %>
+    </div>
+    <!-- End footer -->
+
+    <!-- Scripts -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+    </script>
+    <script src="/javascripts/header_Sidebar.js"></script>
+
+
+</body>
+
+</html>

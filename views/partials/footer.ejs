@@ -1,6 +1,5 @@
 <!-- Footer -->
-<div id="footerContainer">
- <div class="page-footer font-small unique-color-dark pt-4">
+<footer class="page-footer font-small bg-dark pt-4">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -10,62 +9,58 @@
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold"><img src="/images/logo_transparent.png" width="40" height="40" alt=""> ExtraHands</h6>
-                
-
-                <p><small> ExtraHands is a free platform which can gather both customers and service providers. Enables customers
-                     from to see different offers, choose the suitable one and get the service they want and It helps the 
-                    service providers to understand customers´ problems faster, save operating time, and market their business as well.</small></p>
+                <!-- <img src="/images/logo_transparent.png" width="40" height="40"> -->
+                <h6 class="text-uppercase mb-4 font-weight-bold deep-orange-text"> EXTRA HANDS</h6>
+                <p>ExtraHands is a free platform which can gather both customers and service providers. We aim to be the
+                    most-trusted source for connecting with service professionals.</p>
             </div>
             <!-- Grid column -->
 
             <hr class="w-100 clearfix d-md-none">
 
+            <% if (logged) {%>
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Service provider </h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold deep-orange-text">SERVICE PROVIDER</h6>
                 <p>
                     <a href="/users/signup">Register</a>
                 </p>
                 <p>
-                    <a href="/users/signin">My Account</a>
+                    <a href="/users/editProfile">My Account</a>
                 </p>
                 <p>
-                    <a href="#!">Verify as a service provider </a>
+                    <a href="#!">Verification</a>
                 </p>
             </div>
-
-             <!-- Grid column -->
-
-             <hr class="w-100 clearfix d-md-none">
-
-             <!-- Grid column -->
-             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                 <h6 class="text-uppercase mb-4 font-weight-bold">Client </h6>
-                 <p>
+            <!-- Grid column -->
+            <% } else { %>
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold deep-orange-text">CLIENT</h6>
+                <p>
                     <a href="/users/signup">Register</a>
                 </p>
-                 <p>
-                     <a href="#!">Browse Categories</a>
-                 </p>
-                 <p>
-                    <a href="#!">Find service provider </a>
+                <p>
+                    <a href="#!">Browse Categories</a>
                 </p>
-                 <p>
-                     <a href="/users/signin">My Account</a>
-                 </p>
-             </div>
+                <p>
+                    <a href="#!">Find service provider</a>
+                </p>
+                <p>
+                    <a href="/users/editProfile">My Account</a>
+                </p>
+            </div>
             <!-- Grid column -->
+            <% } %>
 
             <hr class="w-100 clearfix d-md-none">
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">ExtraHands</h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold deep-orange-text">Navigation</h6>
                 <p>
-                    <a href="#!">Home</a>
+                    <a href="/">Home</a>
                 </p>
-               
                 <p>
                     <a href="/help/faq">FAQs</a>
                 </p>
@@ -73,7 +68,7 @@
                     <a href="/help/aboutUs">About us</a>
                 </p>
                 <p>
-                    <a href="#!">Contact us </a>
+                    <a href="/help/aboutUs">Contact us</a>
                 </p>
             </div>
 
@@ -82,21 +77,22 @@
 
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                <ul class="contact">
-                    <li><p>Coblitzallee 1-9<br>68163 Mannheim</p></li>
-                    <br>
-                    <li>info@gmail.com</li>
-                    <li>+49 234 567 88</li>
-                    <li>+49 234 567 89</li>
-                </ul>
+                <h6 class="text-uppercase mb-4 font-weight-bold deep-orange-text">Contact</h6>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Coblitzallee 1-9 68163 Mannheim</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> + 49 234 567 88</p>
+                <p>
+                    <i class="fas fa-print mr-3"></i> + 49 234 567 89</p>
             </div>
             <!-- Grid column -->
 
         </div>
         <!-- Footer links -->
 
-        <hr class="bg-white">
+        <hr class="deep-orange">
 
         <!-- Grid row -->
         <div class="row d-flex align-items-center">
@@ -106,8 +102,8 @@
 
                 <!--Copyright-->
                 <p class="text-center text-md-left">© 2019 Copyright:
-                    <a href="www.extrahands4.me" target="_parent">
-                        <strong> extrahands4.me</strong>
+                    <a href="https://extrahands4.me">
+                        <strong> ExtraHands4.me</strong>
                     </a>
                 </p>
 
@@ -121,20 +117,24 @@
                 <div class="text-center text-md-right">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
-                            <a href="https://www.facebook.com">
-                                <i class="fab facebook"><img src="/images/facebook.png" width="30" height="30" alt=""></i>
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.twitter.com">
-                                <i class="fab twitter"><img src="/images/twitter.png" width="30" height="30" alt=""></i>
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.linkedin.com">
-                                <i class="fab fa-linkedin-in"><img src="/images/linkedin.png" width="30" height="30" alt=""></i>
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-google-plus-g"></i>
                             </a>
-
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -148,6 +148,5 @@
     </div>
     <!-- Footer Links -->
 
- </div>
-</div>
+</footer>
 <!-- Footer -->

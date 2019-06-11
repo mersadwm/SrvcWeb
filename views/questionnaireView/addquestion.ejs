@@ -1,28 +1,81 @@
-<form name="addquestion" action="/admin/addQ" method="post">
-  <div>
-    <label for="user" class="label">Question Key</label>
-    <input id="questiinKey" name="Question Key" type="text">
-  </div>
-  <div>
-    <label for="Parent Key" class="label">Parent Key</label>
-    <input id="ParentKey" name="Parent Key" type="text">
-  </div>
-  <div>
-    <label for="Question" class="label">Question</label>
-    <input id="question" name="Question" type="text">
+<!DOCTYPE html>
+<html lang="en">
 
-  </div>
-  <input id="isVisual" type="checkbox" class="check" checked>
-  <label for="IsVisualized"><span class="icon"></span> Is Visualized</label>
-  </div>
-  <div>
-    <label for="More info" class="label">More info</label>
-    <input id="moreinfo" name="more info" type="text">
-  </div>
-  <a href="/admin/addQ">
-     <button type="button">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Quetion</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
+  
+  <link rel="stylesheet" href="/stylesheets/adminForms.css">
 
-    <span> submit </span>
-    </button>
-  </a>
-  <form>
+
+
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include ../partials/header_Slider %>
+
+  <!-- Page contents -->
+  <div id="main">
+    <%- include ../partials/header %>
+    <!-- End header -->
+
+    <div class="form-container">
+      <form name="addquestion" action="/admin/addQ" method="post">
+        <div class="form-group">
+          <label for="user" class="label">Question Key</label>
+          <input id="questiinKey" class="form-control" name="questionKey" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Parent Key" class="label">Parent Key</label>
+          <input id="ParentKey" class="form-control" name="parentKey" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Question" class="label">Question</label>
+          <input id="question" class="form-control" name="question" type="text">
+        </div>
+        <div class="form-check">
+          <input id="isVisual" class="form-check-input" name="isVisualized" type="checkbox" class="check" checked>
+          <label for="IsVisualized" class="form-check-label"><span class="icon"></span> Is Visualized</label>
+        </div>
+        <div class="form-group">
+          <label for="More info" class="label">More info</label>
+          <input id="moreinfo" class="form-control" name="moreInfo" type="text">
+        </div>
+        <input type="submit" class="button btn btn-primary" value="submit">
+        <form>
+    </div>
+
+    <!-- End page contents -->
+
+
+    <!-- Footer -->
+    <%- include ../partials/footer %>
+  </div>
+  <!-- End footer -->
+
+  <!-- Scripts -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+  </script>
+  <script src="/javascripts/header_Sidebar.js"></script>
+
+
+</body>
+
+</html>

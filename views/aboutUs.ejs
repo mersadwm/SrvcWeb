@@ -10,10 +10,13 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
     <link rel="stylesheet" href="/stylesheets/aboutUs.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    
 
 </head>
 
@@ -30,7 +33,7 @@
         <section id="banner">
             <i class="icon fa-diamond"></i>
             <h2>About ExtraHands</h2>
-                  <p>We help users choose great service providers,<br> and we help service providers succeed</p>
+            <p>We help users choose great service providers,<br> and we help service providers succeed</p>
         </section>
 
         <!-- contents -->
@@ -40,57 +43,63 @@
                     <span class="image"><img src="\images\aboutUs\pic01.jpg" alt=""></span>
                     <div class="content">
                         <h2> Tell us about your problem </h2>
-                        <p> Select a service category that best matches your home repair or improvement need. 
-                        Then by answering our Questionnaire, we ensure that we are able to match you to the 
-                        right service provider for your service.</p>
-                    </div>
-                </article> 
-            </div>
-
-        <section id="two" class="content wrapper">
-            <div class="inner">        
-                <article class="feature right">
-                    <span class="image"><img src="\images\aboutUs\pic02.jpg" alt=""></span>
-                    <div class="content">
-                        <h2>Get Matched </h2>
-                        <p>Compare between service providers' profiles, see their contact information and 
-                        previous work and contact them to make sure you got the right provider you want.<br>
-                        </p>
+                        <p> Select a service category that best matches your home repair or improvement need.
+                            Then by answering our Questionnaire, we ensure that we are able to match you to the
+                            right service provider for your service.</p>
                     </div>
                 </article>
-            </div>    
-
-        <section id="three" class="content wrapper">
-            <div class="inner">         
-                <article class="feature left">
-                    <span class="image"><img src="\images\aboutUs\pic03.jpg" alt=""></span>
-                    <div class="content">
-                        <h2>Leave feedback</h2>
-                        <p>Feedback system ensures that service providers are rewarded for good work and held accountable for any problems.
-                         Our service providers relish the opportunity to build an outstanding reputation on ExtraHands, and your feedback
-                          makes that possible.Feedback rewards tradesmen for good work and holds them accountable for any problems.</p>
-                    </div>
-                </article>              
             </div>
-        </section>
+
+            <section id="two" class="content wrapper">
+                <div class="inner">
+                    <article class="feature right">
+                        <span class="image"><img src="\images\aboutUs\pic02.jpg" alt=""></span>
+                        <div class="content">
+                            <h2>Get Matched </h2>
+                            <p>Compare between service providers' profiles, see their contact information and
+                                previous work and contact them to make sure you got the right provider you want.<br>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <section id="three" class="content wrapper">
+                    <div class="inner">
+                        <article class="feature left">
+                            <span class="image"><img src="\images\aboutUs\pic03.jpg" alt=""></span>
+                            <div class="content">
+                                <h2>Leave feedback</h2>
+                                <p>Feedback system ensures that service providers are rewarded for good work and held
+                                    accountable for any problems.
+                                    Our service providers relish the opportunity to build an outstanding reputation on
+                                    ExtraHands, and your feedback
+                                    makes that possible.Feedback rewards tradesmen for good work and holds them
+                                    accountable for any problems.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
 
-        <!-- End page contents -->
+                <!-- End page contents -->
 
 
-        <!-- Footer -->
-      <%- include partials/footer %>
+                <!-- Footer -->
+                <%- include partials/footer %>
     </div>
     <!-- End footer -->
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
     </script>
     <script src="/javascripts/header_Sidebar.js"></script>
 
