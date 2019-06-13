@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-let currentSlide = '0001';
+let currentSlide = '1';
 let parentSlide = 'root';
 
 class SlideResult {
