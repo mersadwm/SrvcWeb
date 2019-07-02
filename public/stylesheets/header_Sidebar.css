@@ -36,6 +36,11 @@ body {
   margin-left: 50px;
 }
 
+.sidenav h5 {
+color: orange;
+
+}
+
 #main {
   transition: margin-left .5s;
 }

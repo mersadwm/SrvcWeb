@@ -9,3 +9,8 @@
 	right: 0;
 	padding: 15px;
 }
+
+.megamenu-li h5 {
+	color: orange;
+	font-weight: bold;
+}
