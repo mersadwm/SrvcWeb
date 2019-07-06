@@ -19,7 +19,9 @@ async function qFunc() {
   // nextSlideTransitionAnim();
   await $.ajax({
     type: 'GET',
-    url: '/services/questionnaire/raw',
+    // url: '/services/questionnaire/raw',
+    // Temproray usage of a Json file instead of querying from database to save costs
+    url: '/data/questions.json',
     dataType: 'json',
     data: {},
     success(slides) {
@@ -43,8 +45,8 @@ async function qFunc() {
             for (let j = 0; j < answers.length; j += 1) {
               answershtml += `<div class="visualAnswer"><img class="answerImg" src="${answers[j].imageUrl
               }"onclick="onAnswerClick('${answers[j].nextSlidekey}', ' ${answers[j].imageCaption}   ' )" /><div class="imageCaption unselectable" <h7>${
-                answers[j].imageCaption}</h7> </div>`
-                                + `<span class="tooltiptext unselectable">${answers[j].imageDescription}</span> </div>`;
+                answers[j].imageCaption}</h7> </div>` +
+                `<span class="tooltiptext unselectable">${answers[j].imageDescription}</span> </div>`;
             }
             $('.questionnaireContainer').append(`${answershtml}</div>`);
           } else {
