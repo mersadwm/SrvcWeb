@@ -32,6 +32,10 @@ router.get('/signup', (req, res) => {
   res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
 });
 
+router.get('/SVEditProfile', (req, res) => {
+  res.render('SVEditProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+});
+
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
