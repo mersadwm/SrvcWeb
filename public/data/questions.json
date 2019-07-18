@@ -4,7 +4,7 @@
       "key": "1",
       "question": "service category",
       "isAnswerVisualized": true,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -64,7 +64,7 @@
       "key": "figa",
       "question": "Fixing",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11",
@@ -96,7 +96,7 @@
       "key": "figa11",
       "question": "Repairing a household appliance ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11z1",
@@ -140,7 +140,7 @@
       "key": "figa11z1",
       "question": "Repair washing machine ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -153,7 +153,7 @@
       "key": "figa11z10",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -166,7 +166,7 @@
       "key": "figa11z11",
       "question": "Apple",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -179,7 +179,7 @@
       "key": "figa11z12",
       "question": "Samsung",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -192,7 +192,7 @@
       "key": "figa11z13",
       "question": "HTC",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -205,7 +205,7 @@
       "key": "figa11z14",
       "question": "Huawei",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -218,7 +218,7 @@
       "key": "figa11z15",
       "question": "LG",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -231,7 +231,7 @@
       "key": "figa11z16",
       "question": "Microsoft",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -244,7 +244,7 @@
       "key": "figa11z17",
       "question": "Motorola",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -257,7 +257,7 @@
       "key": "figa11z18",
       "question": "Nokia ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -270,7 +270,7 @@
       "key": "figa11z19",
       "question": "OnePlus ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -283,7 +283,7 @@
       "key": "figa11z2",
       "question": "Repair electric cooker ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -296,7 +296,7 @@
       "key": "figa11z20",
       "question": "Sony ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -309,7 +309,7 @@
       "key": "figa11z21",
       "question": "Xiaomi ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -322,7 +322,7 @@
       "key": "figa11z22",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -335,7 +335,7 @@
       "key": "figa11z3",
       "question": "Repair cooktop ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -348,7 +348,7 @@
       "key": "figa11z4",
       "question": "Repair dryer ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -361,7 +361,7 @@
       "key": "figa11z5",
       "question": "Repair dishwasher",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -374,7 +374,7 @@
       "key": "figa11z6",
       "question": "Repair refrigerator",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -387,7 +387,7 @@
       "key": "figa11z7",
       "question": "Repair freezer ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -400,7 +400,7 @@
       "key": "figa11z8",
       "question": "Repairing other household appliances",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -413,7 +413,7 @@
       "key": "figa11z9",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -426,7 +426,7 @@
       "key": "figa12",
       "question": "Repair home electronics ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11z9",
@@ -442,7 +442,7 @@
       "key": "figa13",
       "question": "Repair furniture & furnishings ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11z10",
@@ -458,7 +458,7 @@
       "key": "figa14",
       "question": "Mobile phone",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11z11",
@@ -514,7 +514,7 @@
       "key": "figa15",
       "question": "Other repair work",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "figa11z22",
@@ -530,7 +530,7 @@
       "key": "inga",
       "question": "Inside ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga11",
@@ -590,7 +590,7 @@
       "key": "inga11",
       "question": "Basement",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga11j1",
@@ -634,7 +634,7 @@
       "key": "inga110",
       "question": "Electrical & SmartHome",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga110r1",
@@ -662,7 +662,7 @@
       "key": "inga110r1",
       "question": "Window & glass cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -675,7 +675,7 @@
       "key": "inga110r2",
       "question": "Construction & final cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -688,7 +688,7 @@
       "key": "inga110r3",
       "question": "maintenance cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -701,7 +701,7 @@
       "key": "inga110r4",
       "question": "Other cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -714,7 +714,7 @@
       "key": "inga111",
       "question": "Heating, plumbing, climate",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga111s1",
@@ -746,7 +746,7 @@
       "key": "inga111s1",
       "question": " Installation, exchange of internal stairs",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -759,7 +759,7 @@
       "key": "inga111s2",
       "question": "shuttering & casting concrete stairs",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -772,7 +772,7 @@
       "key": "inga111s3",
       "question": "Renovate & refurbish stairs",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -785,7 +785,7 @@
       "key": "inga111s4",
       "question": "Stairs & railings varnish",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -798,7 +798,7 @@
       "key": "inga111s5",
       "question": "Other about Stairs & Balustrades",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -811,7 +811,7 @@
       "key": "inga112",
       "question": "Fireplace & chimney",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -824,7 +824,7 @@
       "key": "inga11j1",
       "question": "Complete renovation of the cellar ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -837,7 +837,7 @@
       "key": "inga11j2",
       "question": "Drain the cellar ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -850,7 +850,7 @@
       "key": "inga11j3",
       "question": "Seal/insulate cellars",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -863,7 +863,7 @@
       "key": "inga11j4",
       "question": "Renovation/levelling of cellar floors ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -876,7 +876,7 @@
       "key": "inga11j5",
       "question": "Renovate cellar wall ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -889,7 +889,7 @@
       "key": "inga11j6",
       "question": "Renovate cellar stairs ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -902,7 +902,7 @@
       "key": "inga11j7",
       "question": "Other renovation work on the cellar ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -915,7 +915,7 @@
       "key": "inga11j8",
       "question": "Disposal (e.g. of building materials) required",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -928,7 +928,7 @@
       "key": "inga12",
       "question": "Cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga12k1",
@@ -988,7 +988,7 @@
       "key": "inga12k1",
       "question": "Interior design and drywall",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1001,7 +1001,7 @@
       "key": "inga12k10",
       "question": "Tapying and painting",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1014,7 +1014,7 @@
       "key": "inga12k11",
       "question": "Renovation entrance extract",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1027,7 +1027,7 @@
       "key": "inga12k12",
       "question": "Plastering ornamental plaster",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1040,7 +1040,7 @@
       "key": "inga12k2",
       "question": "Wall breakthrough",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1053,7 +1053,7 @@
       "key": "inga12k3",
       "question": "Core drilling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1066,7 +1066,7 @@
       "key": "inga12k4",
       "question": "Bath tile",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1079,7 +1079,7 @@
       "key": "inga12k5",
       "question": "Tile mirror and wall tile",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1092,7 +1092,7 @@
       "key": "inga12k6",
       "question": "Floor tiles laid",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1105,7 +1105,7 @@
       "key": "inga12k7",
       "question": "renew",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1118,7 +1118,7 @@
       "key": "inga12k8",
       "question": "Tile panels and panelling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1131,7 +1131,7 @@
       "key": "inga12k9",
       "question": "Wall paint white",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1144,7 +1144,7 @@
       "key": "inga13",
       "question": "Staircase & Railings",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga13k1",
@@ -1196,7 +1196,7 @@
       "key": "inga13k1",
       "question": "Plaster ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1209,7 +1209,7 @@
       "key": "inga13k10",
       "question": "Other ceiling works",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1222,7 +1222,7 @@
       "key": "inga13k2",
       "question": "Paint ceiling ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1235,7 +1235,7 @@
       "key": "inga13k3",
       "question": "Wallpapering the ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1248,7 +1248,7 @@
       "key": "inga13k4",
       "question": "Lacquering the wooden ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1261,7 +1261,7 @@
       "key": "inga13k5",
       "question": "Panel the ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1274,7 +1274,7 @@
       "key": "inga13k6",
       "question": "Suspend ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1287,7 +1287,7 @@
       "key": "inga13k7",
       "question": "stucco works",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1300,7 +1300,7 @@
       "key": "inga13k8",
       "question": "Install lamps, spotlights",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1313,7 +1313,7 @@
       "key": "inga13k9",
       "question": "Insulating the suspended ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1326,7 +1326,7 @@
       "key": "inga14",
       "question": "Other interior work",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga14l1",
@@ -1378,7 +1378,7 @@
       "key": "inga14l1",
       "question": "Door, window & wall opening",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1391,7 +1391,7 @@
       "key": "inga14l10",
       "question": "Other for Doors & Windows",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1404,7 +1404,7 @@
       "key": "inga14l2",
       "question": "Installation, exchange door",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1417,7 +1417,7 @@
       "key": "inga14l3",
       "question": "Installation of animal flap",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1430,7 +1430,7 @@
       "key": "inga14l4",
       "question": "Installation, exchange window",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1443,7 +1443,7 @@
       "key": "inga14l5",
       "question": "Roof windows & skylight",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1456,7 +1456,7 @@
       "key": "inga14l6",
       "question": "Paint doors/ windows",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1469,7 +1469,7 @@
       "key": "inga14l7",
       "question": "Glazing door & window",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1482,7 +1482,7 @@
       "key": "inga14l8",
       "question": "window cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1495,7 +1495,7 @@
       "key": "inga14l9",
       "question": "Blinds & Roller blinds",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1508,7 +1508,7 @@
       "key": "inga15",
       "question": "Walls & rooms",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga15m1",
@@ -1568,7 +1568,7 @@
       "key": "inga15m1",
       "question": "Laying & renovating planks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1581,7 +1581,7 @@
       "key": "inga15m10",
       "question": "underfloor heating",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1594,7 +1594,7 @@
       "key": "inga15m11",
       "question": "Floor levelling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1607,7 +1607,7 @@
       "key": "inga15m12",
       "question": "Other about Parquet & Flooring",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1620,7 +1620,7 @@
       "key": "inga15m2",
       "question": "Grinding wooden planks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1633,7 +1633,7 @@
       "key": "inga15m3",
       "question": "parquet",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1646,7 +1646,7 @@
       "key": "inga15m4",
       "question": "Parquet sanding & varnishing",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1659,7 +1659,7 @@
       "key": "inga15m5",
       "question": "Laying & exchanging laminate",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1672,7 +1672,7 @@
       "key": "inga15m6",
       "question": "Laying carpet, PVC & linoleum",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1685,7 +1685,7 @@
       "key": "inga15m7",
       "question": "tile",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1698,7 +1698,7 @@
       "key": "inga15m8",
       "question": "Lay terrazzo flooring",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1711,7 +1711,7 @@
       "key": "inga15m9",
       "question": "Laying a natural stone floor",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1724,7 +1724,7 @@
       "key": "inga16",
       "question": "Ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga16n1",
@@ -1776,7 +1776,7 @@
       "key": "inga16n1",
       "question": "Custom-made wooden furniture",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1789,7 +1789,7 @@
       "key": "inga16n10",
       "question": "Other about Furniture & Furnishings",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1802,7 +1802,7 @@
       "key": "inga16n2",
       "question": "assemble/disassemble a prefabricated kitchen",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1815,7 +1815,7 @@
       "key": "inga16n3",
       "question": "Kitchen construction Kitchen studio",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1828,7 +1828,7 @@
       "key": "inga16n4",
       "question": "Installing the worktop",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1841,7 +1841,7 @@
       "key": "inga16n5",
       "question": "Assembly/disassembly of ready-made furniture",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1854,7 +1854,7 @@
       "key": "inga16n6",
       "question": "Restore furniture",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1867,7 +1867,7 @@
       "key": "inga16n7",
       "question": "Upholster & upholster seat furniture",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1880,7 +1880,7 @@
       "key": "inga16n8",
       "question": "Construction Highbed, Plateau",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1893,7 +1893,7 @@
       "key": "inga16n9",
       "question": "Plan your interior",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1906,7 +1906,7 @@
       "key": "inga17",
       "question": "Doors & Windows",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga17o1",
@@ -1950,7 +1950,7 @@
       "key": "inga17o1",
       "question": "Electroinst. & Renewal",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1963,7 +1963,7 @@
       "key": "inga17o2",
       "question": "Sockets, wiring & light switches",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1976,7 +1976,7 @@
       "key": "inga17o3",
       "question": "Install lamps, spotlights",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -1989,7 +1989,7 @@
       "key": "inga17o4",
       "question": "SAT system, TV cable & network",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2002,7 +2002,7 @@
       "key": "inga17o5",
       "question": "Electric cooker connection & repair",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2015,7 +2015,7 @@
       "key": "inga17o6",
       "question": "Alarm System & Security",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2028,7 +2028,7 @@
       "key": "inga17o7",
       "question": "SmartHome & Home Automation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2041,7 +2041,7 @@
       "key": "inga17o8",
       "question": "Miscellaneous about Electrics & SmartHome",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2054,7 +2054,7 @@
       "key": "inga18",
       "question": "Parquet & flooring",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga18p1",
@@ -2122,7 +2122,7 @@
       "key": "inga18p1",
       "question": "Heating system & hot water",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2135,7 +2135,7 @@
       "key": "inga18p10",
       "question": "Exchange shower & bathtub",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2148,7 +2148,7 @@
       "key": "inga18p11",
       "question": "Complete bathroom renovation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2161,7 +2161,7 @@
       "key": "inga18p12",
       "question": "Gas stove Connection",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2174,7 +2174,7 @@
       "key": "inga18p13",
       "question": "Laying gas pipelines",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2187,7 +2187,7 @@
       "key": "inga18p14",
       "question": "Other about Heating, Sanitary & Air Conditioning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2200,7 +2200,7 @@
       "key": "inga18p2",
       "question": "Installation, exchange Air conditioner",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2213,7 +2213,7 @@
       "key": "inga18p3",
       "question": "Installation, exchange oil/gas tank",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2226,7 +2226,7 @@
       "key": "inga18p4",
       "question": "underfloor heating",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2239,7 +2239,7 @@
       "key": "inga18p5",
       "question": "Piping & Connection",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2252,7 +2252,7 @@
       "key": "inga18p6",
       "question": "Connecting the valve",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2265,7 +2265,7 @@
       "key": "inga18p7",
       "question": "Installation Sanitary & Toilets",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2278,7 +2278,7 @@
       "key": "inga18p8",
       "question": "Replacement toilets",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2291,7 +2291,7 @@
       "key": "inga18p9",
       "question": "Built-in shower & bathtub",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2304,7 +2304,7 @@
       "key": "inga19",
       "question": "Furniture & furnishings",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "inga19q1",
@@ -2332,7 +2332,7 @@
       "key": "inga19q1",
       "question": "Connecting the finished chimney/stove",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2345,7 +2345,7 @@
       "key": "inga19q2",
       "question": "Building fireplace/tiled stove",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2358,7 +2358,7 @@
       "key": "inga19q3",
       "question": "Chimney construction & renovation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2371,7 +2371,7 @@
       "key": "inga19q4",
       "question": "Other about Fireplace & Chimney",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2384,7 +2384,7 @@
       "key": "itga",
       "question": "IT and software support - Werbung",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "itga11",
@@ -2412,7 +2412,7 @@
       "key": "itga11",
       "question": "Website & Software",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "itga11y1",
@@ -2428,7 +2428,7 @@
       "key": "itga11y1",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2441,7 +2441,7 @@
       "key": "itga11y2",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2454,7 +2454,7 @@
       "key": "itga11y3",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2467,7 +2467,7 @@
       "key": "itga11y4",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2480,7 +2480,7 @@
       "key": "itga12",
       "question": "Design & Print",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "itga11y2",
@@ -2496,7 +2496,7 @@
       "key": "itga13",
       "question": "Home appliances, SAT system",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "itga11y3",
@@ -2512,7 +2512,7 @@
       "key": "itga14",
       "question": "Miscellaneous to EDP & Advertising",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "itga11y4",
@@ -2528,7 +2528,7 @@
       "key": "kiga",
       "question": "Kitchen & furniture set-up",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "kiga11",
@@ -2556,7 +2556,7 @@
       "key": "kiga11",
       "question": "Kitchen & furniture construction ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "kiga11z1",
@@ -2592,7 +2592,7 @@
       "key": "kiga11z1",
       "question": "Installing the kitchen ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2605,7 +2605,7 @@
       "key": "kiga11z10",
       "question": "Repair electric stove ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2618,7 +2618,7 @@
       "key": "kiga11z11",
       "question": "Replace electric stove ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2631,7 +2631,7 @@
       "key": "kiga11z12",
       "question": "Disconnect electric stove",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2644,7 +2644,7 @@
       "key": "kiga11z13",
       "question": "Dispose of old device",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2657,7 +2657,7 @@
       "key": "kiga11z2",
       "question": "Cutting and mounting the worktop to size ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2670,7 +2670,7 @@
       "key": "kiga11z3",
       "question": "Installing a large electrical appliance (without connection)",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2683,7 +2683,7 @@
       "key": "kiga11z4",
       "question": "Dismantle old kitchen ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2696,7 +2696,7 @@
       "key": "kiga11z5",
       "question": "Transport of kitchen required (delivery) ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2709,7 +2709,7 @@
       "key": "kiga11z6",
       "question": "Disposal (e.g. of the old kitchen) required",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2722,7 +2722,7 @@
       "key": "kiga11z7",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2735,7 +2735,7 @@
       "key": "kiga11z8",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2748,7 +2748,7 @@
       "key": "kiga11z9",
       "question": "Connecting the electric stove",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2761,7 +2761,7 @@
       "key": "kiga12",
       "question": "Furniture construction & dismantling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "kiga11z7",
@@ -2777,7 +2777,7 @@
       "key": "kiga13",
       "question": "Electric cooker connection & repair ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "kiga11z8",
@@ -2793,7 +2793,7 @@
       "key": "kiga14",
       "question": "Others for Kitchen & furniture construction",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "kiga11z9",
@@ -2825,7 +2825,7 @@
       "key": "mega",
       "question": "Metal",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "mega11",
@@ -2853,7 +2853,7 @@
       "key": "mega11",
       "question": "Structure of gates & railings  ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "mega11y12",
@@ -2869,7 +2869,7 @@
       "key": "mega11y12",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2882,7 +2882,7 @@
       "key": "mega11y13",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2895,7 +2895,7 @@
       "key": "mega11y14",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2908,7 +2908,7 @@
       "key": "mega11y15",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -2921,7 +2921,7 @@
       "key": "mega12",
       "question": "Load-bearing construction ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "mega11y13",
@@ -2937,7 +2937,7 @@
       "key": "mega13",
       "question": "welding operations",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "mega11y14",
@@ -2953,7 +2953,7 @@
       "key": "mega14",
       "question": "Other metalwork",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "mega11y15",
@@ -2969,7 +2969,7 @@
       "key": "ouga",
       "question": "Outside ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga11",
@@ -3021,7 +3021,7 @@
       "key": "ouga11",
       "question": "Winter service",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga11a1",
@@ -3041,7 +3041,7 @@
       "key": "ouga110",
       "question": "Walls and shell construction",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3054,7 +3054,7 @@
       "key": "ouga11a1",
       "question": "Remove Snow from Walks, Drives and Roofs",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3067,7 +3067,7 @@
       "key": "ouga11a2",
       "question": "Distribute grit",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3080,7 +3080,7 @@
       "key": "ouga12",
       "question": "Other outside work",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga12b1",
@@ -3104,7 +3104,7 @@
       "key": "ouga12b1",
       "question": "Private space paving",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3117,7 +3117,7 @@
       "key": "ouga12b2",
       "question": "Garden Trail",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3130,7 +3130,7 @@
       "key": "ouga12b3",
       "question": "Putting lawn edge stones",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3143,7 +3143,7 @@
       "key": "ouga13",
       "question": "Private paths and areas",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga13c1",
@@ -3171,7 +3171,7 @@
       "key": "ouga13c1",
       "question": "Surface paving",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3184,7 +3184,7 @@
       "key": "ouga13c2",
       "question": "Paving work on public areas (squares, public car park)",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3197,7 +3197,7 @@
       "key": "ouga13c3",
       "question": "asphalt surface",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3210,7 +3210,7 @@
       "key": "ouga13c4",
       "question": "Concreting an area",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3223,7 +3223,7 @@
       "key": "ouga14",
       "question": "Public roads and areas",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga14d1",
@@ -3267,7 +3267,7 @@
       "key": "ouga14d1",
       "question": "Painting the facade",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3280,7 +3280,7 @@
       "key": "ouga14d2",
       "question": "Cleaning the facade",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3293,7 +3293,7 @@
       "key": "ouga14d3",
       "question": "plaster the facade",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3306,7 +3306,7 @@
       "key": "ouga14d4",
       "question": "Restoration & Refurbishment",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3319,7 +3319,7 @@
       "key": "ouga14d5",
       "question": "Balcony construction & renovation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3332,7 +3332,7 @@
       "key": "ouga14d6",
       "question": "Facade cladding",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3345,7 +3345,7 @@
       "key": "ouga14d7",
       "question": "scaffolding",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3358,7 +3358,7 @@
       "key": "ouga14d8",
       "question": "Roller shutters & awnings",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3371,7 +3371,7 @@
       "key": "ouga15",
       "question": "Facade and scaffolding",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga15e1",
@@ -3435,7 +3435,7 @@
       "key": "ouga15e1",
       "question": "Roof truss, carpenter",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3448,7 +3448,7 @@
       "key": "ouga15e10",
       "question": "Thermal collectors",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3461,7 +3461,7 @@
       "key": "ouga15e11",
       "question": "Solar system connection",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3474,7 +3474,7 @@
       "key": "ouga15e12",
       "question": "Cleaning eaves gutter",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3487,7 +3487,7 @@
       "key": "ouga15e13",
       "question": "roof cleaning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3500,7 +3500,7 @@
       "key": "ouga15e2",
       "question": "roof a house",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3513,7 +3513,7 @@
       "key": "ouga15e3",
       "question": "Roofing outbuildings",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3526,7 +3526,7 @@
       "key": "ouga15e4",
       "question": "Roof windows & skylight",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3539,7 +3539,7 @@
       "key": "ouga15e5",
       "question": "gutter & downpipe",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3552,7 +3552,7 @@
       "key": "ouga15e6",
       "question": "chimney",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3565,7 +3565,7 @@
       "key": "ouga15e7",
       "question": "waterproof the roof ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3578,7 +3578,7 @@
       "key": "ouga15e8",
       "question": "roof insulation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3591,7 +3591,7 @@
       "key": "ouga15e9",
       "question": "Electric solar panels",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3604,7 +3604,7 @@
       "key": "ouga16",
       "question": "Roof and chimney",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga16f1",
@@ -3660,7 +3660,7 @@
       "key": "ouga16f1",
       "question": "Fence construction",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3673,7 +3673,7 @@
       "key": "ouga16f10",
       "question": "Pool & Garden Pond",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3686,7 +3686,7 @@
       "key": "ouga16f11",
       "question": "Others about Horticulture & care",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3699,7 +3699,7 @@
       "key": "ouga16f2",
       "question": "Lawn Care & Create Lawn",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3712,7 +3712,7 @@
       "key": "ouga16f3",
       "question": "Tree care & pruning",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3725,7 +3725,7 @@
       "key": "ouga16f4",
       "question": "Hedge cutting",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3738,7 +3738,7 @@
       "key": "ouga16f5",
       "question": "Garden path & area",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3751,7 +3751,7 @@
       "key": "ouga16f6",
       "question": "Dispose of garden waste",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3764,7 +3764,7 @@
       "key": "ouga16f7",
       "question": "Removing hedges",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3777,7 +3777,7 @@
       "key": "ouga16f8",
       "question": "Wooden terraces",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3790,7 +3790,7 @@
       "key": "ouga16f9",
       "question": "Finished carport or similar Assembly",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3803,7 +3803,7 @@
       "key": "ouga17",
       "question": "Horticulture & care",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga17g1",
@@ -3831,7 +3831,7 @@
       "key": "ouga17g1",
       "question": "point foundation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3844,7 +3844,7 @@
       "key": "ouga17g2",
       "question": "Base plate, strip foundation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3857,7 +3857,7 @@
       "key": "ouga17g3",
       "question": "Casting concrete ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3870,7 +3870,7 @@
       "key": "ouga17g4",
       "question": "Other foundation work",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3883,7 +3883,7 @@
       "key": "ouga18",
       "question": "Foundation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga18h1",
@@ -3927,7 +3927,7 @@
       "key": "ouga18h1",
       "question": "Construction pits & channels ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3940,7 +3940,7 @@
       "key": "ouga18h2",
       "question": "well drilling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3953,7 +3953,7 @@
       "key": "ouga18h3",
       "question": "Small earthworks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3966,7 +3966,7 @@
       "key": "ouga18h4",
       "question": "Demolition & Disposal",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3979,7 +3979,7 @@
       "key": "ouga18h5",
       "question": "bore geothermal heat ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -3992,7 +3992,7 @@
       "key": "ouga18h6",
       "question": "Built-in tanks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4005,7 +4005,7 @@
       "key": "ouga18h7",
       "question": "Disposal of excavated earth",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4018,7 +4018,7 @@
       "key": "ouga18h8",
       "question": "Other dredging & earthworks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4031,7 +4031,7 @@
       "key": "ouga19",
       "question": "Diggers and earthworks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "ouga19i1",
@@ -4095,7 +4095,7 @@
       "key": "ouga19i1",
       "question": "Floor panel & ceiling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4108,7 +4108,7 @@
       "key": "ouga19i10",
       "question": "Stair construction & repair",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4121,7 +4121,7 @@
       "key": "ouga19i11",
       "question": "Railing construction & repair",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4134,7 +4134,7 @@
       "key": "ouga19i12",
       "question": "Demolition & Disposal",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4147,7 +4147,7 @@
       "key": "ouga19i13",
       "question": "Others about Walls & Shell construction",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4160,7 +4160,7 @@
       "key": "ouga19i2",
       "question": "Building shell & masonry work",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4173,7 +4173,7 @@
       "key": "ouga19i3",
       "question": "Plaster, clinker &fachen",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4186,7 +4186,7 @@
       "key": "ouga19i4",
       "question": "brick facing",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4199,7 +4199,7 @@
       "key": "ouga19i5",
       "question": "wall penetration",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4212,7 +4212,7 @@
       "key": "ouga19i6",
       "question": "core drilling",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4225,7 +4225,7 @@
       "key": "ouga19i7",
       "question": "Dry construction & interior finishing",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4238,7 +4238,7 @@
       "key": "ouga19i8",
       "question": "Screed pouring",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4251,7 +4251,7 @@
       "key": "ouga19i9",
       "question": "Dry wall",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4264,7 +4264,7 @@
       "key": "trga",
       "question": "Transport",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "trga11",
@@ -4292,7 +4292,7 @@
       "key": "trga11",
       "question": "Move",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "trga11y1",
@@ -4320,7 +4320,7 @@
       "key": "trga11y1",
       "question": "Local",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4333,7 +4333,7 @@
       "key": "trga11y2",
       "question": "National",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4346,7 +4346,7 @@
       "key": "trga11y3",
       "question": "International",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4359,7 +4359,7 @@
       "key": "trga11y4",
       "question": "Other removals",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4372,7 +4372,7 @@
       "key": "trga12",
       "question": "Transport",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "trga12y1",
@@ -4400,7 +4400,7 @@
       "key": "trga12y1",
       "question": "Delivery & Collection",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4413,7 +4413,7 @@
       "key": "trga12y2",
       "question": "Piano & furniture transport ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4426,7 +4426,7 @@
       "key": "trga12y3",
       "question": "Transport, disposal & clearing out",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4439,7 +4439,7 @@
       "key": "trga12y4",
       "question": "Other transports",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4452,7 +4452,7 @@
       "key": "trga13",
       "question": "Transfer",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "trga13y1",
@@ -4472,7 +4472,7 @@
       "key": "trga13y1",
       "question": "from Germany",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4485,7 +4485,7 @@
       "key": "trga13y2",
       "question": "to Germany",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4498,7 +4498,7 @@
       "key": "trga14",
       "question": "Other to Move & Transport",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "trga14y1",
@@ -4514,7 +4514,7 @@
       "key": "trga14y1",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4527,7 +4527,7 @@
       "key": "vega",
       "question": "Vehicales",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega11",
@@ -4559,7 +4559,7 @@
       "key": "vega11",
       "question": "CARS, TRUCKS",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega11t1",
@@ -4607,7 +4607,7 @@
       "key": "vega11t1",
       "question": "Small Repair & Smart Repair",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4620,7 +4620,7 @@
       "key": "vega11t2",
       "question": "vehicle maintenance",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4633,7 +4633,7 @@
       "key": "vega11t3",
       "question": "trailer hitch",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4646,7 +4646,7 @@
       "key": "vega11t4",
       "question": "Windscreen repair & installation",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4659,7 +4659,7 @@
       "key": "vega11t5",
       "question": "film discs",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4672,7 +4672,7 @@
       "key": "vega11t6",
       "question": "Paint vehicle",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4685,7 +4685,7 @@
       "key": "vega11t7",
       "question": "Carport made to measure",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4698,7 +4698,7 @@
       "key": "vega11t8",
       "question": "Transport & Transfer",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4711,7 +4711,7 @@
       "key": "vega11t9",
       "question": "Others for Cars & Trucks",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4724,7 +4724,7 @@
       "key": "vega12",
       "question": "Motorcycle",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega12u1",
@@ -4740,7 +4740,7 @@
       "key": "vega12u1",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4753,7 +4753,7 @@
       "key": "vega13",
       "question": "Bike",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega13v1",
@@ -4769,7 +4769,7 @@
       "key": "vega13v1",
       "question": "TBD",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4782,7 +4782,7 @@
       "key": "vega13v2",
       "question": "Transport & Transfer",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4795,7 +4795,7 @@
       "key": "vega13v3",
       "question": "Boat construction & repair",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4808,7 +4808,7 @@
       "key": "vega13v4",
       "question": "Repair boat engine",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4821,7 +4821,7 @@
       "key": "vega14",
       "question": "Boat",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega13v2",
@@ -4845,7 +4845,7 @@
       "key": "vega15",
       "question": "Installation garage doors",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         {
           "nextSlidekey": "vega15x2",
@@ -4873,7 +4873,7 @@
       "key": "vega15x2",
       "question": "Installation garage door ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4886,7 +4886,7 @@
       "key": "vega15x3",
       "question": "Replacing the garage door Disassembling the garage door ",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4899,7 +4899,7 @@
       "key": "vega15x4",
       "question": "Disposal of the garage door",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
@@ -4912,7 +4912,7 @@
       "key": "vega15x5",
       "question": "Other work on garage doors",
       "isAnswerVisualized": false,
-      "moreInfo": "NULL",
+      "moreInfo": "",
       "verbalAnswers": [
         
       ],
