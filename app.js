@@ -21,8 +21,8 @@ const app = express();
 const sqlConfig = {
   user: 'mersad',
   password: '5xqpV&Vde9!W',
-  server: 'srvc.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
-  database: 'services',
+  server: 'extrahandsdbserver.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
+  database: 'extraHandsDB',
 
   options: {
     encrypt: true // Use this if you're on Windows Azure
