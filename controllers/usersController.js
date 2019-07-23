@@ -1,4 +1,4 @@
-// const debug = require('debug')('app:usersController');
+const debug = require('debug')('app:usersController');
 const sql = require('mssql');
 
 
@@ -51,13 +51,11 @@ function usersController() {
   }
 
   async function updateUserInfo(username, password, email, firstName, lastName, profilePic) {
-    const login = await loginUser(username, password);
-    // debug(login);
-    if (login.output.responseMessage === 'User successfully logged in') {
-      // debug('success');
-      const request = new sql.Request();
-      request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', PROFILE_PIC_URL = '${profilePic}', email = '${email}' where LOGIN_NAME = '${username}'`);
-    }
+    const request = new sql.Request();
+    debug(username, password, email, firstName, lastName, profilePic);
+    // await can be removed.
+    const answ = await request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', PROFILE_PIC_URL = '${profilePic}', email = '${email}' where LOGIN_NAME = '${username}'`);
+    debug(answ);
   }
 
   return {

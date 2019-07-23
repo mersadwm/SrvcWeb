@@ -21,7 +21,7 @@ const app = express();
 const sqlConfig = {
   user: 'mersad',
   password: '5xqpV&Vde9!W',
-  server: 'extrahandsdbserver.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
+  server: 'extrahandsdbserver.database.windows.net',
   database: 'extraHandsDB',
 
   options: {

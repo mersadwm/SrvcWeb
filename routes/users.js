@@ -1,6 +1,11 @@
 const express = require('express');
 const passport = require('passport');
 const debug = require('debug')('app:users');
+const formidable = require('formidable');
+// const util = require('util');
+const path = require('path');
+const crypto = require('crypto');
+
 
 const router = express.Router();
 const defined = require('defined');
@@ -46,8 +51,21 @@ router.route('/editProfile')
       userName, password, email, firstName, lastName,
     } = req.body;
 
-    updateUserInfo(userName, password, email, firstName, lastName, null);
-    res.redirect('/users/profile');
+    const form = new formidable.IncomingForm();
+    form.keepExtensions = true;
+    form.maxFileSize = 10 * 1024 * 1024;
+
+    form.parse(req);
+
+    form.on('fileBegin', (name, file) => {
+      file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(100).toString('hex') + file.name);
+    });
+
+    form.on('file', (name, file) => {
+      debug(`Uploaded ${file.path}`);
+      updateUserInfo(userName, password, email, firstName, lastName, file.path);
+      res.redirect('/users/profile');
+    });
   });
 
 router.route('/signUp').post(async (req, res) => {
