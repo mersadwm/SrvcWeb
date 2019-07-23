@@ -38,7 +38,11 @@
             <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
             <h6>Upload a different photo...</h6>
 
-            <input type="file" name='file' class="form-control">
+            <form action="/users/updateProfilePic" enctype="multipart/form-data" method="post">
+              <input type="file" name="upload"  class="form-control">
+              <input type="submit" value="Upload">
+          </form>
+
             <a class="nav-link" href="/users/SVEditProfile">Upgrate to Service Provider</a>
           </div>
         </div>
