@@ -1,8 +1,9 @@
 CREATE PROCEDURE dbo.uspChangePass
     @pLoginName NVARCHAR(50), 
     @pOldPassword NVARCHAR(50),
-    @pNewPassword NVARCHAR(50)
-
+    @pNewPassword NVARCHAR(50),
+	@salt NVARCHAR (36)
+	
 AS 
 BEGIN
 
