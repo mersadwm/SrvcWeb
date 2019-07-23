@@ -2,7 +2,6 @@ const express = require('express');
 const passport = require('passport');
 const debug = require('debug')('app:users');
 const formidable = require('formidable');
-// const util = require('util');
 const path = require('path');
 const crypto = require('crypto');
 
@@ -48,11 +47,19 @@ router.route('/editProfile')
   })
   .post((req, res) => {
     const {
-      userName, password, email, firstName, lastName,
+      password, email, firstName, lastName,
     } = req.body;
 
+    debug(req.user);
+    updateUserInfo(req.user.username, password, email, firstName, lastName, null);
+
+    res.redirect('/users/profile');
+  });
+
+router.route('/updateProfilePic')
+  .all(routeProtection)
+  .post((req, res) => {
     const form = new formidable.IncomingForm();
-    form.keepExtensions = true;
     form.maxFileSize = 10 * 1024 * 1024;
 
     form.parse(req);
@@ -63,8 +70,8 @@ router.route('/editProfile')
 
     form.on('file', (name, file) => {
       debug(`Uploaded ${file.path}`);
-      updateUserInfo(userName, password, email, firstName, lastName, file.path);
-      res.redirect('/users/profile');
+      // MARK: the file should be saved as the user s profile pic in the db
+      res.redirect('/users/editProfile');
     });
   });
 
