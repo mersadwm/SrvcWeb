@@ -36,9 +36,19 @@ router.get('/signup', (req, res) => {
   res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
 });
 
-router.get('/SVEditProfile', (req, res) => {
-  res.render('SVEditProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
-});
+
+router.route('/SVEditProfile')
+  .all(routeProtection)
+  .get((req, res) => {
+    res.render('SVEditProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+  })
+  .post((req, res) => {
+    const {
+      username, password, email, firstName, lastName, service,
+    } = req.body;
+    debug(service);
+    res.redirect('/users/profile');
+  });
 
 router.route('/editProfile')
   .all(routeProtection)

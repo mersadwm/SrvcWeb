@@ -55,7 +55,7 @@
           <% }%>
             <h3>Personal info</h3>
 
-            <form class="form-horizontal" name="form" action="/users/editProfile" method="post">
+            <form class="form-horizontal" name="form" action="/users/SVEditProfile" method="post">
               <div class="form-group">
                 <label class="col-lg-3 control-label">First name:</label>
                 <div class="col-lg-8">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-8">
-                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                    <textarea class="form-control" name="service" id="service_textarea" rows="3"></textarea>
                     </div>
                   </div>
 
@@ -161,7 +161,7 @@
   <script>
   function addtext() {
     var nameValue = document.getElementById('sel1').value;
-        document.getElementById('exampleFormControlTextarea5').textContent += nameValue + '\n';
+        document.getElementById('service_textarea').textContent += nameValue + '\n';
 }
   </script>
 
