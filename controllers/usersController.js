@@ -65,6 +65,13 @@ function usersController() {
     debug(answ);
   }
 
+  function addServiceproviderService(service){
+    for (let index = 0; index < service.length; index++) {
+      const element = array[index];
+      
+    }
+  }
+
   return {
     routeProtection,
     addUser,

@@ -46,7 +46,8 @@ router.route('/SVEditProfile')
     const {
       username, password, email, firstName, lastName, service,
     } = req.body;
-    debug(service);
+    const serviceArr = service.split('\n');
+    debug(serviceArr[2]);
     res.redirect('/users/profile');
   });
 
