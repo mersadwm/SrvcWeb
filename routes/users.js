@@ -76,13 +76,15 @@ router.route('/updateProfilePic')
     form.parse(req);
 
     form.on('fileBegin', (name, file) => {
-      file.path = path.join('images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
+      file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
     });
 
     form.on('file', (name, file) => {
       debug(`Uploaded ${file.path}`);
       // MARK: the file should be saved as the user s profile pic in the db
-      updateUserProfilePic(req.user.login_name, file.path);
+      
+      // file.path.substr(file.path.indexOf('/home/site/wwwroot/public/'), '/home/site/wwwroot/public/'.length);
+      updateUserProfilePic(req.user.login_name, file.path.substring(0, file.path.indexOf('/home/site/wwwroot/public/') + '/home/site/wwwroot/public/'.length));
       res.redirect('/users/signin');
     });
   });
