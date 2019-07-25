@@ -76,7 +76,7 @@ router.route('/updateProfilePic')
     form.parse(req);
 
     form.on('fileBegin', (name, file) => {
-      file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
+      file.path = path.join('images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
     });
 
     form.on('file', (name, file) => {
