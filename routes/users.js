@@ -82,9 +82,7 @@ router.route('/updateProfilePic')
     form.on('file', (name, file) => {
       debug(`Uploaded ${file.path}`);
       // MARK: the file should be saved as the user s profile pic in the db
-      
-      // file.path.substr(file.path.indexOf('/home/site/wwwroot/public/'), '/home/site/wwwroot/public/'.length);
-      updateUserProfilePic(req.user.login_name, file.path.substring(0, file.path.indexOf('/home/site/wwwroot/public/') + '/home/site/wwwroot/public/'.length));
+      updateUserProfilePic(req.user.login_name, file.path.replace('/home/site/wwwroot/public/', '/'));
       res.redirect('/users/signin');
     });
   });
