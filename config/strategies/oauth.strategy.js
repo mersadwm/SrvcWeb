@@ -4,7 +4,7 @@ const GoogleStrategy = require('passport-google-oauth20');
 const usersController = require('../../controllers/usersController');
 
 const {
-  addUser, loginUser, updateUserInfo, getUserInfo,
+  addUser, loginUser, updateUserInfo, getUserInfo, updateUserProfilePic,
 } = usersController;
 
 passport.use(
@@ -22,8 +22,6 @@ passport.use(
     // debug(value);
     const username = id;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
-    await addUser(username, pass, value);
-    await updateUserInfo(username, pass, value, name.givenName, name.familyName, photos[0].value);
     const login = await loginUser(username, pass);
     // debug(login);
     if (login.output.responseMessage === 'User successfully logged in') {
@@ -32,6 +30,9 @@ passport.use(
       done(null, recordset[0]);
     } else {
       // debug('failed');
+      await addUser(username, pass, value);
+      await updateUserInfo(username, pass, value, name.givenName, name.familyName);
+      await updateUserProfilePic(username, photos[0].value);
       done(null, false);
     }
 

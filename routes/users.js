@@ -29,7 +29,7 @@ const user = {
 };
 
 const {
-  routeProtection, addUser, loginUser, updateUserInfo,
+  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
@@ -61,9 +61,10 @@ router.route('/editProfile')
     } = req.body;
 
     debug(req.user);
-    updateUserInfo(req.user.username, password, email, firstName, lastName, null);
+    updateUserInfo(req.user.login_name, password, email, firstName, lastName);
 
-    res.redirect('/users/profile');
+    // res.redirect('/users/profile');
+    res.redirect('/users/signin');
   });
 
 router.route('/updateProfilePic')
@@ -75,13 +76,14 @@ router.route('/updateProfilePic')
     form.parse(req);
 
     form.on('fileBegin', (name, file) => {
-      file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(100).toString('hex') + file.name);
+      file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
     });
 
     form.on('file', (name, file) => {
       debug(`Uploaded ${file.path}`);
       // MARK: the file should be saved as the user s profile pic in the db
-      res.redirect('/users/editProfile');
+      updateUserProfilePic(req.user.login_name, file.path);
+      res.redirect('/users/signin');
     });
   });
 
@@ -113,11 +115,10 @@ router.get('/google', passport.authenticate('google', {
   scope: ['profile', 'email'],
 }));
 
-router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.redirect('/users/editProfile');
-
-  // debug(result);
-});
+router.get('/google/redirect', passport.authenticate('google', {
+  successRedirect: '/users/editProfile',
+  failureRedirect: '/users/signin',
+}));
 
 router.get('/logout', (req, res) => {
   // hande with passport
