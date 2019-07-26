@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/stylesheets/questionnaire.css">
     <link rel="stylesheet" href="/stylesheets/categories.css">
     <link rel="stylesheet" href="/stylesheets/sub_Cat.css">
+    <link rel="stylesheet" href="/stylesheets/message-box.css">
 
     
 
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+    
     <!-- Header -->
     <%- include partials/header_Slider %>
 
@@ -45,7 +47,11 @@
 
         <!-- End page contents -->
 
-
+     
+                <div class="alert info">
+            <span class="closebtn">&times;</span>  
+            <strong>Info!</strong> Please notice that we use cookies to save your information.
+          </div>  
         <!-- Footer -->
         <%- include partials/footer %>
     </div>
@@ -66,9 +72,8 @@
     <script src="javascripts/header_Sidebar.js"></script>
     <script src="javascripts/questionnaire.js"></script>
     <script src="javascripts/categories.js"></script>
-    <script>
-        alert('Please notice that we use cookies to save your information');
-    </script>
+    <script src="javascripts/message-box.js"></script>
+
 
 
 

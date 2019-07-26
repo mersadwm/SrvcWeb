@@ -29,7 +29,7 @@ const user = {
 };
 
 const {
-  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic,
+  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
@@ -58,13 +58,14 @@ router.route('/editProfile')
   })
   .post((req, res) => {
     const {
-      password, email, firstName, lastName,
+      password, passwordNew, email, firstName, lastName,
     } = req.body;
 
     debug(req.user);
-    updateUserInfo(req.user.login_name, password, email, firstName, lastName);
-
-    // res.redirect('/users/profile');
+    updateUserInfo(req.user.login_name, email, firstName, lastName);
+    if (passwordNew.lenght > 7) {
+      updateUserPassword(req.user.login_name, password, passwordNew);
+    }
     res.redirect('/users/signin');
   });
 

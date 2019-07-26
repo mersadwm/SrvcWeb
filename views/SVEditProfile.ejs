@@ -89,7 +89,7 @@
                     <option>Chose</option>
                     <option>Outside home</option>
                     <option>Inside  home</option>
-                    <option>Vehicales</option>
+                    <option>Vehicles</option>
                     <option>Transport</option>
                     <option>Metal</option>
                     <option>IT and software support</option>
@@ -100,13 +100,19 @@
                  </div>
               </div>
               <div class="form-group">
+                  <label class="col-lg-3 control-label">More Info:</label>
+                  <div class="col-lg-8">
+                    <input class="form-control" name='moreinfo' id='moreinfo' type="text" >
+                  </div>
+                </div>
+              <div class="form-group">
                   <div class="col-lg-8">
                   <button onclick="addtext()" type="button">Add</button>
                   </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-8">
-                    <textarea class="form-control" name="service" id="service_textarea" rows="3"></textarea>
+                    <textarea class="form-control" name="service" id="service_textarea" rows="3" ></textarea>
                     </div>
                   </div>
 
@@ -160,11 +166,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
   </script>
   <script src="/javascripts/header_Sidebar.js"></script>
-  <script>
-  function addtext() {
-    var nameValue = document.getElementById('sel1').value;
-        document.getElementById('service_textarea').textContent += nameValue + '\n';
-}
-  </script>
+  <script src="/javascripts/add-service.js"></script>
+
 
 </body>

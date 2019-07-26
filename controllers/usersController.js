@@ -50,12 +50,16 @@ function usersController() {
     request.execute('uspAddUser');
   }
 
-  async function updateUserInfo(username, password, email, firstName, lastName) {
+  async function updateUserInfo(username, email, firstName, lastName) {
     const request = new sql.Request();
-    debug(username, password, email, firstName, lastName);
+    debug(username, email, firstName, lastName);
     // await can be removed.
     const answ = await request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', email = '${email}' where LOGIN_NAME = '${username}'`);
     debug(answ);
+  }
+
+  async function updateUserPassword(username, password, passwordNew) {
+    debug(username);
   }
 
   async function updateUserProfilePic(username, profilePic) {
@@ -65,10 +69,9 @@ function usersController() {
     debug(answ);
   }
 
-  function addServiceproviderService(service){
+  function addServiceForProviderService(service) {
     for (let index = 0; index < service.length; index++) {
-      const element = array[index];
-      
+      const element = service[index];
     }
   }
 
@@ -80,6 +83,8 @@ function usersController() {
     getUserInfo,
     updateUserInfo,
     updateUserProfilePic,
+    updateUserPassword,
+    addServiceForProviderService,
   };
 }
 
