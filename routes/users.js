@@ -29,7 +29,7 @@ const user = {
 };
 
 const {
-  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword, addServiceProviderInfo,
+  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword, addServiceProviderInfo, addServiceProviderService, 
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
@@ -42,13 +42,17 @@ router.route('/SVEditProfile')
   .get((req, res) => {
     res.render('SVEditProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
   })
-  .post((req, res) => {
+  .post(async (req, res) => {
     const {
-      address, city, zipcode, phone, webpage, aboutme, company, email, moreinfo, service,
+      address, city, zipcode, phone, webpage, aboutme, company, email, service,
     } = req.body;
     const serviceArr = service.split('\n');
     debug(aboutme);
     addServiceProviderInfo(company, address, phone, webpage, email, zipcode, city, aboutme);
+    await addServiceProviderService(serviceArr, req.user.login_name);
+   // debug(typeof service);
+    //debug(typeof serviceArr);
+   // debug(typeof serviceArr[0]);
     res.redirect('/users/profile');
   });
 

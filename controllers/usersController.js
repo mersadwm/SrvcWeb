@@ -69,9 +69,19 @@ function usersController() {
     debug(answ);
   }
 
-  function addServiceForProviderService(service) {
+  function addServiceProviderService(service, loginName) {
+    const request = new sql.Request();
     for (let index = 0; index < service.length; index++) {
-      const element = service[index];
+      const serviceName = service[index];
+      const moreInfo = service[index+1];
+      request.input('pLogin', sql.NVarChar, loginName);
+      request.input('pservice', sql.NVarChar, serviceName);
+      request.input('pmore_info', sql.NVarChar, moreInfo);
+      request.execute('uspServices_ref');
+     // debug(serviceName , typeof moreInfo);
+      //debug(service.length);
+      index++;
+      debug(index);
     }
   }
 
@@ -87,7 +97,6 @@ function usersController() {
     request.input('pcity', sql.NVarChar, city);
     request.input('pabout_me', sql.NVarChar, aboutme);
     request.input('pverified', sql.Bit, verified);
-
     request.execute('uspService_Provider');
 
   }
@@ -101,8 +110,8 @@ function usersController() {
     updateUserInfo,
     updateUserProfilePic,
     updateUserPassword,
-    addServiceForProviderService,
     addServiceProviderInfo,
+    addServiceProviderService,
   };
 }
 
