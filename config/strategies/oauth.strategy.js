@@ -20,7 +20,7 @@ passport.use(
     } = await profile;
     const { value } = await emails[0];
     // debug(value);
-    const username = id;
+    const username = `${id}@google.auth`;
     const pass = `sdw90sdkf${id}7iuzjh3f`;
     const login = await loginUser(username, pass);
     // debug(login);
@@ -31,7 +31,7 @@ passport.use(
     } else {
       // debug('failed');
       await addUser(username, pass, value);
-      await updateUserInfo(username, pass, value, name.givenName, name.familyName);
+      await updateUserInfo(username, value, name.givenName, name.familyName);
       await updateUserProfilePic(username, photos[0].value);
       done(null, false);
     }
