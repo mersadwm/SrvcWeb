@@ -71,7 +71,7 @@ function usersController() {
 
   function addServiceForProviderService(service) {
     for (let index = 0; index < service.length; index++) {
-      const element = array[index];
+      const element = service[index];
     }
   }
 
