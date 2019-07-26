@@ -75,6 +75,23 @@ function usersController() {
     }
   }
 
+  function addServiceProviderInfo(componyName, address, phone, website, email, zipCode, city, aboutme ){
+    const request = new sql.Request();
+    const verified = 0;
+    request.input('pcompany_name', sql.NVarChar, componyName);
+    request.input('paddress_sp', sql.NVarChar, address);
+    request.input('ptelephone', sql.NVarChar, phone);
+    request.input('pwebsite_link', sql.NVarChar, website);
+    request.input('pcontact_email', sql.NVarChar, email);
+    request.input('pzip', sql.Int, zipCode);
+    request.input('pcity', sql.NVarChar, city);
+    request.input('pabout_me', sql.NVarChar, aboutme);
+    request.input('pverified', sql.Bit, verified);
+
+    request.execute('uspService_Provider');
+
+  }
+
   return {
     routeProtection,
     addUser,
@@ -85,6 +102,7 @@ function usersController() {
     updateUserProfilePic,
     updateUserPassword,
     addServiceForProviderService,
+    addServiceProviderInfo,
   };
 }
 

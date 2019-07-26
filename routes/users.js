@@ -29,7 +29,7 @@ const user = {
 };
 
 const {
-  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword,
+  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword, addServiceProviderInfo,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
@@ -44,10 +44,11 @@ router.route('/SVEditProfile')
   })
   .post((req, res) => {
     const {
-      username, password, email, firstName, lastName, service,
+      address, city, zipcode, phone, webpage, aboutme, company, email, moreinfo, service,
     } = req.body;
     const serviceArr = service.split('\n');
-    debug(serviceArr[2]);
+    debug(aboutme);
+    addServiceProviderInfo(company, address, phone, webpage, email, zipcode, city, aboutme);
     res.redirect('/users/profile');
   });
 
