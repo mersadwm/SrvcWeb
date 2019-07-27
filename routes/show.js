@@ -1,10 +1,11 @@
 const express = require('express');
 const defined = require('defined');
-const url = require('url');
 const debug = require('debug')('app:show');
+const queryString = require('querystring');
 
 
 const router = express.Router();
+const serviceController = require('../controllers/servicesController');
 
 const user = {
   first_name: '',
@@ -22,10 +23,33 @@ const user = {
   PLZ: '',
 };
 
-router.get('/search', (req, res) => {
-  const q = url.parse(req.url, true);
-  debug(`\nsearch parameters are ${q.search}`);
-  res.render('showResults', { user: defined(req.user, user), logged: req.isAuthenticated() });
+const {
+  getService,
+  getAllServices,
+  getServiceId,
+  getServiceProvidersForService,
+  getServiceProvidersForServiceByTitle,
+} = serviceController;
+
+router.get('/search', async (req, res) => {
+  const q = queryString.parse(req.url.replace(/^.*\?/, ''));
+  debug(q);
+  let serviceCollection;
+  if (q.searchVal) {
+    serviceCollection = await getServiceProvidersForServiceByTitle(q.searchVal);
+  } else {
+    serviceCollection = await getAllServices();
+  }
+  const {
+    recordset,
+  } = serviceCollection;
+
+  debug(recordset);
+  res.render('showResults', {
+    user: defined(req.user, user),
+    recordset,
+    logged: req.isAuthenticated(),
+  });
 });
 
 module.exports = router;

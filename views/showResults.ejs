@@ -15,7 +15,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
     <link rel="stylesheet" href="../stylesheets/questionnaire.css">
-    <link rel="stylesheet" href="../stylesheets/categories.css">
     <link rel="stylesheet" href="../stylesheets/sub_Cat.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
@@ -41,7 +40,7 @@
                 <div class="inner-form">
                     <div class="basic-search">
                         <div class="input-field">
-                            <input id="search" type="text" placeholder="Type Keywords" />
+                            <input id="search" name="searchVal" type="text" placeholder="Type Keywords" />
                             <div class="icon-wrap">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
@@ -138,8 +137,9 @@
 
         <!-- This templates was made by Colorlib (https://colorlib.com) -->
 
+        <% if(recordset.length > 0){ %>
         <ul class="article-list-vertical">
-
+            <% for(var i = 0; i < recordset.lenght;i++) { %>
             <li>
                 <a href="#" style="background-image: url('../images/aboutUs/pic01.jpg')"></a>
                 <div>
@@ -150,7 +150,8 @@
                 </div>
             </li>
 
-            <li>
+            <% } %>
+            <!-- <li>
                 <a href="#" style="background-image: url('../images/aboutUs/pic03.jpg')"></a>
                 <div>
                     <h2><a href="#">Interesting article title</a></h2>
@@ -158,10 +159,10 @@
                         a volutpat magna.</p>
                     <a href="#" class="read-more">Read more &rarr;</a>
                 </div>
-            </li>
+            </li> -->
 
         </ul>
-
+        <% } %>
 
         <!-- End page contents -->
 
@@ -184,7 +185,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
     </script>
     <script src="../javascripts/header_Sidebar.js"></script>
-    <script src="../javascripts/categories.js"></script>
     <script src="../javascripts/ShowResultsExtention/choices.js"></script>
     <script>
         const customSelects = document.querySelectorAll("select");
