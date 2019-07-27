@@ -35,13 +35,15 @@ const {
   updateUserInfo,
   updateUserProfilePic,
   updateUserPassword,
+  addServiceProviderInfo,
+  addServiceProviderService,
   updateUserAddress,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup', {
     user: defined(req.user, user),
-    logged: req.isAuthenticated()
+    logged: req.isAuthenticated(),
   });
 });
 
@@ -51,20 +53,28 @@ router.route('/SVEditProfile')
   .get((req, res) => {
     res.render('SVEditProfile', {
       user: defined(req.user, user),
-      logged: req.isAuthenticated()
+      logged: req.isAuthenticated(),
     });
   })
-  .post((req, res) => {
+  .post(async (req, res) => {
     const {
-      username,
-      password,
+      address,
+      city,
+      zipcode,
+      phone,
+      webpage,
+      aboutme,
+      company,
       email,
-      firstName,
-      lastName,
       service,
     } = req.body;
     const serviceArr = service.split('\n');
-    debug(serviceArr[2]);
+    debug(aboutme);
+    addServiceProviderInfo(company, address, phone, webpage, email, zipcode, city, aboutme);
+    await addServiceProviderService(serviceArr, req.user.login_name);
+    // debug(typeof service);
+    // debug(typeof serviceArr);
+    // debug(typeof serviceArr[0]);
     res.redirect('/users/profile');
   });
 
@@ -73,7 +83,7 @@ router.route('/editProfile')
   .get((req, res) => {
     res.render('editProfile', {
       user: defined(req.user, user),
-      logged: req.isAuthenticated()
+      logged: req.isAuthenticated(),
     });
   })
   .post((req, res) => {
@@ -112,6 +122,7 @@ router.route('/updateProfilePic')
     form.parse(req);
 
     form.on('fileBegin', (name, file) => {
+      // eslint-disable-next-line no-param-reassign
       file.path = path.join(__dirname, '../', 'public', 'images', 'profilePic', 'userUploads', crypto.randomBytes(50).toString('hex') + file.name);
     });
 
@@ -128,10 +139,10 @@ router.route('/signUp').post(async (req, res) => {
   const {
     username,
     password,
-    email
+    email,
   } = req.body;
   addUser(username, password, email);
-  const login = await loginUser(username, password);
+  loginUser(username, password);
   // debug(login);
   res.redirect('/users/signin');
 });
@@ -140,7 +151,7 @@ router.route('/signin')
   .get((req, res) => {
     res.render('signin', {
       user: defined(req.user, user),
-      logged: req.isAuthenticated()
+      logged: req.isAuthenticated(),
     });
   })
   .post(passport.authenticate('local', {

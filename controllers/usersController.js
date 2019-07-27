@@ -84,10 +84,40 @@ function usersController() {
     await request.query(`update users set PROFILE_PIC_URL = '${profilePic}' where LOGIN_NAME = '${username}'`);
   }
 
-  function addServiceForProviderService(service) {
-    for (let index = 0; index < service.length; index++) {
-      const element = service[index];
+  async function addServiceProviderService(service, loginName) {
+    const request = new sql.Request();
+    for (let index = 0; index < service.length - 1; index++) {
+      debug(`index before ++index: ${ index}`);
+      const serviceName = service[index];
+      const moreInfo = service[++index];
+      debug(`index after ++index: ${ index}`);
+      request.input('pLogin', sql.NVarChar, loginName);
+      request.input('pservice', sql.NVarChar, serviceName);
+      request.input('pmore_info', sql.NVarChar, moreInfo);
+      await request.execute('uspServices_ref');
+      // debug(serviceName , typeof moreInfo);
+      // debug(service.length);
+      //  debug(serviceName);
+      // debug('service: ' + serviceName);
+      // debug('moreinfo: ' + moreInfo);
+      debug(`service : ${serviceName}`);
+      debug(`moreinfo : ${moreInfo}`);
     }
+  }
+
+  function addServiceProviderInfo(componyName, address, phone, website, email, zipCode, city, aboutme) {
+    const request = new sql.Request();
+    const verified = 0;
+    request.input('pcompany_name', sql.NVarChar, componyName);
+    request.input('paddress_sp', sql.NVarChar, address);
+    request.input('ptelephone', sql.NVarChar, phone);
+    request.input('pwebsite_link', sql.NVarChar, website);
+    request.input('pcontact_email', sql.NVarChar, email);
+    request.input('pzip', sql.Int, zipCode);
+    request.input('pcity', sql.NVarChar, city);
+    request.input('pabout_me', sql.NVarChar, aboutme);
+    request.input('pverified', sql.Bit, verified);
+    request.execute('uspService_Provider');
   }
 
   return {
@@ -99,8 +129,9 @@ function usersController() {
     updateUserInfo,
     updateUserProfilePic,
     updateUserPassword,
-    addServiceForProviderService,
     updateUserAddress,
+    addServiceProviderInfo,
+    addServiceProviderService,
   };
 }
 
