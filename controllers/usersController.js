@@ -109,12 +109,12 @@ function usersController() {
     }
   }
 
-  async function addServiceProviderInfo(username, componyName, address, phone, website, email, zipCode, city, aboutme) {
+  async function addServiceProviderInfo(username, companyName, address, phone, website, email, zipCode, city, aboutme) {
     const request = new sql.Request();
     const verified = 0;
     const user = await request.query(`select * from service_providers where login_user = '${username}'`);
     if (user.rowsAffected[0] === 0) {
-      request.input('pcompany_name', sql.NVarChar, componyName);
+      request.input('pcompany_name', sql.NVarChar, companyName);
       request.input('plogin_user', sql.NVarChar, username);
       request.input('paddress_sp', sql.NVarChar, address);
       request.input('ptelephone', sql.NVarChar, phone);
@@ -125,6 +125,8 @@ function usersController() {
       request.input('pabout_me', sql.NVarChar, aboutme);
       request.input('pverified', sql.Bit, verified);
       request.execute('uspService_Provider');
+    } else {
+      request.query(`update service_providers set company_name = '${companyName}', address_sp = '${address}', telephone = '${phone}', website_link = '${website}', contact_email = '${email}', zip = '${zipCode}', city = '${city}', about_me = '${aboutme}' where login_user = '${username}'`);
     }
     debug(user.rowsAffected[0]);
   }
