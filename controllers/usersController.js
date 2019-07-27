@@ -71,17 +71,20 @@ function usersController() {
 
   function addServiceProviderService(service, loginName) {
     const request = new sql.Request();
-    for (let index = 0; index < service.length; index++) {
+      for (let index = 0; index < service.length - 1; index++) {
       const serviceName = service[index];
-      const moreInfo = service[index+1];
+      const moreInfo = service[++index];
       request.input('pLogin', sql.NVarChar, loginName);
       request.input('pservice', sql.NVarChar, serviceName);
       request.input('pmore_info', sql.NVarChar, moreInfo);
       request.execute('uspServices_ref');
-     // debug(serviceName , typeof moreInfo);
-      //debug(service.length);
-      index++;
-      debug(index);
+      // debug(serviceName , typeof moreInfo);
+      // debug(service.length);
+      //  debug(serviceName);
+     // debug('service: ' + serviceName);
+      //debug('moreinfo: ' + moreInfo);
+      debug('service : '+ serviceName);
+      debug('moreinfo : '+ moreInfo);
     }
   }
 
