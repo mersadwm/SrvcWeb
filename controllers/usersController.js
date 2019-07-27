@@ -69,15 +69,17 @@ function usersController() {
     debug(answ);
   }
 
-  function addServiceProviderService(service, loginName) {
+  async function addServiceProviderService(service, loginName) {
     const request = new sql.Request();
-      for (let index = 0; index < service.length - 1; index++) {
+    for (let index = 0; index < service.length - 1; index++) {
+      debug('index before ++index: '+ index);
       const serviceName = service[index];
       const moreInfo = service[++index];
+      debug('index after ++index: '+ index);
       request.input('pLogin', sql.NVarChar, loginName);
       request.input('pservice', sql.NVarChar, serviceName);
       request.input('pmore_info', sql.NVarChar, moreInfo);
-      request.execute('uspServices_ref');
+      await request.execute('uspServices_ref');
       // debug(serviceName , typeof moreInfo);
       // debug(service.length);
       //  debug(serviceName);
