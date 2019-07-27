@@ -109,20 +109,24 @@ function usersController() {
     }
   }
 
-  function addServiceProviderInfo(username, componyName, address, phone, website, email, zipCode, city, aboutme) {
+  async function addServiceProviderInfo(username, componyName, address, phone, website, email, zipCode, city, aboutme) {
     const request = new sql.Request();
     const verified = 0;
-    request.input('pcompany_name', sql.NVarChar, componyName);
-    request.input('plogin_user', sql.NVarChar, username);
-    request.input('paddress_sp', sql.NVarChar, address);
-    request.input('ptelephone', sql.NVarChar, phone);
-    request.input('pwebsite_link', sql.NVarChar, website);
-    request.input('pcontact_email', sql.NVarChar, email);
-    request.input('pzip', sql.Int, zipCode);
-    request.input('pcity', sql.NVarChar, city);
-    request.input('pabout_me', sql.NVarChar, aboutme);
-    request.input('pverified', sql.Bit, verified);
-    request.execute('uspService_Provider');
+    const user = await request.query(`select * from service_providers where login_user = '${username}'`);
+    if (user.rowsAffected[0] === 0) {
+      request.input('pcompany_name', sql.NVarChar, componyName);
+      request.input('plogin_user', sql.NVarChar, username);
+      request.input('paddress_sp', sql.NVarChar, address);
+      request.input('ptelephone', sql.NVarChar, phone);
+      request.input('pwebsite_link', sql.NVarChar, website);
+      request.input('pcontact_email', sql.NVarChar, email);
+      request.input('pzip', sql.Int, zipCode);
+      request.input('pcity', sql.NVarChar, city);
+      request.input('pabout_me', sql.NVarChar, aboutme);
+      request.input('pverified', sql.Bit, verified);
+      request.execute('uspService_Provider');
+    }
+    debug(user.rowsAffected[0]);
   }
 
   async function getServiceProviderInfo(username) {
