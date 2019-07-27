@@ -380,6 +380,14 @@ textarea {
   font: inherit;
   /* 2 */
 }
+/* 
+   Turn off input number arrows
+*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 /* Interactive
    ========================================================================== */
@@ -811,7 +819,8 @@ legend {
 }
 
 .s008 {
-  min-height: 100vh;
+  min-height: 70vh;
+  max-height: 100vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -822,6 +831,7 @@ legend {
   background-size: cover;
   padding: 15px;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 10vh;
 }
 
 .s008 form {

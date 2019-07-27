@@ -24,7 +24,7 @@ const user = {
 
 router.get('/search', (req, res) => {
   const q = url.parse(req.url, true);
-  debug(`\nhost = ${q.host} \npath name is ${q.pathname} \nsearch parameters are ${q.search}`);
+  debug(`\nsearch parameters are ${q.search}`);
   res.render('showResults', { user: defined(req.user, user), logged: req.isAuthenticated() });
 });
 
