@@ -1,5 +1,6 @@
 const debug = require('debug')('app:usersController');
 const sql = require('mssql');
+const defined = require('defined');
 
 
 function usersController() {
@@ -108,10 +109,11 @@ function usersController() {
     }
   }
 
-  function addServiceProviderInfo(componyName, address, phone, website, email, zipCode, city, aboutme) {
+  function addServiceProviderInfo(username, componyName, address, phone, website, email, zipCode, city, aboutme) {
     const request = new sql.Request();
     const verified = 0;
     request.input('pcompany_name', sql.NVarChar, componyName);
+    request.input('plogin_user', sql.NVarChar, username);
     request.input('paddress_sp', sql.NVarChar, address);
     request.input('ptelephone', sql.NVarChar, phone);
     request.input('pwebsite_link', sql.NVarChar, website);
@@ -121,6 +123,24 @@ function usersController() {
     request.input('pabout_me', sql.NVarChar, aboutme);
     request.input('pverified', sql.Bit, verified);
     request.execute('uspService_Provider');
+  }
+
+  async function getServiceProviderInfo(username) {
+    const request = new sql.Request();
+    const result = await request.query(`select * from service_providers where login_user = '${username}'`);
+    debug(result);
+    const returnVal = defined(result.recordset[0], {
+      company_name: '',
+      address_sp: '',
+      telephone: 0,
+      website_link: '',
+      contact_email: '',
+      zip: 0,
+      city: '',
+      about_me: '',
+      verified: false,
+    });
+    return returnVal;
   }
 
   return {
@@ -135,6 +155,7 @@ function usersController() {
     updateUserAddress,
     addServiceProviderInfo,
     addServiceProviderService,
+    getServiceProviderInfo,
   };
 }
 

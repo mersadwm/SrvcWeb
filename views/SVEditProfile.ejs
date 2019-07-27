@@ -5,8 +5,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Edit Profile</title>
-  <meta name="description" content="Edit Profile">
+  <title>Edit Service Provider Profile</title>
+  <meta name="description" content="Edit Service Provider Profile">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     <!-- End header -->
 
     <div class="container">
-      <h1>Edit Profile</h1>
+      <h1>Edit Service Provider Profile</h1>
       <hr>
       <div class="row">
         <!-- left column -->
@@ -40,7 +40,7 @@
             <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
             <br>
             <br>
-            <% if(true) {%>
+            <% if(!serviceProvider.verified) {%>
             <img src="/images/editProfile/notverified.png" style="max-width: 150px"  class="avatar rounded-circle">
             <hr>
             Please contact admins to verify your business information
@@ -63,7 +63,7 @@
             <%}%> <%if(!user.address_1){%><strong>adress</strong><%}%>
           </div>
           <% }%>
-            <h3>Personal info</h3>
+            <h3>Company info</h3>
 
             <form class="form-horizontal" name="form" action="/users/SVEditProfile" method="post">
               <div class="form-group">
@@ -82,7 +82,7 @@
               <div class="form-group">
                 <label class="col-lg-3 control-label">Adress:</label>
                 <div class="col-lg-8">
-                  <input class="form-control" name='address' type="text" value="<%=user.adress%>">
+                  <input class="form-control" name='address' type="text" value="<%=serviceProvider.adress_sp%>">
                 </div>
               </div>
 
@@ -90,21 +90,21 @@
               <div class="form-group">
                 <label class="col-lg-3 control-label">City:</label>
                 <div class="col-lg-8">
-                  <input class="form-control" name='city' type="text" value="<%=user.city%>">
+                  <input class="form-control" name='city' type="text" value="<%=serviceProvider.city%>">
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-lg-3 control-label">Zip Code:</label>
                 <div class="col-lg-8">
-                  <input class="form-control" name='zipcode' type="text" value="<%=user.zipcode%>">
+                  <input class="form-control" name='zipcode' type="number" value="<%=user.zipcode%>">
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-lg-3 control-label">Phone number:</label>
                 <div class="col-lg-8">
-                  <input class="form-control" name='phone' type="text" value="<%=user.city%>">
+                  <input class="form-control" name='phone' type="number" value="<%=user.city%>">
                 </div>
               </div>
 
@@ -139,7 +139,7 @@
                 <label class="col-lg-3 control-label">Service:</label>
                 <div class="col-lg-8">
                   <select class="form-control" id="sel1">
-                    <option>Chose</option>
+                    <option>Choose</option>
                     <option>Outside home</option>
                     <option>Inside home</option>
                     <option>Vehicles</option>
@@ -168,25 +168,6 @@
               <div class="form-group">
                 <div class="col-lg-8">
                   <textarea class="form-control" name="service" id="service_textarea" rows="3" readonly></textarea>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-md-3 control-label">Username:</label>
-                <div class="col-md-8">
-                  <input class="form-control" name='userName' type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" name='password' type="password">
-                </div>
-                <div class="form-group">
-                  <label class="col-md-3 control-label">Confirm password:</label>
-                  <div class="col-md-8">
-                    <input class="form-control" type="password">
-                  </div>
                 </div>
               </div>
               <div class="form-group">

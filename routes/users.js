@@ -38,6 +38,7 @@ const {
   addServiceProviderInfo,
   addServiceProviderService,
   updateUserAddress,
+  getServiceProviderInfo,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
@@ -50,9 +51,12 @@ router.get('/signup', (req, res) => {
 
 router.route('/SVEditProfile')
   .all(routeProtection)
-  .get((req, res) => {
+  .get(async (req, res) => {
+    const serviceProvider = await getServiceProviderInfo(req.user.login_name);
+    debug(serviceProvider);
     res.render('SVEditProfile', {
       user: defined(req.user, user),
+      serviceProvider,
       logged: req.isAuthenticated(),
     });
   })
@@ -70,12 +74,12 @@ router.route('/SVEditProfile')
     } = req.body;
     const serviceArr = service.split('\n');
     debug(aboutme);
-    addServiceProviderInfo(company, address, phone, webpage, email, zipcode, city, aboutme);
+    addServiceProviderInfo(req.user.login_name, company, address, phone, webpage, email, zipcode, city, aboutme);
     await addServiceProviderService(serviceArr, req.user.login_name);
     // debug(typeof service);
     // debug(typeof serviceArr);
     // debug(typeof serviceArr[0]);
-    res.redirect('/users/profile');
+    res.redirect('/users/SVEditProfile');
   });
 
 router.route('/editProfile')
@@ -99,7 +103,7 @@ router.route('/editProfile')
       city,
       state,
       country,
-      zipcode, // add in ejs:  address1, address2, address3, city, state, country, zipcode
+      zipcode,
     } = req.body;
 
     // debug(req.user);
