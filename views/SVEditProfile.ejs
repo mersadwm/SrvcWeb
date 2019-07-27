@@ -38,15 +38,23 @@
         <div class="col-md-3">
           <div class="text-center">
             <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
-            <h6>Upload a different photo...</h6>
-
-            <input type="file" name='file' class="form-control">
+            <br>
+            <br>
+            <% if(true) {%>
+            <img src="/images/editProfile/notverified.png" style="max-width: 150px"  class="avatar rounded-circle">
+            <hr>
+            Please contact admins to verify your business information
+            <%} else {%>
+            <img src="/images/editProfile/verified.png" style="max-width: 150px"  class="avatar rounded-circle">
+            <hr>
+            Please contact admins to verify your business information
+            <% }%>
           </div>
         </div>
 
         <!-- edit form column -->
         <div class="col-md-9 personal-info">
-        <%if(!user.first_name || !user.last_name || !user.address_1){ %>
+          <%if(!user.first_name || !user.last_name || !user.address_1){ %>
           <div class=" alert alert-info alert-dismissable">
             <a class="panel-close close" data-dismiss="alert">×</a>
             <i class="fa fa-coffee"></i>
@@ -72,47 +80,47 @@
               </div>
 
               <div class="form-group">
-                  <label class="col-lg-3 control-label">Adress:</label>
-                  <div class="col-lg-8">
-                    <input class="form-control" name='address' type="text" value="<%=user.adress%>">
-                  </div>
+                <label class="col-lg-3 control-label">Adress:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='address' type="text" value="<%=user.adress%>">
                 </div>
+              </div>
 
-                
+
               <div class="form-group">
-                  <label class="col-lg-3 control-label">City:</label>
-                  <div class="col-lg-8">
-                    <input class="form-control" name='city' type="text" value="<%=user.city%>">
-                  </div>
+                <label class="col-lg-3 control-label">City:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='city' type="text" value="<%=user.city%>">
                 </div>
+              </div>
 
-                <div class="form-group">
-                    <label class="col-lg-3 control-label">Zip Code:</label>
-                    <div class="col-lg-8">
-                      <input class="form-control" name='zipcode' type="text" value="<%=user.zipcode%>">
-                    </div>
-                  </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Zip Code:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='zipcode' type="text" value="<%=user.zipcode%>">
+                </div>
+              </div>
 
-                  <div class="form-group">
-                      <label class="col-lg-3 control-label">Phone number:</label>
-                      <div class="col-lg-8">
-                        <input class="form-control" name='phone' type="text" value="<%=user.city%>">
-                      </div>
-                    </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Phone number:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='phone' type="text" value="<%=user.city%>">
+                </div>
+              </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label">Company Webpage:</label>
-                        <div class="col-lg-8">
-                          <input class="form-control" name='webpage' type="text" value="<%=user.city%>">
-                        </div>
-                      </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Company Webpage:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='webpage' type="text" value="<%=user.city%>">
+                </div>
+              </div>
 
-                      <div class="form-group">
-                          <label class="col-lg-3 control-label">About me:</label>
-                          <div class="col-lg-8">
-                              <textarea class="form-control" name="aboutme" id="aboutme_textarea" rows="3" ></textarea>
-                          </div>
-                        </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">About me:</label>
+                <div class="col-lg-8">
+                  <textarea class="form-control" name="aboutme" id="aboutme_textarea" rows="3"></textarea>
+                </div>
+              </div>
 
 
               <div class="form-group">
@@ -133,7 +141,7 @@
                   <select class="form-control" id="sel1">
                     <option>Chose</option>
                     <option>Outside home</option>
-                    <option>Inside  home</option>
+                    <option>Inside home</option>
                     <option>Vehicles</option>
                     <option>Transport</option>
                     <option>Metal</option>
@@ -144,24 +152,24 @@
 
 
                   </select>
-                 </div>
+                </div>
               </div>
               <div class="form-group">
-                  <label class="col-lg-3 control-label">More Info:</label>
-                  <div class="col-lg-8">
-                    <input class="form-control" name='moreinfo' id='moreinfo' type="text" >
-                  </div>
+                <label class="col-lg-3 control-label">More Info:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='moreinfo' id='moreinfo' type="text">
                 </div>
+              </div>
               <div class="form-group">
-                  <div class="col-lg-8">
-                  <button onclick="addtext()" type="button">Add</button>
-                  </div>
+                <div class="col-lg-8">
+                  <button onclick="addtext()" type="button"  class="btn btn-dark">Add</button>
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-8">
-                    <textarea class="form-control" name="service" id="service_textarea" rows="3" ></textarea>
-                    </div>
-                  </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-8">
+                  <textarea class="form-control" name="service" id="service_textarea" rows="3" readonly></textarea>
+                </div>
+              </div>
 
               <div class="form-group">
                 <label class="col-md-3 control-label">Username:</label>

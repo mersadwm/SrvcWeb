@@ -38,14 +38,20 @@
         <div class="col-md-3">
           <div class="text-center">
             <img src="<%if(user.profile_pic_url){%><%=user.profile_pic_url%><%}else{%>/images/profilePic/default.png<%}%>" class="avatar img-circle" style="width:100px;height:100px;">
-            <h6>Upload a different photo...</h6>
-
+            <br>
+            <br>
             <form action="/users/updateProfilePic" enctype="multipart/form-data" method="post">
-              <input type="file" name="upload"  class="form-control">
-              <input type="submit" value="Upload">
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" name="upload" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01" >Choose file</label>
+                </div>
+              </div>
+              <input type="submit" class="btn btn-primary" value="Upload">
           </form>
 
-            <a class="nav-link" href="/users/SVEditProfile">Upgrate to Service Provider</a>
+            <a class="nav-link" href="/users/SVEditProfile">Upgrade to Service Provider</a>
           </div>
         </div>
 
