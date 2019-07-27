@@ -143,6 +143,17 @@ function usersController() {
     return returnVal;
   }
 
+
+  async function upgradeToAdmin(username, operationMode) {
+    const request = new sql.Request();
+    request.query(`update users set admin_rights = ${operationMode} where login_name = '${username}'`);
+  }
+
+  async function verifyServiceProvider(username, operationMode) {
+    const request = new sql.Request();
+    request.query(`update service_providers set verified = ${operationMode} where login_user = '${username}'`);
+  }
+
   return {
     routeProtection,
     addUser,
@@ -156,6 +167,8 @@ function usersController() {
     addServiceProviderInfo,
     addServiceProviderService,
     getServiceProviderInfo,
+    upgradeToAdmin,
+    verifyServiceProvider,
   };
 }
 
