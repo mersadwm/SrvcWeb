@@ -29,22 +29,39 @@ const user = {
 };
 
 const {
-  routeProtection, addUser, loginUser, updateUserInfo, updateUserProfilePic, updateUserPassword,
+  routeProtection,
+  addUser,
+  loginUser,
+  updateUserInfo,
+  updateUserProfilePic,
+  updateUserPassword,
+  updateUserAddress,
 } = usersController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
-  res.render('signup', { user: defined(req.user, user), logged: req.isAuthenticated() });
+  res.render('signup', {
+    user: defined(req.user, user),
+    logged: req.isAuthenticated()
+  });
 });
 
 
 router.route('/SVEditProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('SVEditProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+    res.render('SVEditProfile', {
+      user: defined(req.user, user),
+      logged: req.isAuthenticated()
+    });
   })
   .post((req, res) => {
     const {
-      username, password, email, firstName, lastName, service,
+      username,
+      password,
+      email,
+      firstName,
+      lastName,
+      service,
     } = req.body;
     const serviceArr = service.split('\n');
     debug(serviceArr[2]);
@@ -54,17 +71,34 @@ router.route('/SVEditProfile')
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
-    res.render('editProfile', { user: defined(req.user, user), logged: req.isAuthenticated() });
+    res.render('editProfile', {
+      user: defined(req.user, user),
+      logged: req.isAuthenticated()
+    });
   })
   .post((req, res) => {
     const {
-      password, passwordNew, email, firstName, lastName,
+      password,
+      passwordNew,
+      email,
+      firstName,
+      lastName,
+      address1,
+      address2,
+      address3,
+      city,
+      state,
+      country,
+      zipcode, // add in ejs:  address1, address2, address3, city, state, country, zipcode
     } = req.body;
 
-    debug(req.user);
+    // debug(req.user);
     updateUserInfo(req.user.login_name, email, firstName, lastName);
-    if (passwordNew.lenght > 7) {
-      updateUserPassword(req.user.login_name, password, passwordNew);
+    updateUserAddress(req.user.login_name, defined(address1, ''), address2, address3, defined(city, ''), defined(state, ''), defined(country, ''), defined(zipcode, ''));
+    if (defined(passwordNew, false)) {
+      if (defined(passwordNew.lenght, 0) > 7) {
+        updateUserPassword(req.user.login_name, password, passwordNew);
+      }
     }
     res.redirect('/users/signin');
   });
@@ -91,16 +125,23 @@ router.route('/updateProfilePic')
 
 router.route('/signUp').post(async (req, res) => {
   // create user
-  const { username, password, email } = req.body;
+  const {
+    username,
+    password,
+    email
+  } = req.body;
   addUser(username, password, email);
   const login = await loginUser(username, password);
-  debug(login);
+  // debug(login);
   res.redirect('/users/signin');
 });
 
 router.route('/signin')
   .get((req, res) => {
-    res.render('signin', { user: defined(req.user, user), logged: req.isAuthenticated() });
+    res.render('signin', {
+      user: defined(req.user, user),
+      logged: req.isAuthenticated()
+    });
   })
   .post(passport.authenticate('local', {
     successRedirect: '/users/editProfile',

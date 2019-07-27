@@ -41,6 +41,13 @@ function usersController() {
     return result;
   }
 
+  async function addNewUsersAddress(username) {
+    const request = new sql.Request();
+    request.query(`INSERT INTO user_address (login_name, address_1, address_2, address_3, PLZ, city_name, state_name, Country)
+    VALUES('${username}', ' ', NULL, NULL, 00000, ' ', ' ', ' ')`);
+  }
+
+
   function addUser(username, password, email) {
     const request = new sql.Request();
     request.input('pLogin', sql.NVarChar, username);
@@ -48,25 +55,33 @@ function usersController() {
     request.input('pEmail', sql.NVarChar, email);
     request.output('responseMessage', sql.NVarChar);
     request.execute('uspAddUser');
+    addNewUsersAddress(username);
   }
 
   async function updateUserInfo(username, email, firstName, lastName) {
     const request = new sql.Request();
-    debug(username, email, firstName, lastName);
+    // debug(username, email, firstName, lastName);
     // await can be removed.
-    const answ = await request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', email = '${email}' where LOGIN_NAME = '${username}'`);
-    debug(answ);
+    await request.query(`update users set FIRST_NAME = '${firstName}', LAST_NAME = '${lastName}', email = '${email}' where LOGIN_NAME = '${username}'`);
+  }
+
+  async function updateUserAddress(username, address1, address2, address3, city, state, country, zipcode) {
+    const request = new sql.Request();
+    request.query(`update user_address set address_1 = '${address1}', address_2 = '${address2}', address_3 = '${address3}', city_name = '${city}', state_name = '${state}', Country = '${country}', PLZ = ${zipcode} where login_name = '${username}'`, (err, result) => {
+      if (err) {
+        addNewUsersAddress(username);
+      }
+    });
   }
 
   async function updateUserPassword(username, password, passwordNew) {
-    debug(username);
+    // debug(username);
   }
 
   async function updateUserProfilePic(username, profilePic) {
     const request = new sql.Request();
     // await can be removed.
-    const answ = await request.query(`update users set PROFILE_PIC_URL = '${profilePic}' where LOGIN_NAME = '${username}'`);
-    debug(answ);
+    await request.query(`update users set PROFILE_PIC_URL = '${profilePic}' where LOGIN_NAME = '${username}'`);
   }
 
   function addServiceForProviderService(service) {
@@ -85,6 +100,7 @@ function usersController() {
     updateUserProfilePic,
     updateUserPassword,
     addServiceForProviderService,
+    updateUserAddress,
   };
 }
 
