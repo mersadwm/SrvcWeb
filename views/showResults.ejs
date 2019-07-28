@@ -136,7 +136,7 @@
         </div>
 
         <!-- This templates was made by Colorlib (https://colorlib.com) -->
-
+        <% if(recordset){ %>
         <% if(recordset.length > 0){ %>
         <ul class="article-list-vertical">
             <% for(var i = 0; i < recordset.lenght;i++) { %>
@@ -162,6 +162,7 @@
             </li> -->
 
         </ul>
+        <% } %>
         <% } %>
 
         <!-- End page contents -->

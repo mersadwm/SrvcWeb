@@ -7,42 +7,54 @@ const sql = require('mssql');
 function servicesController() {
   function getService(id) {
     const request = new sql.Request();
-    const result = request.input('id', sql.NVarChar, id).query('select * from services where id=@id');
-    debug('##servicesController###############################');
-    debug(result);
-    debug(id);
-    debug('########################');
+    const result = request.input('id', sql.NVarChar, id).query('select * from services where id=@id', (err, result) => {
+      debug('##servicesController###############################');
+      debug(result);
+      debug(err);
+      debug(id);
+      debug('########################');
+    });
+
     return result;
   }
 
   async function getServiceProvidersForService(id) {
     const request = new sql.Request();
     request.input('pServices', sql.NVarChar, id);
-    const result = await request.execute('uspSearchServiceProvider');
-    debug('##getServiceProvidersForService###############################');
-    debug(result);
-    debug(id);
-    debug('########################');
+    const result = await request.execute('uspSearchServiceProvider', (err, result) => {
+      debug('##getServiceProvidersForService###############################');
+      debug(result);
+      debug(err);
+      debug(id);
+      debug('########################');
+    });
+
     return result;
   }
 
 
   async function getAllServices() {
     const request = new sql.Request();
-    const result = await request.execute('uspGetAllServicesOfProviders');
-    debug('##getAllServices###############################');
-    debug(result);
-    debug('########################');
+    const result = await request.execute('uspGetAllServicesOfProviders', (err, result) => {
+      debug('##getAllServices###############################');
+      debug(result);
+      debug(err);
+      debug('########################');
+    });
+
     return result;
   }
 
   async function getServiceId(serviceTitle) {
     const request = new sql.Request();
-    const result = await request.query(`select id from services where title = '${serviceTitle}'`);
-    debug('##getServiceProvidersForService###############################');
-    debug(result);
-    debug(serviceTitle);
-    debug('########################');
+    const result = await request.query(`select id from services where title = '${serviceTitle}'`, (err, result) => {
+      debug('##getServiceProvidersForService###############################');
+      debug(result);
+      debug(err);
+      debug(serviceTitle);
+      debug('########################');
+    });
+
     return result;
   }
 
