@@ -112,10 +112,12 @@ function usersController() {
   async function addServiceProviderInfo(username, companyName, address, phone, website, email, zipCode, city, aboutme) {
     const request = new sql.Request();
     const verified = 0;
+    const userId = await request.query(`select user_id from users where login_name = '${username}'`);
     const user = await request.query(`select * from service_providers where login_user = '${username}'`);
     if (user.rowsAffected[0] === 0) {
-      request.input('pcompany_name', sql.NVarChar, companyName);
       request.input('plogin_user', sql.NVarChar, username);
+      request.input('puser_id', sql.Int, userId.recordset[0].user_id);
+      request.input('pcompany_name', sql.NVarChar, companyName);
       request.input('paddress_sp', sql.NVarChar, address);
       request.input('ptelephone', sql.NVarChar, phone);
       request.input('pwebsite_link', sql.NVarChar, website);
