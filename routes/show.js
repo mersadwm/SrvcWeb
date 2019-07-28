@@ -44,7 +44,6 @@ router.get('/search', async (req, res) => {
     recordset,
   } = serviceCollection;
 
-  debug(recordset);
   res.render('showResults', {
     user: defined(req.user, user),
     recordset,

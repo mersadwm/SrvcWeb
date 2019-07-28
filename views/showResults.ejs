@@ -63,7 +63,8 @@
                                         <option>SUBJECT B</option>
                                         <option>SUBJECT C</option>
                                     </select> -->
-                                    <input type="number" name="zipcode" class="bg-dark text-white" placeholder="Zip Code">
+                                    <input type="number" name="zipcode" class="bg-dark text-white"
+                                        placeholder="Zip Code">
                                 </div>
                             </div>
                             <div class="input-field">
@@ -139,28 +140,22 @@
         <% if(recordset){ %>
         <% if(recordset.length > 0){ %>
         <ul class="article-list-vertical">
-            <% for(var i = 0; i < recordset.lenght;i++) { %>
+            <% for (let index = 0; index < recordset.length; index++) {%>
             <li>
                 <a href="#" style="background-image: url('../images/aboutUs/pic01.jpg')"></a>
                 <div>
-                    <h2><a href="#">Interesting article title</a></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam
-                        a volutpat magna.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
+                    <h2><%=recordset[index].first_name%> <%=recordset[index].last_name%></h2>
+                    <strong><a href="https://<%=recordset[index].website_link%>" target=”_blank”><%=recordset[index].company_name%></a></strong>
+                    <p><%=recordset[index].about_me%></p>
+                    <hr>
+                    <p><%=recordset[index].more_info%></p>
+                    <p><%=recordset[index].address_sp%>, <%=recordset[index].zip%> <%=recordset[index].city%></p>
+                    <a href="mailto:<%=recordset[index].contact_email%>?Subject=Need%20a%20hand%20from%20ExtraHands4me&body=Dear%20Maddam/Sir%20<%=recordset[index].last_name%>" class="read-more">Send an email &rarr;</a>
+                    <a href="tel:<%=recordset[index].telephone%>" class="read-more">Call &rarr;</a>
                 </div>
             </li>
 
             <% } %>
-            <!-- <li>
-                <a href="#" style="background-image: url('../images/aboutUs/pic03.jpg')"></a>
-                <div>
-                    <h2><a href="#">Interesting article title</a></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam
-                        a volutpat magna.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
-                </div>
-            </li> -->
-
         </ul>
         <% } %>
         <% } %>
