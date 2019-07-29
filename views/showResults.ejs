@@ -124,7 +124,7 @@
                         <div class="row third">
                             <div class="input-field">
                                 <div class="result-count">
-                                    <span><% if(recordset){ %><%=recordset.length%><%}%> </span>results</div>
+                                    <span><% if(serviceCollection){ %><%=serviceCollection.length%><%}%> </span>results</div>
                                 <div class="group-btn">
                                     <button class="btn-delete" id="delete">Reset</button>
                                     <button class="btn-search">Search</button>
@@ -137,24 +137,30 @@
         </div>
 
         <!-- This templates was made by Colorlib (https://colorlib.com) -->
-        <% if(recordset){ if(recordset.length > 0){ %>
+        <% if(serviceCollection){ if(serviceCollection.length > 0){ %>
         <ul class="article-list-vertical">
-            <% for (let index = 0; index < recordset.length; index++) {%>
+            <% for (let index = 0; index < serviceCollection.length; index++) {%>
             <li>
-                <a href="#" style="background-image: url('<%=recordset[index].profile_pic_url%>')"></a>
+                <a href="#" style="background-image: url('<%=serviceCollection[index].profile_pic_url%>')"></a>
                 <div>
-                    <p><%=recordset[index].title%></p>
-                    <p><%=recordset[index].category%></p>
-                    <p><%=recordset[index].more_info%></p>
+                    <p><strong><%=serviceCollection[index].title%></strong>
+                        <br>
+                    <%=serviceCollection[index].category%>
+                    <br>
+                    <%=serviceCollection[index].more_info%></p>
                     <hr>
-                    <h2><%=recordset[index].first_name%> <%=recordset[index].last_name%></h2>
-                    <strong><a href="https://<%=recordset[index].website_link%>"
-                            target=”_blank”><%=recordset[index].company_name%></a></strong>
-                    <p><%=recordset[index].about_me%></p>
-                    <p><%=recordset[index].address_sp%>, <%=recordset[index].zip%> <%=recordset[index].city%></p>
-                    <a href="mailto:<%=recordset[index].contact_email%>?Subject=Need%20a%20hand%20from%20ExtraHands4me&body=Dear%20Maddam/Sir%20<%=recordset[index].last_name%>"
+                    <% if (logged) {%>
+                    <h2><%=serviceCollection[index].first_name%> <%=serviceCollection[index].last_name%></h2>
+                    <strong><a href="https://<%=serviceCollection[index].website_link%>"
+                            target=”_blank”><%=serviceCollection[index].company_name%></a></strong>
+                    <p><%=serviceCollection[index].about_me%>
+                    <%=serviceCollection[index].address_sp%>, <%=serviceCollection[index].zip%> <%=serviceCollection[index].city%></p>
+                    <a href="mailto:<%=serviceCollection[index].contact_email%>?Subject=Need%20a%20hand%20from%20ExtraHands4me&body=Dear%20Maddam/Sir%20<%=serviceCollection[index].last_name%>"
                         class="read-more">Send an email &rarr;</a>
-                    <a href="tel:<%=recordset[index].telephone%>" class="read-more">Call &rarr;</a>
+                    <a href="tel:<%=serviceCollection[index].telephone%>" class="read-more">Call &rarr;</a>
+                    <% } else { %>
+                        <a href="/users/signin">To view the contact infromation please login</a>
+            <% }%>
                 </div>
             </li>
 

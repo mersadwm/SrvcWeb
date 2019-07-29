@@ -24,11 +24,9 @@ const user = {
 };
 
 const {
-  getService,
   getAllServices,
-  getServiceId,
-  getServiceProvidersForService,
   getServiceProvidersForServiceByTitle,
+  advancedSearch,
 } = serviceController;
 
 router.get('/search', async (req, res) => {
@@ -36,17 +34,15 @@ router.get('/search', async (req, res) => {
   debug(q);
   let serviceCollection;
   if (q.searchVal) {
-    serviceCollection = await getServiceProvidersForServiceByTitle(q.searchVal);
+    // serviceCollection = await getServiceProvidersForServiceByTitle(q.searchVal);
+    serviceCollection = await advancedSearch(q.searchVal, null, null);
   } else {
     serviceCollection = await getAllServices();
   }
-  const {
-    recordset,
-  } = serviceCollection;
 
   res.render('showResults', {
     user: defined(req.user, user),
-    recordset,
+    serviceCollection,
     logged: req.isAuthenticated(),
   });
 });
