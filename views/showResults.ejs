@@ -155,7 +155,7 @@
                             target=”_blank”><%=serviceCollection[index].company_name%></a></strong>
                     <p><%=serviceCollection[index].about_me%>
                     <%=serviceCollection[index].address_sp%>, <%=serviceCollection[index].zip%> <%=serviceCollection[index].city%></p>
-                    <a href="mailto:<%=serviceCollection[index].contact_email%>?Subject=Need%20a%20hand%20from%20ExtraHands4me&body=Dear%20Maddam/Sir%20<%=serviceCollection[index].last_name%>"
+                    <a href="mailto:<%=serviceCollection[index].contact_email%>?Subject=ExtraHands%20Order%20by%20Mr/Ms%20<%=user.last_name%>&body=Dear%20Mr/Ms%20%20<%=serviceCollection[index].last_name%>,%0D%0A%0D%0AI%20found%20your%20contact%20for%20the%20service%20of%20<%=serviceCollection[index].title%>%20on%20ExtraHands4me.%0D%0AI%20would%20like%20to...%0D%0A%0D%0A%0D%0ABest%20regards,%0D%0A%0D%0AContact%20information%0D%0A<%=user.first_name%>%20<%=user.last_name%>"
                         class="read-more">Send an email &rarr;</a>
                     <a href="tel:<%=serviceCollection[index].telephone%>" class="read-more">Call &rarr;</a>
                     <% } else { %>
