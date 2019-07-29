@@ -36,11 +36,33 @@ function servicesController() {
     return serviceId.id;
   }
 
+  async function getAllServicesForProvider(providerUserId) {
+    const { recordset } = await getAllServices();
+    const dataCollection = [];
+    for (let index = 0; index < recordset.length; index++) {
+      const element = recordset[index];
+      if (element.user_id[0] === providerUserId) {
+        dataCollection.push(element);
+      }
+    }
+    debug(dataCollection);
+    return dataCollection;
+  }
 
   async function getServiceProvidersForServiceByTitle(serviceTitle) {
     const id = await getServiceId(serviceTitle);
     const services = await getServiceProvidersForService(id);
     return services;
+  }
+
+  async function advancedSearch(keyword, zip, range) {
+    const { recordset } = await getAllServices();
+
+    for (let index = 0; index < recordset.length; index++) {
+      const element = recordset[index];
+      debug(element);
+      debug('###############');
+    }
   }
 
 
@@ -50,6 +72,8 @@ function servicesController() {
     getServiceId,
     getServiceProvidersForService,
     getServiceProvidersForServiceByTitle,
+    advancedSearch,
+    getAllServicesForProvider,
   };
 }
 
