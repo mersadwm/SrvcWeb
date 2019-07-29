@@ -141,14 +141,16 @@
         <ul class="article-list-vertical">
             <% for (let index = 0; index < recordset.length; index++) {%>
             <li>
-                <a href="#" style="background-image: url('../images/aboutUs/pic03.jpg')"></a>
+                <a href="#" style="background-image: url('<%=recordset[index].profile_pic_url%>')"></a>
                 <div>
+                    <p><%=recordset[index].title%></p>
+                    <p><%=recordset[index].category%></p>
+                    <p><%=recordset[index].more_info%></p>
+                    <hr>
                     <h2><%=recordset[index].first_name%> <%=recordset[index].last_name%></h2>
                     <strong><a href="https://<%=recordset[index].website_link%>"
                             target=”_blank”><%=recordset[index].company_name%></a></strong>
                     <p><%=recordset[index].about_me%></p>
-                    <hr>
-                    <p><%=recordset[index].more_info%></p>
                     <p><%=recordset[index].address_sp%>, <%=recordset[index].zip%> <%=recordset[index].city%></p>
                     <a href="mailto:<%=recordset[index].contact_email%>?Subject=Need%20a%20hand%20from%20ExtraHands4me&body=Dear%20Maddam/Sir%20<%=recordset[index].last_name%>"
                         class="read-more">Send an email &rarr;</a>
