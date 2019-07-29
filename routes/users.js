@@ -4,6 +4,7 @@ const debug = require('debug')('app:users');
 const formidable = require('formidable');
 const path = require('path');
 const crypto = require('crypto');
+const sql = require('mssql');
 
 
 const router = express.Router();
@@ -11,6 +12,8 @@ const defined = require('defined');
 
 
 const usersController = require('../controllers/usersController');
+const serviceController = require('../controllers/servicesController');
+
 
 const user = {
   first_name: '',
@@ -40,6 +43,8 @@ const {
   updateUserAddress,
   getServiceProviderInfo,
 } = usersController;
+
+const { getAllServicesForProvider } = serviceController;
 /* GET users pages. */
 router.get('/signup', (req, res) => {
   res.render('signup', {
@@ -52,13 +57,18 @@ router.get('/signup', (req, res) => {
 router.route('/SVEditProfile')
   .all(routeProtection)
   .get(async (req, res) => {
+    //const request = new sql.Request();
     const serviceProvider = await getServiceProviderInfo(req.user.login_name);
-    debug(serviceProvider);
+    const serviceProviderData = await getAllServicesForProvider(serviceProvider.user_id);
+  //  const { recordset } = await request.query(`select service_id from service_prividers_ref where user_id = '${serviceProvider.user_id}'`);
+    //debug(serviceProvider);
     res.render('SVEditProfile', {
       user: defined(req.user, user),
       serviceProvider,
+      serviceProviderData,
       logged: req.isAuthenticated(),
     });
+    //debug(recordset);
   })
   .post(async (req, res) => {
     const {
