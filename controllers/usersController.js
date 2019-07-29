@@ -90,22 +90,19 @@ function usersController() {
       const request = new sql.Request();
       debug(`index before ++index: ${index}`);
       const serviceName = service[index];
+      const lowerCaseServise = serviceName.toLowerCase();
       const moreInfo = service[++index];
       debug(`index after ++index: ${index}`);
       request.input('pLogin', sql.NVarChar, loginName);
-      request.input('pservice', sql.NVarChar, serviceName.trim());
+      request.input('pservice', sql.NVarChar, lowerCaseServise.trim());
       request.input('pmore_info', sql.NVarChar, moreInfo);
-      request.execute('uspServices_ref', (err, result) => {
-        debug(err);
-        debug(result);
-      });
+      request.execute('uspServices_ref');
       // debug(serviceName , typeof moreInfo);
       // debug(service.length);
       //  debug(serviceName);
       // debug('service: ' + serviceName);
       // debug('moreinfo: ' + moreInfo);
-      debug(`service : ${serviceName}`);
-      debug(`moreinfo : ${moreInfo}`);
+      debug(`service : ${lowerCaseServise.trim()}`);
     }
   }
 
