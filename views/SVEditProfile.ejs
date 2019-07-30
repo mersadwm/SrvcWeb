@@ -16,6 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
   <link rel="stylesheet" href="/stylesheets/sub_Cat.css">
+  <link rel="stylesheet" href="/stylesheets/SVEditProfile.css">
 
 
 
@@ -508,16 +509,16 @@
                   </table>
                 </div>
               </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label"></label>
-              <div class="col-md-8">
-                <input type="submit" class="btn btn-primary" value="Save Changes">
-                <input type="reset" class="btn btn-default" value="Cancel">
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                  <input type="submit" class="btn btn-primary" value="Save Changes">
+                  <input type="reset" class="btn btn-default" value="Cancel">
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
 
-            <form class="form-horizontal" name="form" action="/users/DeleteService" method="post">
+            <!-- <form class="form-horizontal" name="form" action="/users/DeleteService" method="post">
               <div class="form-group">
                 <label class="col-lg-3 control-label">Enter your Service ID to delete it:</label>
                 <div class="col-lg-8">
@@ -531,7 +532,7 @@
                   <button type="submit" class="btn btn-danger">Delete</button>
                 </div>
               </div>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
@@ -560,16 +561,26 @@
     <script src="/javascripts/header_Sidebar.js"></script>
     <script src="/javascripts/add-service.js"></script>
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
 
-$('#myTable tr').click(function() {
-    var href = $(this).find("a").attr("href");
-    if(href) {
-        alert(href);
-    }
-});
+            $('#myTable tr').click(function () {
+                  var href = $(this).find("a").attr("href");
+                  if (href) {
+                    var delConfirm = prompt(
+                      `Please enter keyword 'delete' to remove the service with the id number ${href}`);
 
-});
+                    if (delConfirm === "delete" || delConfirm === "Delete") {
+                       $.ajax({
+                          type: 'POST',
+                          url: '/users/DeleteService',
+                          data: {userid: <%=serviceProvider.user_id%>, serviceproviderid: href},
+                          success(result) {
+                            window.alert("The service has been removed, please reload the page to view the changes");
+                          }
+                        });
+                      }}
+                  });
+                });
     </script>
 
 
