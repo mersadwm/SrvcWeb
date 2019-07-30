@@ -158,7 +158,12 @@ function usersController() {
     const request = new sql.Request();
     request.query(`update service_providers set verified = ${operationMode} where login_user = '${username}'`);
   }
-
+  function deleteService(userId, spId) {
+    const request = new sql.Request();
+    request.query(`delete from service_prividers_ref where user_id = ${userId} and sp_id = ${spId}`, (err, result) => { debug(err); debug(result); });
+    debug(userId);
+    debug(spId);
+  }
   return {
     routeProtection,
     addUser,
@@ -174,6 +179,7 @@ function usersController() {
     getServiceProviderInfo,
     upgradeToAdmin,
     verifyServiceProvider,
+    deleteService,
   };
 }
 

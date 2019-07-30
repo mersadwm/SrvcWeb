@@ -41,11 +41,11 @@
             <br>
             <br>
             <% if(!serviceProvider.verified) {%>
-            <img src="/images/editProfile/notverified.png" style="max-width: 150px"  class="avatar rounded-circle">
+            <img src="/images/editProfile/notverified.png" style="max-width: 150px" class="avatar rounded-circle">
             <hr>
             Please contact admins to verify your business information
             <%} else {%>
-            <img src="/images/editProfile/verified.png" style="max-width: 150px"  class="avatar rounded-circle">
+            <img src="/images/editProfile/verified.png" style="max-width: 150px" class="avatar rounded-circle">
             <% }%>
           </div>
         </div>
@@ -95,7 +95,8 @@
               <div class="form-group">
                 <label class="col-lg-3 control-label">Zip Code:</label>
                 <div class="col-lg-8">
-                  <input class="form-control" name='zipcode' type="number" value="<%=serviceProvider.zip%>" placeholder="Zip Code">
+                  <input class="form-control" name='zipcode' type="number" value="<%=serviceProvider.zip%>"
+                    placeholder="Zip Code">
                 </div>
               </div>
 
@@ -116,7 +117,8 @@
               <div class="form-group">
                 <label class="col-lg-3 control-label">About me:</label>
                 <div class="col-lg-8">
-                  <textarea class="form-control" name="aboutme" id="aboutme_textarea" rows="3" value="<%=serviceProvider.about_me%>"></textarea>
+                  <textarea class="form-control" name="aboutme" id="aboutme_textarea" rows="3"
+                    value="<%=serviceProvider.about_me%>"></textarea>
                 </div>
               </div>
 
@@ -138,332 +140,332 @@
                 <div class="col-lg-8">
                   <select class="form-control" id="sel1">
                     <option>Choose</option>
-                        <optgroup label="Winter service"> 
-                            <option>Remove Snow from Walks, Drives and Roofs</option>
-                            <option>Distribute grit</option>
-                        </optgroup>
-                        <optgroup label="Private paths and areas"> 
-                            <option>Private space paving
-                            <option>Garden Trail
-                            <option>Putting lawn edge stones
-                        </optgroup>
-                        <optgroup label="Public roads and areas"> 
-                            <option>Surface paving</option>
-                            <option>asphalt surface</option>
-                            <option>Concreting an area</option>
-                        </optgroup>
-                        <optgroup label="Facade and scaffolding"> 
-                            <option>Painting the facade</option>
-                            <option>Cleaning the facade</option>
-                            <option>plaster the facade</option>
-                            <option>Restoration & Refurbishment</option>
-                            <option>Balcony construction & renovation</option>
-                            <option>Facade cladding</option>
-                            <option>scaffolding</option>
-                            <option>Roller shutters & awnings</option>            
-                        </optgroup>
-                        <optgroup label="Roof and chimney"> 
-                            <option>Roof truss, carpenter</option>
-                            <option>roof a house</option>
-                            <option>Roofing outbuildings</option>
-                            <option>Roof windows & skylight</option>
-                            <option>gutter & downpipe</option>
-                            <option>chimney</option>
-                            <option>waterproof the roof</option>
-                            <option>roof insulation</option>
-                            <option>Electric solar panels</option>
-                            <option>Thermal collectors</option>
-                            <option>Solar system connection</option>
-                            <option>Cleaning eaves gutter</option>
-                            <option>roof cleaning</option>
-                        </optgroup>
-                        <optgroup label="Horticulture & care"> 
-                            <option>Fence construction</option>
-                            <option>Lawn Care & Create Lawn</option>
-                            <option>Tree care & pruning</option>
-                            <option>Hedge cutting</option>
-                            <option>Garden path & area</option>
-                            <option>Dispose of garden waste</option>
-                            <option>Removing hedges</option>
-                            <option>Wooden terraces</option>
-                            <option>Finished carport or similar Assembly</option>
-                            <option>Pool & Garden Pond</option>
-                            <option>Others about Horticulture & care </option>                           
-                        </optgroup>
-                        <optgroup label="Foundation"> 
-                            <option>point foundation</option>
-                            <option>Base plate, strip foundation</option>
-                            <option>Casting concrete ceiling</option>
-                            <option>Other foundation work</option>                                                
-                        </optgroup>
-                        <optgroup label="Diggers and earthworks"> 
-                            <option>Construction pits & channels</option>
-                            <option>well drilling</option>
-                            <option>Small earthworks</option>
-                            <option>Demolition & Disposal</option>
-                            <option>bore geothermal heat</option>
-                            <option>Built-in tanks</option>
-                            <option>Disposal of excavated earth</option>
-                            <option>Other dredging & earthworks</option>                                                                          
-                        </optgroup>
-                        <optgroup label="Walls and shell construction"> 
-                            <option>Floor panel & ceiling</option>
-                            <option>Building shell & masonry work</option>
-                            <option>Plaster, clinker &fachen</option>
-                            <option>brick facing</option>
-                            <option>wall penetration</option>
-                            <option>core drilling</option>
-                            <option>Dry construction & interior finishing</option>
-                            <option>Screed pouring</option>
-                            <option>Dry wall</option>
-                            <option>Stair construction & repair</option>
-                            <option>Railing construction & repair</option>
-                            <option>Demolition & Disposal</option>
-                            <option>Others about Walls & Shell construction</option>                                                                                                         
-                        </optgroup>
-                        <optgroup label="Basement"> 
-                            <option>Complete renovation of the cellar</option>
-                            <option>Drain the cellar</option>
-                            <option>Seal/insulate cellars</option>
-                            <option>Renovation/levelling of cellar floors</option>
-                            <option>Renovate cellar wall</option>
-                            <option>Renovate cellar stairs</option>
-                            <option>Other renovation work on the cellar</option>
-                            <option>Disposal (e.g. of building materials) required</option>                                                                                                                              
-                        </optgroup>
-                        <optgroup label="walls & rooms"> 
-                            <option>Interior design and drywall</option>
-                            <option>Wall breakthrough</option>
-                            <option>Core drilling</option>
-                            <option>Bath tile</option>
-                            <option>Tile mirror and wall tile</option>
-                            <option>Floor tiles laid</option>
-                            <option>renew</option>
-                            <option>Tile panels and panelling</option>
-                            <option>Wall paint white</option>
-                            <option>Tapying and painting</option>
-                            <option>Renovation entrance extract</option>
-                            <option>Plastering ornamental plaster</option>                                                                                                                                                          
-                        </optgroup>
-                        <optgroup label="ceiling"> 
-                            <option>Plaster ceiling</option>
-                            <option>Paint ceiling</option>
-                            <option>Wallpapering the ceiling</option>
-                            <option>Lacquering the wooden ceiling</option>
-                            <option>Panel the ceiling</option>
-                            <option>Suspend ceiling</option>
-                            <option>stucco works</option>
-                            <option>Install lamps, spotlights</option>
-                            <option>Insulating the suspended ceiling</option>
-                            <option>Other ceiling works</option>                                                                                                                                                                                        
-                        </optgroup>
-                        <optgroup label="doors & windows"> 
-                            <option>Door, window & wall opening</option>
-                            <option>Installation, exchange door</option>
-                            <option>Installation of animal flap</option>
-                            <option>Installation, exchange window</option>
-                            <option>Roof windows & skylight</option>
-                            <option>Paint doors/ windows</option>
-                            <option>Glazing door & window</option>
-                            <option>window cleaning</option>
-                            <option>Blinds & Roller blinds</option>
-                            <option>Other for Doors & Windows</option>                                                                                                                                                                                                                
-                        </optgroup>
-                        <optgroup label="parquet & flooring">
-                            <option>Laying & renovating planks</option>
-                            <option>Grinding wooden planks</option>
-                            <option>parquet</option>
-                            <option>Parquet sanding & varnishing</option>
-                            <option>Laying & exchanging laminate</option>
-                            <option>Laying carpet, PVC & linoleum</option>
-                            <option>tile</option>
-                            <option>Lay terrazzo flooring</option>
-                            <option>Laying a natural stone floor</option>
-                            <option>underfloor heating</option>
-                            <option>Floor levelling</option>
-                            <option>Other about Parquet & Flooring</option>                            
-                        </optgroup>
-                        <optgroup label="furniture & furnishings">
-                            <option>Custom-made wooden furniture</option>
-                            <option>assemble/disassemble a prefabricated kitchen</option>
-                            <option>Kitchen construction Kitchen studio</option>
-                            <option>Installing the worktop</option>
-                            <option>Assembly/disassembly of ready-made furniture</option>
-                            <option>Restore furniture</option>
-                            <option>Upholster & upholster seat furniture</option>
-                            <option>Construction Highbed, Plateau</option>
-                            <option>Plan your interior</option>
-                            <option>Other about Furniture & Furnishings</option>                       
-                        </optgroup>
-                        <optgroup label="electrical & smartHome">
-                            <option>Electroinst. & Renewal</option>
-                            <option>Sockets, wiring & light switches</option>
-                            <option>Install lamps, spotlights</option>
-                            <option>SAT system, TV cable & network</option>
-                            <option>Electric cooker connection & repair</option>
-                            <option>Alarm System & Security</option>
-                            <option>SmartHome & Home Automation</option>
-                            <option>Miscellaneous about Electrics & SmartHome</option>                            
-                        </optgroup>
-                        <optgroup label="heating, plumbing, climate">
-                            <option>Heating system & hot water</option>
-                            <option>Installation, exchange Air conditioner</option>
-                            <option>Installation, exchange oil/gas tank</option>
-                            <option>underfloor heating</option>
-                            <option>Piping & Connection</option>
-                            <option>Connecting the valve</option>
-                            <option>Installation Sanitary & Toilets</option>
-                            <option>Replacement toilets</option>
-                            <option>Built-in shower & bathtub</option>
-                            <option>Exchange shower & bathtub</option>
-                            <option>Complete bathroom renovation</option>
-                            <option>Gas stove Connection</option>
-                            <option>Laying gas pipelines</option>
-                            <option>Other about Heating, Sanitary & Air Conditioning</option>                            
-                        </optgroup>
-                        <optgroup label="fireplace & chimney">
-                            <option>Connecting the finished chimney/stove</option>
-                            <option>Building fireplace/tiled stove</option>
-                            <option>Chimney construction & renovation</option>
-                            <option>Other about Fireplace & Chimney</option>                            
-                        </optgroup>
-                        <optgroup label="cleaning">
-                            <option>Window & glass cleaning</option>
-                            <option>Construction & final cleaning</option>
-                            <option>maintenance cleaning</option>
-                            <option>Other cleaning</option>                            
-                        </optgroup>
-                        <optgroup label="staircase & sailings">
-                            <option>Installation, exchange of internal stairs</option>
-                            <option>shuttering & casting concrete stairs</option>
-                            <option>Renovate & refurbish stairs</option>
-                            <option>Stairs & railings varnish</option>
-                            <option>Other about Stairs & Balustrades</option>                            
-                        </optgroup>
-                        <optgroup label="cars, trucks">
-                            <option>Small Repair & Smart Repair</option>
-                            <option>vehicle maintenance</option>
-                            <option>trailer hitch</option>
-                            <option>Windscreen repair & installation</option>
-                            <option>film discs</option>
-                            <option>Paint vehicle</option>
-                            <option>Carport made to measure</option>
-                            <option>Transport & Transfer</option>
-                            <option>Others for Cars & Trucks</option>                                                    
-                        </optgroup>
-                        <optgroup label="motorcycle">
-                            <option>TBD</option>                                                
-                        </optgroup>
-                        <optgroup label="bike">
-                            <option>TBD</option>                                                
-                        </optgroup>
-                        <optgroup label="boot">
-                            <option>Transport & Transfer</option>
-                            <option>Boat construction & repair</option>
-                            <option>Repair boat engine</option>
-                         </optgroup>
-                        <optgroup label="installation garage doors">
-                            <option>Installation garage door</option>
-                            <option>Replacing the garage door Disassembling the garage door</option>
-                            <option>Disposal of the garage door</option>
-                            <option>Other work on garage doors</option>                        
-                        </optgroup>
-                        <optgroup label="move">
-                            <option>Local</option>
-                            <option>National</option>
-                            <option>International</option>
-                            <option>Other removals</option>                                                
-                        </optgroup>
-                        <optgroup label="transport">
-                            <option>Delivery & Collection</option>
-                            <option>Piano & furniture transport</option>
-                            <option>Transport, disposal & clearing out</option>
-                            <option>Other transports</option>
-                            <option>from Germany</option>
-                            <option>to Germany</option>                                                                         
-                        </optgroup>
-                        <optgroup label="Repairing a household appliance">
-                            <option>Repair washing machine</option>
-                            <option>Repair electric cooker</option>
-                            <option>Repair cooktop</option>
-                            <option>Repair dryer</option>
-                            <option>Repair dishwasher</option>
-                            <option>Repair refrigerator</option>
-                            <option>Repair freezer</option>
-                            <option>Repairing other household appliances</option>                                                                         
-                        </optgroup>
-                        <optgroup label="Mobile phone">
-                            <option>Apple</option>
-                            <option>Samsung</option>
-                            <option>HTC</option>
-                            <option>Huawei</option>
-                            <option>LG</option>
-                            <option>Microsoft</option>
-                            <option>Motorola</option>
-                            <option>Nokia</option>
-                            <option>OnePlus</option>
-                            <option>Sony</option>
-                            <option>Xiaomi</option>                                                                        
-                        </optgroup>
-                        <optgroup label="Kitchen & furniture construction">
-                            <option>Installing the kitchen</option>
-                            <option>Cutting and mounting the worktop to size</option>
-                            <option>Installing a large electrical appliance (without connection)</option>
-                            <option>Dismantle old kitchen</option>
-                            <option>Transport of kitchen required (delivery)</option>
-                            <option>Disposal (e.g. of the old kitchen) required</option>                                                                                                
-                        </optgroup>
-                        <optgroup label="Others for Kitchen & furniture construction">
-                            <option>Connecting the electric stove</option>
-                            <option>Repair electric stove</option>
-                            <option>Replace electric stove</option>
-                            <option>Disconnect electric stove</option>
-                            <option>Dispose of old device</option>                                                                                                                     
-                        </optgroup>
-                        <optgroup label="Other to Move & Transport">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Structure of gates & railings">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Load-bearing construction">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="welding operations">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Other metalwork">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Website & Software">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Design & Print">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Home appliances, SAT system">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Miscellaneous to EDP & Advertising">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Repair home electronics">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Repair furniture & furnishings">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Other repair work">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Furniture construction & dismantling">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
-                        <optgroup label="Electric cooker connection & repair">
-                            <option>TBD</option>                                                                                            
-                        </optgroup>
+                    <optgroup label="Winter service">
+                      <option>Remove Snow from Walks, Drives and Roofs</option>
+                      <option>Distribute grit</option>
+                    </optgroup>
+                    <optgroup label="Private paths and areas">
+                      <option>Private space paving
+                      <option>Garden Trail
+                      <option>Putting lawn edge stones
+                    </optgroup>
+                    <optgroup label="Public roads and areas">
+                      <option>Surface paving</option>
+                      <option>asphalt surface</option>
+                      <option>Concreting an area</option>
+                    </optgroup>
+                    <optgroup label="Facade and scaffolding">
+                      <option>Painting the facade</option>
+                      <option>Cleaning the facade</option>
+                      <option>plaster the facade</option>
+                      <option>Restoration & Refurbishment</option>
+                      <option>Balcony construction & renovation</option>
+                      <option>Facade cladding</option>
+                      <option>scaffolding</option>
+                      <option>Roller shutters & awnings</option>
+                    </optgroup>
+                    <optgroup label="Roof and chimney">
+                      <option>Roof truss, carpenter</option>
+                      <option>roof a house</option>
+                      <option>Roofing outbuildings</option>
+                      <option>Roof windows & skylight</option>
+                      <option>gutter & downpipe</option>
+                      <option>chimney</option>
+                      <option>waterproof the roof</option>
+                      <option>roof insulation</option>
+                      <option>Electric solar panels</option>
+                      <option>Thermal collectors</option>
+                      <option>Solar system connection</option>
+                      <option>Cleaning eaves gutter</option>
+                      <option>roof cleaning</option>
+                    </optgroup>
+                    <optgroup label="Horticulture & care">
+                      <option>Fence construction</option>
+                      <option>Lawn Care & Create Lawn</option>
+                      <option>Tree care & pruning</option>
+                      <option>Hedge cutting</option>
+                      <option>Garden path & area</option>
+                      <option>Dispose of garden waste</option>
+                      <option>Removing hedges</option>
+                      <option>Wooden terraces</option>
+                      <option>Finished carport or similar Assembly</option>
+                      <option>Pool & Garden Pond</option>
+                      <option>Others about Horticulture & care </option>
+                    </optgroup>
+                    <optgroup label="Foundation">
+                      <option>point foundation</option>
+                      <option>Base plate, strip foundation</option>
+                      <option>Casting concrete ceiling</option>
+                      <option>Other foundation work</option>
+                    </optgroup>
+                    <optgroup label="Diggers and earthworks">
+                      <option>Construction pits & channels</option>
+                      <option>well drilling</option>
+                      <option>Small earthworks</option>
+                      <option>Demolition & Disposal</option>
+                      <option>bore geothermal heat</option>
+                      <option>Built-in tanks</option>
+                      <option>Disposal of excavated earth</option>
+                      <option>Other dredging & earthworks</option>
+                    </optgroup>
+                    <optgroup label="Walls and shell construction">
+                      <option>Floor panel & ceiling</option>
+                      <option>Building shell & masonry work</option>
+                      <option>Plaster, clinker &fachen</option>
+                      <option>brick facing</option>
+                      <option>wall penetration</option>
+                      <option>core drilling</option>
+                      <option>Dry construction & interior finishing</option>
+                      <option>Screed pouring</option>
+                      <option>Dry wall</option>
+                      <option>Stair construction & repair</option>
+                      <option>Railing construction & repair</option>
+                      <option>Demolition & Disposal</option>
+                      <option>Others about Walls & Shell construction</option>
+                    </optgroup>
+                    <optgroup label="Basement">
+                      <option>Complete renovation of the cellar</option>
+                      <option>Drain the cellar</option>
+                      <option>Seal/insulate cellars</option>
+                      <option>Renovation/levelling of cellar floors</option>
+                      <option>Renovate cellar wall</option>
+                      <option>Renovate cellar stairs</option>
+                      <option>Other renovation work on the cellar</option>
+                      <option>Disposal (e.g. of building materials) required</option>
+                    </optgroup>
+                    <optgroup label="walls & rooms">
+                      <option>Interior design and drywall</option>
+                      <option>Wall breakthrough</option>
+                      <option>Core drilling</option>
+                      <option>Bath tile</option>
+                      <option>Tile mirror and wall tile</option>
+                      <option>Floor tiles laid</option>
+                      <option>renew</option>
+                      <option>Tile panels and panelling</option>
+                      <option>Wall paint white</option>
+                      <option>Tapying and painting</option>
+                      <option>Renovation entrance extract</option>
+                      <option>Plastering ornamental plaster</option>
+                    </optgroup>
+                    <optgroup label="ceiling">
+                      <option>Plaster ceiling</option>
+                      <option>Paint ceiling</option>
+                      <option>Wallpapering the ceiling</option>
+                      <option>Lacquering the wooden ceiling</option>
+                      <option>Panel the ceiling</option>
+                      <option>Suspend ceiling</option>
+                      <option>stucco works</option>
+                      <option>Install lamps, spotlights</option>
+                      <option>Insulating the suspended ceiling</option>
+                      <option>Other ceiling works</option>
+                    </optgroup>
+                    <optgroup label="doors & windows">
+                      <option>Door, window & wall opening</option>
+                      <option>Installation, exchange door</option>
+                      <option>Installation of animal flap</option>
+                      <option>Installation, exchange window</option>
+                      <option>Roof windows & skylight</option>
+                      <option>Paint doors/ windows</option>
+                      <option>Glazing door & window</option>
+                      <option>window cleaning</option>
+                      <option>Blinds & Roller blinds</option>
+                      <option>Other for Doors & Windows</option>
+                    </optgroup>
+                    <optgroup label="parquet & flooring">
+                      <option>Laying & renovating planks</option>
+                      <option>Grinding wooden planks</option>
+                      <option>parquet</option>
+                      <option>Parquet sanding & varnishing</option>
+                      <option>Laying & exchanging laminate</option>
+                      <option>Laying carpet, PVC & linoleum</option>
+                      <option>tile</option>
+                      <option>Lay terrazzo flooring</option>
+                      <option>Laying a natural stone floor</option>
+                      <option>underfloor heating</option>
+                      <option>Floor levelling</option>
+                      <option>Other about Parquet & Flooring</option>
+                    </optgroup>
+                    <optgroup label="furniture & furnishings">
+                      <option>Custom-made wooden furniture</option>
+                      <option>assemble/disassemble a prefabricated kitchen</option>
+                      <option>Kitchen construction Kitchen studio</option>
+                      <option>Installing the worktop</option>
+                      <option>Assembly/disassembly of ready-made furniture</option>
+                      <option>Restore furniture</option>
+                      <option>Upholster & upholster seat furniture</option>
+                      <option>Construction Highbed, Plateau</option>
+                      <option>Plan your interior</option>
+                      <option>Other about Furniture & Furnishings</option>
+                    </optgroup>
+                    <optgroup label="electrical & smartHome">
+                      <option>Electroinst. & Renewal</option>
+                      <option>Sockets, wiring & light switches</option>
+                      <option>Install lamps, spotlights</option>
+                      <option>SAT system, TV cable & network</option>
+                      <option>Electric cooker connection & repair</option>
+                      <option>Alarm System & Security</option>
+                      <option>SmartHome & Home Automation</option>
+                      <option>Miscellaneous about Electrics & SmartHome</option>
+                    </optgroup>
+                    <optgroup label="heating, plumbing, climate">
+                      <option>Heating system & hot water</option>
+                      <option>Installation, exchange Air conditioner</option>
+                      <option>Installation, exchange oil/gas tank</option>
+                      <option>underfloor heating</option>
+                      <option>Piping & Connection</option>
+                      <option>Connecting the valve</option>
+                      <option>Installation Sanitary & Toilets</option>
+                      <option>Replacement toilets</option>
+                      <option>Built-in shower & bathtub</option>
+                      <option>Exchange shower & bathtub</option>
+                      <option>Complete bathroom renovation</option>
+                      <option>Gas stove Connection</option>
+                      <option>Laying gas pipelines</option>
+                      <option>Other about Heating, Sanitary & Air Conditioning</option>
+                    </optgroup>
+                    <optgroup label="fireplace & chimney">
+                      <option>Connecting the finished chimney/stove</option>
+                      <option>Building fireplace/tiled stove</option>
+                      <option>Chimney construction & renovation</option>
+                      <option>Other about Fireplace & Chimney</option>
+                    </optgroup>
+                    <optgroup label="cleaning">
+                      <option>Window & glass cleaning</option>
+                      <option>Construction & final cleaning</option>
+                      <option>maintenance cleaning</option>
+                      <option>Other cleaning</option>
+                    </optgroup>
+                    <optgroup label="staircase & sailings">
+                      <option>Installation, exchange of internal stairs</option>
+                      <option>shuttering & casting concrete stairs</option>
+                      <option>Renovate & refurbish stairs</option>
+                      <option>Stairs & railings varnish</option>
+                      <option>Other about Stairs & Balustrades</option>
+                    </optgroup>
+                    <optgroup label="cars, trucks">
+                      <option>Small Repair & Smart Repair</option>
+                      <option>vehicle maintenance</option>
+                      <option>trailer hitch</option>
+                      <option>Windscreen repair & installation</option>
+                      <option>film discs</option>
+                      <option>Paint vehicle</option>
+                      <option>Carport made to measure</option>
+                      <option>Transport & Transfer</option>
+                      <option>Others for Cars & Trucks</option>
+                    </optgroup>
+                    <optgroup label="motorcycle">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="bike">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="boot">
+                      <option>Transport & Transfer</option>
+                      <option>Boat construction & repair</option>
+                      <option>Repair boat engine</option>
+                    </optgroup>
+                    <optgroup label="installation garage doors">
+                      <option>Installation garage door</option>
+                      <option>Replacing the garage door Disassembling the garage door</option>
+                      <option>Disposal of the garage door</option>
+                      <option>Other work on garage doors</option>
+                    </optgroup>
+                    <optgroup label="move">
+                      <option>Local</option>
+                      <option>National</option>
+                      <option>International</option>
+                      <option>Other removals</option>
+                    </optgroup>
+                    <optgroup label="transport">
+                      <option>Delivery & Collection</option>
+                      <option>Piano & furniture transport</option>
+                      <option>Transport, disposal & clearing out</option>
+                      <option>Other transports</option>
+                      <option>from Germany</option>
+                      <option>to Germany</option>
+                    </optgroup>
+                    <optgroup label="Repairing a household appliance">
+                      <option>Repair washing machine</option>
+                      <option>Repair electric cooker</option>
+                      <option>Repair cooktop</option>
+                      <option>Repair dryer</option>
+                      <option>Repair dishwasher</option>
+                      <option>Repair refrigerator</option>
+                      <option>Repair freezer</option>
+                      <option>Repairing other household appliances</option>
+                    </optgroup>
+                    <optgroup label="Mobile phone">
+                      <option>Apple</option>
+                      <option>Samsung</option>
+                      <option>HTC</option>
+                      <option>Huawei</option>
+                      <option>LG</option>
+                      <option>Microsoft</option>
+                      <option>Motorola</option>
+                      <option>Nokia</option>
+                      <option>OnePlus</option>
+                      <option>Sony</option>
+                      <option>Xiaomi</option>
+                    </optgroup>
+                    <optgroup label="Kitchen & furniture construction">
+                      <option>Installing the kitchen</option>
+                      <option>Cutting and mounting the worktop to size</option>
+                      <option>Installing a large electrical appliance (without connection)</option>
+                      <option>Dismantle old kitchen</option>
+                      <option>Transport of kitchen required (delivery)</option>
+                      <option>Disposal (e.g. of the old kitchen) required</option>
+                    </optgroup>
+                    <optgroup label="Others for Kitchen & furniture construction">
+                      <option>Connecting the electric stove</option>
+                      <option>Repair electric stove</option>
+                      <option>Replace electric stove</option>
+                      <option>Disconnect electric stove</option>
+                      <option>Dispose of old device</option>
+                    </optgroup>
+                    <optgroup label="Other to Move & Transport">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Structure of gates & railings">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Load-bearing construction">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="welding operations">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Other metalwork">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Website & Software">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Design & Print">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Home appliances, SAT system">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Miscellaneous to EDP & Advertising">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Repair home electronics">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Repair furniture & furnishings">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Other repair work">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Furniture construction & dismantling">
+                      <option>TBD</option>
+                    </optgroup>
+                    <optgroup label="Electric cooker connection & repair">
+                      <option>TBD</option>
+                    </optgroup>
                   </select>
-                  
+
                 </div>
               </div>
               <div class="form-group">
@@ -474,43 +476,61 @@
               </div>
               <div class="form-group">
                 <div class="col-lg-8">
-                  <button onclick="addtext()" type="button"  class="btn btn-dark">Add</button>
+                  <button onclick="addtext()" type="button" class="btn btn-dark">Add</button>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-lg-8">
-                  <textarea hidden class="form-control" name="service" id="service_textarea" rows="3" readonly></textarea>
+                  <textarea hidden class="form-control" name="service" id="service_textarea" rows="3"
+                    readonly></textarea>
                 </div>
               </div>
               <div class="form-group">
-                  <div class="col-lg-8">
-                      <table class="table" id="myTable" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
-                          <thead>
-                              <tr>
-                                  <th scope="col"><strong>ID</strong></th>
-                                  <th scope="col"><strong>Service</strong></th>
-                                  <th scope="col"><strong>More Info</strong></th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <% for(var i=0; i < serviceProviderData.length; i++) { %>
-                               <tr>
-                                  <td><%=serviceProviderData[i].sp_id%></td>
-                                  <td><%=serviceProviderData[i].title%></td>
-                                  <td><%=serviceProviderData[i].more_info%></td>
+                <div class="col-lg-8">
+                  <table class="table" id="myTable" style="margin: 5% 5% 5% 5%; width: 90%; min-height: 300px">
+                    <thead>
+                      <tr>
+                        <th scope="col"><strong>ID</strong></th>
+                        <th scope="col"><strong>Service</strong></th>
+                        <th scope="col"><strong>More Info</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% for(var i=0; i < serviceProviderData.length; i++) { %>
+                      <tr>
+                        <td><a href="<%=serviceProviderData[i].sp_id%>"></a><%=serviceProviderData[i].sp_id%></td>
+                        <td><%=serviceProviderData[i].title%></td>
+                        <td><%=serviceProviderData[i].more_info%></td>
 
-                              </tr>
-                              <% } %>
-                          </tbody>
-                      </table>
-                   </div>
+                      </tr>
+                      <% } %>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label"></label>
+              <div class="col-md-8">
+                <input type="submit" class="btn btn-primary" value="Save Changes">
+                <input type="reset" class="btn btn-default" value="Cancel">
+              </div>
+            </div>
+          </form>
+
+            <form class="form-horizontal" name="form" action="/users/DeleteService" method="post">
               <div class="form-group">
-                <label class="col-md-3 control-label"></label>
-                <div class="col-md-8">
-                  <input type="submit" class="btn btn-primary" value="Save Changes">
-                  <input type="reset" class="btn btn-default" value="Cancel">
+                <label class="col-lg-3 control-label">Enter your Service ID to delete it:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" name='serviceproviderid' type="number">
+                  <input hidden class="form-control" name='userid' type="number" value="<%=serviceProvider.user_id%>"
+                    readonly>
                 </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-8">
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -523,22 +543,34 @@
     <!-- Footer -->
     <%- include partials/footer %>
 
-  <!-- End footer -->
+    <!-- End footer -->
 
-  <!-- Scripts -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-  </script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
-  </script>
-  <script src="/javascripts/header_Sidebar.js"></script>
-  <script src="/javascripts/add-service.js"></script>
+    <!-- Scripts -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
+    </script>
+    <script src="/javascripts/header_Sidebar.js"></script>
+    <script src="/javascripts/add-service.js"></script>
+    <script>
+      $(document).ready(function() {
+
+$('#myTable tr').click(function() {
+    var href = $(this).find("a").attr("href");
+    if(href) {
+        alert(href);
+    }
+});
+
+});
+    </script>
 
 
 </body>

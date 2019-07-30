@@ -42,6 +42,7 @@ const {
   addServiceProviderService,
   updateUserAddress,
   getServiceProviderInfo,
+  deleteService,
 } = usersController;
 
 const { getAllServicesForProvider } = serviceController;
@@ -57,18 +58,14 @@ router.get('/signup', (req, res) => {
 router.route('/SVEditProfile')
   .all(routeProtection)
   .get(async (req, res) => {
-    //const request = new sql.Request();
     const serviceProvider = await getServiceProviderInfo(req.user.login_name);
     const serviceProviderData = await getAllServicesForProvider(serviceProvider.user_id);
-  //  const { recordset } = await request.query(`select service_id from service_prividers_ref where user_id = '${serviceProvider.user_id}'`);
-    //debug(serviceProvider);
     res.render('SVEditProfile', {
       user: defined(req.user, user),
       serviceProvider,
       serviceProviderData,
       logged: req.isAuthenticated(),
     });
-    //debug(recordset);
   })
   .post(async (req, res) => {
     const {
@@ -192,6 +189,12 @@ router.get('/logout', (req, res) => {
   // hande with passport
   req.logout(req.body);
   res.redirect('/users/signin');
+});
+
+router.post('/DeleteService', (req, res) => {
+  const { userid, serviceproviderid } = req.body;
+  deleteService(userid, serviceproviderid);
+  res.redirect('/users/SVEditProfile');
 });
 
 module.exports = router;

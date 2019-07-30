@@ -35,7 +35,7 @@ function servicesController() {
         dataCollection.push(element);
       }
     }
-    debug(dataCollection);
+   // debug(dataCollection);
     return dataCollection;
   }
 
@@ -59,8 +59,8 @@ function servicesController() {
       } else if (element.super_cat.includes(keyword)) {
         dataCollectionMinor.push(element);
       }
-      debug(element);
-      debug('###############');
+     // debug(element);
+     // debug('###############');
     }
     return dataCollectionPrimary.concat(dataCollectionSecondary.concat(dataCollectionMinor));
   }
