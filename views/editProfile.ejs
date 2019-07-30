@@ -125,7 +125,8 @@
                 </div>
               </div>
               <% if(user.login_name) {%>
-              <% if(!user.login_name.includes("@google.auth")) {%>
+                <!-- Remove '&& false' after implementation of change password function -->
+              <% if(!user.login_name.includes("@google.auth") && false) {%>
               <div class="form-group">
                 <label class="col-md-3 control-label">Current password:</label>
                 <div class="col-md-8">

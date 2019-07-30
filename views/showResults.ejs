@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>My Results</title>
+    <title>My Services</title>
     <meta name="description" content="display results">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -129,9 +129,11 @@
             <% } %>
         </ul>
         <% } else { %>
-            <h3 class="text-center"> <a  class="text-info" href="/show/search">Nothing found, Please click here to see all services</a></h3>
-        <% } } else { %>
-            <h3 class="text-center"> <a  class="text-info" href="/show/search">Nothing found, Please click here to see all services</a></h3>
+            <h3 class="text-center"> <a  class="text-info" href="/show/search">No result, Please click here to see all services</a></h3>
+            <br>
+            <% } } else { %>
+            <h3 class="text-center"> <a  class="text-info" href="/show/search">No result, Please click here to see all services</a></h3>
+            <br>
         <% } %>
 
         <!-- End page contents -->
