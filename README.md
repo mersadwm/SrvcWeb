@@ -12,6 +12,21 @@
 </p>
 <br>
 <br>
+<h2>Troubleshooting</h2>
+<ul>
+  <li><strong>Search page/result doesn't load or cannot signin/up</strong></li>
+  This issue happens when server is trying to connect to the db server in the first few second after running it
+  OR if the database server is paused, you should wait for a while to db server to resume.
+  These problem will be solved automatically after a few second, please wait and refresh the page.
+  If the problem wouldn't be gone after a minute then restart the web app.
+<br>
+<br>
+  <li><strong>Connection is closed error or some webpages/services doesn't load</strong/></li>
+  In Azure or other cloud services with firewall enabled database servers, you should add your IP address in the firewall whitelist and restart the web app.
+  If the problem doesn't resolved then check the db server addresses and credentials.
+</ul>    
+<br>
+<br>
 <h2>Recommandation for development</h2>
 <p>
 <h4>Suggested visual studio code extensions</h4>
