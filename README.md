@@ -4,12 +4,26 @@
 <p>
 <ol>
 <li>pull the code from git</li>
-<li>install node.js on your system <span> <a href="https://nodejs.org/en/download/"> link </a></span> </span> </li>
+<li>If you want to run it locally, install node.js on your system <span> <a href="https://nodejs.org/en/download/"> link </a></span> </span> </li>
 <li>use cmd/terminal to navigate to the project folder</li>
 <li>run 'npm install'</li>
+<li><strong>First time setup:</strong>
+  <ul>
+    <li>Enter your MS SQL Server names, addresses and credentials</li>
+    <li>Restore database backup from SQL folder to your SQL Server using Microsoft SSMS or setup your db using sql commands from the folder</li>
+    <li>Enter your google authentication key if you want to setup</li>
+    <li>Situational: Add your ip to your SQL Server firewall</li>
+    </ul>
+</li>
 <li>run 'npm start'</li>
 </ol>
 </p>
+<br>
+<br>
+<h2>Documentation and Videos</h2>
+<a href="#">Videos folder</a>
+<br>
+<a href="#">Documentation</a>
 <br>
 <br>
 <h2>Troubleshooting</h2>
