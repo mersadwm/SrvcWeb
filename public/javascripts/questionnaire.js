@@ -56,8 +56,13 @@ async function qFunc() {
               }')"> <div class="verbalAnswer"> <h4 class="unselectable">${answers[j].text}</h4></div></div>`);
             }
           }
-          $('.questionnaireContainer').append(`<div class="moreInfoContainer unselectable"><h4>${slides[i].moreInfo
-          }</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">`);
+          if (slides[i].verbalAnswers.length === 0 && slides[i].visualAnswers.length === 0) {
+            $('.questionnaireContainer').append(`<div class="col text-center"> <button  type="button" onclick="location.href='/show/search?searchVal=${slides[i].question}'" class="btn btn-dark">View the results</button> </div>`);
+          } else {
+            $('.questionnaireContainer').append(`<div class="moreInfoContainer unselectable"><h4>${slides[i].moreInfo
+            }</h4></div><textarea class="usersExplanationsInput" placeholder="Do you have anything else to say? If yes type it here">`);
+          }
+
           resultCollection.push(new SlideResult(slides[i].question, '', ''));
         }
       }
@@ -70,6 +75,7 @@ function onAnswerClick(nxtSlideKey, chosenAnswer) {
   currentSlide = nxtSlideKey;
   resultCollection[resultCollection.length - 1].answer = chosenAnswer;
   resultCollection[resultCollection.length - 1].extraDetail = $('.usersExplanationsInput').val();
+  console.log(resultCollection);
   // printQuestionnaireResult();
   qFunc();
 }

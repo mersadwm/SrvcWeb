@@ -5,6 +5,9 @@
     box-align: left;
 }
 
+.service-faq-container{
+display: flex;
+}
 
 .c05-faq-container__title{
     position: relative;

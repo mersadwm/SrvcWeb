@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>My Results</title>
+    <title>My Services</title>
     <meta name="description" content="display results">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/header_Sidebar.css">
     <link rel="stylesheet" href="../stylesheets/questionnaire.css">
-    <link rel="stylesheet" href="../stylesheets/categories.css">
     <link rel="stylesheet" href="../stylesheets/sub_Cat.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
@@ -41,7 +40,7 @@
                 <div class="inner-form">
                     <div class="basic-search">
                         <div class="input-field">
-                            <input id="search" type="text" placeholder="Type Keywords" />
+                            <input id="search" name="searchVal" type="text" placeholder="Type Keywords" />
                             <div class="icon-wrap">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
@@ -54,75 +53,40 @@
                         </div>
                     </div>
                     <div class="advance-search">
-                        <span class="desc">Advanced Search</span>
-                        <div class="row">
+                        <!-- <span class="desc">Advanced Search</span> -->
+                        <!-- <div class="row">
+                            <div class="input-field">
+                                <div>
+                                    <input type="number" name="zipcode" class="bg-dark text-white"
+                                        placeholder="Zip Code">
+                                </div>
+                            </div>
                             <div class="input-field">
                                 <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">ACCESSORIES</option>
-                                        <option>ACCESSORIES</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
+                                    <select data-trigger="" name="range">
+                                        <option placeholder="" value="">Range</option>
+                                        <option>05 km</option>
+                                        <option>10 km</option>
+                                        <option>20 km</option>
+                                        <option>50 km</option>
+                                        <option>99 km</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="input-field">
                                 <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">COLOR</option>
-                                        <option>GREEN</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
+                                    <select data-trigger="" name="verification">
+                                        <option placeholder="" value="">Verification Status</option>
+                                        <option>Verified</option>
+                                        <option>Not Verified</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">SIZE</option>
-                                        <option>SIZE</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row second">
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">SALE</option>
-                                        <option>SALE</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">TIME</option>
-                                        <option>THIS WEEK</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">TYPE</option>
-                                        <option>TYPE</option>
-                                        <option>SUBJECT B</option>
-                                        <option>SUBJECT C</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                         <div class="row third">
                             <div class="input-field">
                                 <div class="result-count">
-                                    <span>108 </span>results</div>
+                                    <span><% if(serviceCollection){ %><%=serviceCollection.length%><%}%> </span>results</div>
                                 <div class="group-btn">
                                     <button class="btn-delete" id="delete">Reset</button>
                                     <button class="btn-search">Search</button>
@@ -135,31 +99,42 @@
         </div>
 
         <!-- This templates was made by Colorlib (https://colorlib.com) -->
-
+        <% if(serviceCollection){ if(serviceCollection.length > 0){ %>
         <ul class="article-list-vertical">
-
+            <% for (let index = 0; index < serviceCollection.length; index++) {%>
             <li>
-                <a href="#" style="background-image: url('../images/aboutUs/pic01.jpg')"></a>
+                <a href="#" style="background-image: url('<%=serviceCollection[index].profile_pic_url%>')"></a>
                 <div>
-                    <h2><a href="#">Interesting article title</a></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam
-                        a volutpat magna.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
+                    <p><strong><%=serviceCollection[index].title%></strong>
+                        <br>
+                    <%=serviceCollection[index].category%>
+                    <br>
+                    <%=serviceCollection[index].more_info%></p>
+                    <hr>
+                    <% if (logged) {%>
+                    <h2><%=serviceCollection[index].first_name%> <%=serviceCollection[index].last_name%></h2>
+                    <strong><a href="https://<%=serviceCollection[index].website_link%>"
+                            target=”_blank”><%=serviceCollection[index].company_name%></a></strong>
+                    <p><%=serviceCollection[index].about_me%>
+                    <%=serviceCollection[index].address_sp%>, <%=serviceCollection[index].zip%> <%=serviceCollection[index].city%></p>
+                    <a href="mailto:<%=serviceCollection[index].contact_email%>?Subject=ExtraHands%20Order%20by%20Mr/Ms%20<%=user.last_name%>&body=Dear%20Mr/Ms%20%20<%=serviceCollection[index].last_name%>,%0D%0A%0D%0AI%20found%20your%20contact%20for%20the%20service%20of%20<%=serviceCollection[index].title%>%20on%20ExtraHands4me.%0D%0AI%20would%20like%20to...%0D%0A%0D%0A%0D%0ABest%20regards,%0D%0A%0D%0AContact%20information%0D%0A<%=user.first_name%>%20<%=user.last_name%>"
+                        class="read-more">Send an email &rarr;</a>
+                    <a href="tel:<%=serviceCollection[index].telephone%>" class="read-more">Call &rarr;</a>
+                    <% } else { %>
+                        <a href="/users/signin">To view the contact infromation please login</a>
+            <% }%>
                 </div>
             </li>
 
-            <li>
-                <a href="#" style="background-image: url('../images/aboutUs/pic03.jpg')"></a>
-                <div>
-                    <h2><a href="#">Interesting article title</a></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis laoreet diam
-                        a volutpat magna.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
-                </div>
-            </li>
-
+            <% } %>
         </ul>
-
+        <% } else { %>
+            <h3 class="text-center"> <a  class="text-info" href="/show/search">No result, Please click here to see all services</a></h3>
+            <br>
+            <% } } else { %>
+            <h3 class="text-center"> <a  class="text-info" href="/show/search">No result, Please click here to see all services</a></h3>
+            <br>
+        <% } %>
 
         <!-- End page contents -->
 
@@ -182,7 +157,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js">
     </script>
     <script src="../javascripts/header_Sidebar.js"></script>
-    <script src="../javascripts/categories.js"></script>
     <script src="../javascripts/ShowResultsExtention/choices.js"></script>
     <script>
         const customSelects = document.querySelectorAll("select");
