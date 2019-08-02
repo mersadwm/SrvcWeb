@@ -24,17 +24,15 @@ const sqlConfig = {
   password: '5xqpV&Vde9!W',
   server: 'extrahandsdbserver.database.windows.net',
   database: 'extraHandsDB',
-
   options: {
-    encrypt: true // Use this if you're on Windows Azure
+    encrypt: true
   }
 };
-
-// view engine setup
+/**
+ * view engine setup
+ */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-// uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -59,34 +57,36 @@ app.use('/show', showRoute);
 
 
 sql.connect(sqlConfig).catch(err => debug(err));
-
-// catch 404 and forward to error handler
+/**
+ * catch 404 and forward to error handler
+ */
 app.use((req, res, next) => {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
-
-// error handlers
-
-// development error handler
-// will print stacktrace
+/**
+ * error handlers
+ * development error handler
+ * will print stacktrace
+ */
 if (app.get('env') === 'development') {
   app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.send(err.message);
   });
 }
-
-// production error handler
-// no stacktraces leaked to user
+/**
+ * production error handler
+ * no stacktraces leaked to user
+ */
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.send(err.message);
 });
-
-
+/**
+ * Local port
+ */
 app.set('port', process.env.PORT || 3000);
 
 const server = app.listen(app.get('port'), () => {

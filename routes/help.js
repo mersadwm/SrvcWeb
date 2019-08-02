@@ -22,7 +22,6 @@ const user = {
 /* GET help pages. */
 router.get('/faq', (req, res) => {
   res.render('faq', { user: defined(req.user, user), logged: req.isAuthenticated() });
-  // res.render(req.params.page);
 });
 
 router.get('/aboutUs', (req, res) => {
