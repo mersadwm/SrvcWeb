@@ -70,17 +70,18 @@ function servicesController() {
    * @param {string} keyword name of service which user want to search for it
    */
   async function advancedSearch(keyword, zip, range) {
+    const word = keyword.toLowerCase();
     const dataArr = await getAllServices();
     const dataCollectionPrimary = [];
     const dataCollectionSecondary = [];
     const dataCollectionMinor = [];
     for (let index = 0; index < dataArr.length; index++) {
       const element = dataArr[index];
-      if (element.title.includes(keyword)) {
+      if (element.title.includes(word)) {
         dataCollectionPrimary.push(element);
-      } else if (element.category.includes(keyword)) {
+      } else if (element.category.includes(word)) {
         dataCollectionSecondary.push(element);
-      } else if (element.super_cat.includes(keyword)) {
+      } else if (element.super_cat.includes(word)) {
         dataCollectionMinor.push(element);
       }
     }
