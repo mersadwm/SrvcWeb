@@ -4,20 +4,20 @@ const debug = require('debug')('app:QuestionnaireController');
  * Questionnaire Choice including texts
  */
 class VerbalAnswer {
-  constructor() {
-    this.nextSlidekey = '';
-    this.text = '';
+  constructor(nextSlideKey, text) {
+    this.nextSlidekey = nextSlideKey;
+    this.text = text;
   }
 }
 /**
  * Questionnaire Choice including images
  */
 class VisualAnswer {
-  constructor() {
-    this.nextSlidekey = '';
-    this.imageUrl = '';
-    this.imageCaption = '';
-    this.imageDescription = '';
+  constructor(nextSlidekey, imageUrl, imageCaption, imageDescription) {
+    this.nextSlidekey = nextSlidekey;
+    this.imageUrl = imageUrl;
+    this.imageCaption = imageCaption;
+    this.imageDescription = imageDescription;
   }
 }
 
@@ -25,12 +25,12 @@ class VisualAnswer {
  * Questionnaire main questions including information to connect to the correct answer
  */
 class Question {
-  constructor() {
-    this.parentKey = '';
-    this.key = '';
-    this.question = '';
-    this.isAnswerVisualized = null;
-    this.moreInfo = '';
+  constructor(parentKey, key, question, isAnswerVisualized, moreInfo) {
+    this.parentKey = parentKey;
+    this.key = key;
+    this.question = question;
+    this.isAnswerVisualized = isAnswerVisualized;
+    this.moreInfo = moreInfo;
     this.verbalAnswers = [];
     this.visualAnswers = [];
   }
@@ -144,36 +144,30 @@ function questionnaireController() {
    * API to get a Json raw including all information of the questionnaire
    */
   async function getAllQuestionsRaw() {
-    const { recordset } = await getAllQuestions();
+    const {
+      recordset
+    } = await getAllQuestions();
     const questions = recordset;
     const request = new sql.Request();
     const verbalAnswers = await request.query('select * from verbal_answer');
     const visualAnswers = await request.query('select * from visual_answer');
     const finalJson = [];
     for (let i = 0; i < questions.length; i += 1) {
-      const tempQ = new Question();
-      tempQ.parentKey = questions[i].parent_key;
-      tempQ.key = questions[i].question_key;
-      tempQ.question = questions[i].questions;
-      tempQ.isAnswerVisualized = questions[i].isvisualized;
-      tempQ.moreInfo = questions[i].moreinfo;
-      if (questions[i].isvisualized) {
+      const q = questions[i];
+      const tempQ = new Question(q.parent_key, q.question_key, q.questions, q.isvisualized, q.moreinfo);
+      if (q.isvisualized) {
         for (let j = 0; j < visualAnswers.recordset.length; j += 1) {
-          if (visualAnswers.recordset[j].question_key === tempQ.key) {
-            const tempA = new VisualAnswer();
-            tempA.nextSlidekey = visualAnswers.recordset[j].next_slide_key;
-            tempA.imageUrl = visualAnswers.recordset[j].image_url;
-            tempA.imageCaption = visualAnswers.recordset[j].image_caption;
-            tempA.imageDescription = visualAnswers.recordset[j].image_description;
+          const iAnswer = visualAnswers.recordset[j];
+          if (iAnswer.question_key === tempQ.key) {
+            const tempA = new VisualAnswer(iAnswer.next_slide_key, iAnswer.image_url, iAnswer.image_caption, iAnswer.image_description);
             tempQ.visualAnswers.push(tempA);
           }
         }
       } else {
         for (let p = 0; p < verbalAnswers.recordset.length; p += 1) {
-          if (verbalAnswers.recordset[p].question_key === tempQ.key) {
-            const tempB = new VerbalAnswer();
-            tempB.nextSlidekey = verbalAnswers.recordset[p].next_slide_key;
-            tempB.text = verbalAnswers.recordset[p].txt;
+          const vAnswer = verbalAnswers.recordset[p];
+          if (vAnswer.question_key === tempQ.key) {
+            const tempB = new VerbalAnswer(vAnswer.next_slide_key, vAnswer.txt);
             tempQ.verbalAnswers.push(tempB);
           }
         }

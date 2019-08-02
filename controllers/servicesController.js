@@ -12,7 +12,9 @@ function servicesController() {
   async function getServiceProvidersForService(id) {
     const request = new sql.Request();
     request.input('pServices', sql.NVarChar, id);
-    const { recordset } = await request.execute('uspSearchServiceProvider');
+    const {
+      recordset
+    } = await request.execute('uspSearchServiceProvider');
     return recordset;
   }
   /**
@@ -20,7 +22,9 @@ function servicesController() {
    */
   async function getAllServices() {
     const request = new sql.Request();
-    const { recordset } = await request.execute('uspGetAllServicesOfProviders');
+    const {
+      recordset
+    } = await request.execute('uspGetAllServicesOfProviders');
     return recordset;
   }
   /**
@@ -29,8 +33,12 @@ function servicesController() {
    */
   async function getServiceId(serviceTitle) {
     const request = new sql.Request();
-    const { recordset } = await request.query(`select id from services where title = '${serviceTitle}'`);
-    const serviceId = defined(recordset[0], { id: 0 });
+    const {
+      recordset
+    } = await request.query(`select id from services where title = '${serviceTitle}'`);
+    const serviceId = defined(recordset[0], {
+      id: 0
+    });
     return serviceId.id;
   }
   /**

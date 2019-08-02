@@ -75,7 +75,6 @@ function onAnswerClick(nxtSlideKey, chosenAnswer) {
   currentSlide = nxtSlideKey;
   resultCollection[resultCollection.length - 1].answer = chosenAnswer;
   resultCollection[resultCollection.length - 1].extraDetail = $('.usersExplanationsInput').val();
-  console.log(resultCollection);
   // printQuestionnaireResult();
   qFunc();
 }
