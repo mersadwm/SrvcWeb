@@ -4,6 +4,9 @@ const defined = require('defined');
 
 
 function usersController() {
+  /**
+   * Middleware to protect routes from unauthorized users
+   */
   function routeProtection(req, res, next) {
     if (req.user) {
       next();
@@ -11,7 +14,9 @@ function usersController() {
       res.redirect('/users/signin');
     }
   }
-
+  /**
+   * Middleware to protect routes from all users except admin
+   */
   function routeProtectionAdmin(req, res, next) {
     if (req.user) {
       if (req.user.admin_rights) {

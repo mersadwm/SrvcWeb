@@ -85,9 +85,6 @@ router.route('/SVEditProfile')
     debug(aboutme);
     addServiceProviderInfo(req.user.login_name, company, address, phone, webpage, email, zipcode, city, aboutme);
     await addServiceProviderService(serviceArr, req.user.login_name);
-    // debug(typeof service);
-    // debug(typeof serviceArr);
-    // debug(typeof serviceArr[0]);
     res.redirect('/users/SVEditProfile');
   });
 /**

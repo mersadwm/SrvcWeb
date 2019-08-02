@@ -24,11 +24,9 @@ const sqlConfig = {
   password: '5xqpV&Vde9!W',
   server: 'extrahandsdbserver.database.windows.net',
   database: 'extraHandsDB',
-  /**
-   * Is used for windows Azure
-   */
   options: {
-    encrypt: true 
+    encrypt: true
+  }
 };
 /**
  * view engine setup
