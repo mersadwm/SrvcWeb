@@ -25,7 +25,9 @@ const {
 router.route('/').get((req, res) => {
   res.send('not found');
 });
-
+/**
+ * route for adding the questions
+ */
 router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addquestion', {
     user: req.user,
@@ -46,7 +48,9 @@ router.route('/addQ').all(routeProtectionAdmin).get((req, res) => {
 
     res.redirect('/admin/addQ');
   });
-
+/**
+ * route for adding visual answers
+ */
 router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addvisualanswers', {
     user: req.user,
@@ -66,7 +70,9 @@ router.route('/addVis').all(routeProtectionAdmin).get((req, res) => {
     addVisualAnswer(questionKey, imageDescription, id, nextSlideKey, imageCaption, imageUrl);
     res.redirect('/admin/addVis');
   });
-
+/**
+ * route for adding verbal answers
+ */
 router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/addverbalanswer', {
     user: req.user,
@@ -84,7 +90,9 @@ router.route('/addVerb').all(routeProtectionAdmin).get((req, res) => {
     addVerbalAnswer(questionKey, text, id, nextSlideKey);
     res.redirect('/admin/addVerb');
   });
-
+/**
+ * route for update questions
+ */
 router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/updateQuestion', {
     user: req.user,
@@ -105,7 +113,9 @@ router.route('/updateQ').all(routeProtectionAdmin).get((req, res) => {
 
     res.redirect('/admin/updateQ');
   });
-
+/**
+ * route for update questions
+ */
 router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
   res.render('questionnaireView/updateverbalanswer', {
     user: req.user,
@@ -123,7 +133,9 @@ router.route('/updateA').all(routeProtectionAdmin).get((req, res) => {
     updateVerbalAnswer(questionKey, text, id, nextSlideKey);
     res.redirect('/admin/updateA');
   });
-
+/**
+ * route for adding users
+ */
 router.route('/upgradeUsers').all(routeProtectionAdmin).get((req, res) => {
   res.render('upgradeUsers', {
     user: req.user,

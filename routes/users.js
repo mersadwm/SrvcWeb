@@ -54,7 +54,9 @@ router.get('/signup', (req, res) => {
   });
 });
 
-
+/**
+ * Get service provider edit page
+ */
 router.route('/SVEditProfile')
   .all(routeProtection)
   .get(async (req, res) => {
@@ -88,7 +90,9 @@ router.route('/SVEditProfile')
     // debug(typeof serviceArr[0]);
     res.redirect('/users/SVEditProfile');
   });
-
+/**
+ * Get edit profile page
+ */
 router.route('/editProfile')
   .all(routeProtection)
   .get((req, res) => {
@@ -113,7 +117,6 @@ router.route('/editProfile')
       zipcode,
     } = req.body;
 
-    // debug(req.user);
     updateUserInfo(req.user.login_name, email, firstName, lastName);
     updateUserAddress(req.user.login_name, defined(address1, ''), address2, address3, defined(city, ''), defined(state, ''), defined(country, ''), defined(zipcode, ''));
     if (defined(passwordNew, false)) {
@@ -123,7 +126,9 @@ router.route('/editProfile')
     }
     res.redirect('/users/signin');
   });
-
+/**
+ * Route for updating profile
+ */
 router.route('/updateProfilePic')
   .all(routeProtection)
   .post((req, res) => {
@@ -144,9 +149,10 @@ router.route('/updateProfilePic')
       res.redirect('/users/signin');
     });
   });
-
+/**
+ * Get signup page to register a new user
+ */
 router.route('/signUp').post(async (req, res) => {
-  // create user
   const {
     username,
     password,
@@ -154,10 +160,11 @@ router.route('/signUp').post(async (req, res) => {
   } = req.body;
   addUser(username, password, email);
   loginUser(username, password);
-  // debug(login);
   res.redirect('/users/signin');
 });
-
+/**
+ * User sign in
+ */
 router.route('/signin')
   .get((req, res) => {
     res.render('signin', {
@@ -174,8 +181,9 @@ router.route('/profile')
   .get((req, res) => {
     res.json(req.user);
   });
-
-// auth with google
+/**
+ * sign in with Google account
+ */
 router.get('/google', passport.authenticate('google', {
   scope: ['profile', 'email'],
 }));
@@ -186,11 +194,12 @@ router.get('/google/redirect', passport.authenticate('google', {
 }));
 
 router.get('/logout', (req, res) => {
-  // hande with passport
   req.logout(req.body);
   res.redirect('/users/signin');
 });
-
+/**
+ * Rout for delete services by service provider
+ */
 router.post('/DeleteService', (req, res) => {
   const { userid, serviceproviderid } = req.body;
   deleteService(userid, serviceproviderid);

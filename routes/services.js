@@ -26,8 +26,9 @@ const user = {
   Country: '',
   PLZ: '',
 };
-
-/* GET users pages. */
+/**
+ *  GET users pages
+ */
 router.get('/id:id', (req, res) => {
   (async function query() {
     const result = await getService(req.param.id);
@@ -35,7 +36,9 @@ router.get('/id:id', (req, res) => {
     res.send(result.recordset);
   }());
 });
-
+/**
+ * Get all services in servie page
+ */
 router.get('/', (req, res) => {
   (async function query() {
     const result = await getAllServices();
@@ -43,15 +46,9 @@ router.get('/', (req, res) => {
     res.send(result.recordset);
   }());
 });
-
-// router.get('/questionnaire/:id', (req, res) => {
-//   (async function query() {
-//     const result = await getQuestion(req.param.id);
-//     debug(result);
-//     res.send(result.recordset);
-//   }());
-// });
-
+/**
+ * Get an Api for questionnaire
+ */
 router.get('/questionnaire/raw', (req, res) => {
   (async function query() {
     const jsonResult = await getAllQuestionsRaw();
@@ -59,7 +56,9 @@ router.get('/questionnaire/raw', (req, res) => {
   }());
 });
 
-
+/**
+ * Get all questions in questionnaire web page
+ */
 router.get('/questionnaire/', (req, res) => {
   (async function query() {
     const questions = await getAllQuestions();

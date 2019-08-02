@@ -28,7 +28,9 @@ const {
   getServiceProvidersForServiceByTitle,
   advancedSearch,
 } = serviceController;
-
+/**
+ * Get search page
+ */
 router.get('/search', async (req, res) => {
   const q = queryString.parse(req.url.replace(/^.*\?/, ''));
   debug(q);
