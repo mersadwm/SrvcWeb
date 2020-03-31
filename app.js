@@ -20,10 +20,10 @@ const showRoute = require('./routes/show');
 const app = express();
 
 const sqlConfig = {
-  user: 'mersad',
-  password: '5xqpV&Vde9!W',
-  server: 'extrahandsdbserver.database.windows.net',
-  database: 'extraHandsDB',
+  user: 'user',
+  password: 'pass',
+  server: 'server-address',
+  database: 'DB-Name',
   options: {
     encrypt: true
   }
